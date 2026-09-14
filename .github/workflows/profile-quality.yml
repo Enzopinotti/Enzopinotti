@@ -1,0 +1,37 @@
+name: Profile quality
+
+on:
+  pull_request:
+    paths:
+      - "README.md"
+      - "assets/**"
+      - "profile-3d-contrib/**"
+      - ".github/profile-3d-settings.json"
+      - ".github/scripts/validate-profile.py"
+      - ".github/workflows/profile-*.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "README.md"
+      - "assets/**"
+      - "profile-3d-contrib/**"
+      - ".github/profile-3d-settings.json"
+      - ".github/scripts/validate-profile.py"
+      - ".github/workflows/profile-*.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    name: Validate profile assets and contracts
+
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+
+      - name: Validate README, themes and SVG assets
+        run: python3 .github/scripts/validate-profile.py
