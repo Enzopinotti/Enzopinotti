@@ -30,6 +30,9 @@ REQUIRED_SVGS = [
 
 HEX_COLOR = re.compile(r"^#[0-9A-Fa-f]{6}$")
 LOCAL_IMAGE = re.compile(r"(?:src|srcset)=\"(\./[^\"]+)\"")
+LANDSCAPE_IMAGE = re.compile(
+    r"\./profile-3d-contrib/profile-enzo-(?:dark|light)\.svg\?v=([0-9a-f]{12})"
+)
 
 
 def fail(message: str) -> None:
@@ -57,8 +60,15 @@ def validate_readme() -> str:
     if "prefers-color-scheme: dark" not in text or "prefers-color-scheme: light" not in text:
         fail("README must provide adaptive dark/light imagery")
 
+    landscape_versions = LANDSCAPE_IMAGE.findall(text)
+    if len(landscape_versions) != 3:
+        fail("README must version all three 3D landscape references")
+    if len(set(landscape_versions)) != 1:
+        fail("README 3D landscape references must share one cache version")
+
     for raw_path in LOCAL_IMAGE.findall(text):
-        path = ROOT / raw_path.removeprefix("./")
+        clean_path = raw_path.split("?", 1)[0].split("#", 1)[0]
+        path = ROOT / clean_path.removeprefix("./")
         if not path.exists():
             fail(f"local image referenced by README does not exist: {raw_path}")
 
