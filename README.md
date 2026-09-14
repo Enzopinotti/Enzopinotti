@@ -2,7 +2,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/enzo-engineering-hero.svg">
     <source media="(prefers-color-scheme: light)" srcset="./assets/enzo-engineering-hero-light.svg">
-    <img src="./assets/enzo-engineering-hero.svg" alt="Enzo Pinotti — Product Systems, Delivery, AI and Infrastructure" width="100%" />
+    <img src="./assets/enzo-engineering-hero.svg" alt="Enzo Pinotti — Product Engineering, Systems Analysis and Delivery" width="100%" />
   </picture>
 </p>
 
@@ -15,13 +15,13 @@
 
 <h1 align="center">Hi, I'm Enzo 👋</h1>
 <p align="center">
-  <strong>Product Engineer · Full Stack · Technical-functional delivery</strong>
+  <strong>Systems Analyst / Technical Lead · Full-Stack / Product Engineer</strong>
 </p>
 <p align="center">
-  Industrial Engineer · Systems Engineering in progress
+  Industrial Engineer · Systems Engineering in progress · English B2
 </p>
 <p align="center">
-  I work where <strong>business processes, software systems, AI and delivery</strong> meet.
+  I work across <strong>business processes, software systems, data, infrastructure and delivery</strong>.
 </p>
 
 ---
@@ -32,18 +32,38 @@
 DISCOVER → DEFINE → BUILD → VERIFY → SHIP → LEARN
 
 PRODUCT SYSTEMS      operational workflows, collaboration, permissions
+TECHNICAL-FUNCTIONAL requirements, process analysis, scope and coordination
 AI INSIDE PRODUCTS   tools, memory, voice, retrieval, structured execution
-PLATFORM FOUNDATIONS APIs, contracts, data integrity and integrations
-DELIVERY DISCIPLINE  risks, blockers, UAT, CI, release evidence and follow-up
+DELIVERY DISCIPLINE  risks, blockers, UAT, CI, releases and follow-up
 ```
 
-My current focus is building and evolving **operational software**: systems that have to survive real users, changing requirements, permissions, data constraints, integrations and releases.
+My current focus is building and evolving **operational software and ERP/SaaS-style systems** that have to survive real users, changing requirements, permissions, data constraints, integrations and production releases.
 
-I work across requirements, product decisions, frontend, backend, data, infrastructure and release qualification. A large part of my current work lives in private repositories, so this profile exposes the engineering patterns and public-safe outcomes rather than private implementation details.
+What differentiates my profile is the bridge between **business context and technical execution**: I can move from user/stakeholder discovery, AS-IS / TO-BE process analysis and acceptance criteria into frontend/backend work, APIs, data, infrastructure, QA/UAT, release qualification and production follow-up.
 
 ---
 
-## 02 // SELECTED BUILDS
+## 02 // CAREER ARC
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/career-arc.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/career-arc-light.svg">
+    <img src="./assets/career-arc.svg" alt="Enzo Pinotti career progression" width="100%" />
+  </picture>
+</p>
+
+My path has been intentionally transversal:
+
+- **GIDAS · Data & Visualization Coordination (2021 → present):** requirements, KPIs, data sources, dashboards/reports and iterative validation while coordinating development, statistics and engineering perspectives.
+- **Fedes · Web / Full-Stack Development (2024 → 2025):** React, Node.js, REST APIs, SQL/data work, integrations and production infrastructure including VPS, Docker, Nginx, SSL and troubleshooting.
+- **Fedes · Systems Analyst / Technical Lead (2025 → present):** ERP/SaaS evolution, requirements, BPMN, AS-IS / TO-BE, use cases, user stories, business rules, acceptance criteria, backlog/scope, risks, dependencies, blockers, development coordination, QA/UAT, releases and production support.
+
+That progression is also why I am increasingly interested in **technical project coordination, IT project administration and functional/system analysis roles** around ERP and complex software implementations — without losing the ability to go deep technically when needed.
+
+---
+
+## 03 // SELECTED BUILDS
 
 ### 🌐 [Portfolio — enzopinotti.dev](https://enzopinotti.dev)
 **Full-stack product + production operations**
@@ -66,7 +86,7 @@ Educational full-stack lab comparing **Huffman** and **Shannon-Fano** lossless c
 
 ---
 
-## 03 // BUILD SIGNAL LANDSCAPE
+## 04 // BUILD SIGNAL LANDSCAPE
 
 <p align="center">
   <picture>
@@ -86,7 +106,7 @@ The landscape uses the MIT-licensed [`github-profile-3d-contrib`](https://github
 
 ---
 
-## 04 // HOW I WORK
+## 05 // HOW I WORK
 
 <p align="center">
   <picture>
@@ -96,33 +116,37 @@ The landscape uses the MIT-licensed [`github-profile-3d-contrib`](https://github
   </picture>
 </p>
 
-Across ERP and operational-software work, I have handled **requirements discovery, process documentation, business ↔ technology translation, development coordination, dependencies and blockers, functional validation / UAT, release follow-up and reporting**.
+I usually work through the full delivery loop rather than one isolated layer. Typical responsibilities include **requirements discovery, process documentation, BPMN / AS-IS / TO-BE, business ↔ technology translation, prioritization, development coordination, dependency and risk tracking, QA/UAT, release follow-up, production troubleshooting and reporting**.
 
-I prefer a recoverable delivery loop: understand the process first, make the contract explicit, expose risks early, validate behavior with evidence and keep enough documentation for another person to continue the work without guessing.
+In ERP and operational-system contexts I am especially comfortable acting as the person who can understand the process with users, translate it into a technical contract, coordinate implementation and then validate what actually reaches production.
+
+I do **not** present myself as a SAP or Dynamics specialist. My relevant experience is the transferable part: ERP/SaaS processes, migrations and integrations, local-business requirements, user validation, delivery coordination and technical ownership.
 
 ---
 
-## 05 // ENGINEERING MAP
+## 06 // ENGINEERING MAP
 
-| Product & delivery | Platform & data |
+| Product / functional analysis | Platform & data |
 | --- | --- |
-| Requirements / process discovery | Node.js / Fastify / Express services |
-| AS-IS / TO-BE thinking | REST APIs and explicit contracts |
-| Stakeholder ↔ engineering coordination | PostgreSQL / SQL data integrity |
-| Risks, dependencies, UAT, releases | Auth, tenancy, RBAC and integrations |
+| Requirements & stakeholder discovery | Node.js / Fastify / Express services |
+| BPMN · AS-IS / TO-BE · use cases | REST APIs and explicit contracts |
+| User stories · business rules · acceptance criteria | PostgreSQL / MySQL / SQL data integrity |
+| Scope · priorities · risks · dependencies | MongoDB · Redis · integrations |
+| QA / UAT · release / production follow-up | Auth · tenancy · RBAC · migrations |
 
 | AI systems | Delivery & operations |
 | --- | --- |
-| Provider abstraction | Docker-based environments |
+| Provider abstraction | Docker / Compose environments |
 | Capability / tool execution | Linux / VPS / Nginx |
-| Confirmation boundaries | CI and regression gates |
-| Memory, retrieval and voice | Release evidence and operational docs |
+| Confirmation boundaries | DNS · SSL/TLS · Certbot |
+| Memory, retrieval and voice | GitHub Actions · CI/CD · runners |
+| Structured extraction / automation | Monitoring · logs · troubleshooting |
 
-I care less about collecting frameworks and more about understanding **where authority lives, how failures behave, what can be verified and how decisions remain legible over time**.
+I also work with **Power BI, Looker Studio, Excel and Google Apps Script** when the problem is better solved through reporting, analysis or lightweight automation than through a new application.
 
 ---
 
-## 06 // CORE TOOLCHAIN
+## 07 // CORE TOOLCHAIN
 
 <p>
   <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
@@ -140,13 +164,13 @@ I care less about collecting frameworks and more about understanding **where aut
 <summary><strong>Additional experience</strong></summary>
 <br />
 
-JavaScript · Sass / CSS · MongoDB · ORM patterns · OAuth · Google Workspace / Apps Script · Python scripting · BI / reporting · WordPress · Shopify · SEO / analytics · Figma-to-code
+JavaScript · Sass / CSS · MongoDB · Redis · ORM patterns · OAuth · Google Workspace / Apps Script · Python scripting · Odoo exposure · Power BI · Looker Studio · Excel · WordPress · Shopify · SEO / analytics · Figma-to-code
 
 </details>
 
 ---
 
-## 07 // ENGINEERING PRINCIPLES
+## 08 // ENGINEERING PRINCIPLES
 
 ```text
 01. Understand the business process before choosing the technology.
@@ -154,14 +178,15 @@ JavaScript · Sass / CSS · MongoDB · ORM patterns · OAuth · Google Workspace
 03. Surface dependencies, risks and blockers before they become surprises.
 04. Prefer recoverable, reviewable changes over giant rewrites.
 05. Treat tests, UAT evidence and documentation as part of delivery.
-06. Automate evidence — not activity for activity's sake.
-07. Build for the person who has to understand the system six months later.
+06. Communicate status, risks and decisions in a way stakeholders can act on.
+07. Automate evidence — not activity for activity's sake.
+08. Build for the person who has to understand the system six months later.
 ```
 
 ---
 
 <p align="center">
-  <strong>Build useful systems. Make important behavior explicit. Keep improving the delivery loop.</strong>
+  <strong>Bridge the process. Build the system. Make the delivery legible.</strong>
 </p>
 
 <p align="center">
