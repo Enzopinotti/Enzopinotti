@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Check out profile repository
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          fetch-depth: 0
 
       - name: Generate contribution themes
         uses: yoshi389111/github-profile-3d-contrib@7d95e7d4cdc028dd1e1cbd957d65f35efb12ae39 # v0.9.3
@@ -78,4 +80,27 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md profile-3d-contrib
           git commit -m "chore(profile): refresh branded build signal landscape"
-          git push
+
+          for attempt in 1 2 3; do
+            echo "Push attempt ${attempt}/3: reconciling with latest origin/main"
+            git fetch --no-tags origin main
+
+            if ! git rebase origin/main; then
+              echo "::error::Generated profile assets conflict with newer main changes; refusing to overwrite them."
+              git rebase --abort || true
+              exit 1
+            fi
+
+            if git push origin HEAD:main; then
+              echo "Generated profile assets published on attempt ${attempt}."
+              exit 0
+            fi
+
+            if [[ "$attempt" -eq 3 ]]; then
+              echo "::error::main kept advancing while publishing generated profile assets; giving up safely after 3 attempts."
+              exit 1
+            fi
+
+            echo "main advanced during push; retrying from the newest remote HEAD."
+            sleep $((attempt * 2))
+          done
