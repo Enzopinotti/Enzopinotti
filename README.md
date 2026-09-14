@@ -105,9 +105,9 @@ The loop matters more to me than the individual tool. A good implementation shou
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-enzo-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-enzo-light.svg">
-    <img src="./profile-3d-contrib/profile-enzo-dark.svg" alt="Enzo Pinotti GitHub 3D contribution landscape" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-enzo-dark.svg?v=a8777a00eac8">
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-enzo-light.svg?v=a8777a00eac8">
+    <img src="./profile-3d-contrib/profile-enzo-dark.svg?v=a8777a00eac8" alt="Enzo Pinotti GitHub 3D contribution landscape" width="100%" />
   </picture>
 </p>
 
