@@ -14,17 +14,20 @@ BRAND_SCRIPT = ROOT / ".github" / "scripts" / "brand-profile-3d.py"
 
 REQUIRED_SECTIONS = [
     "01 // CURRENT MISSION",
-    "02 // SELECTED BUILDS",
-    "03 // BUILD SIGNAL LANDSCAPE",
-    "04 // HOW I WORK",
-    "05 // ENGINEERING MAP",
-    "06 // CORE TOOLCHAIN",
-    "07 // ENGINEERING PRINCIPLES",
+    "02 // CAREER ARC",
+    "03 // SELECTED BUILDS",
+    "04 // BUILD SIGNAL LANDSCAPE",
+    "05 // HOW I WORK",
+    "06 // ENGINEERING MAP",
+    "07 // CORE TOOLCHAIN",
+    "08 // ENGINEERING PRINCIPLES",
 ]
 
 REQUIRED_SVGS = [
     ROOT / "assets" / "enzo-engineering-hero.svg",
     ROOT / "assets" / "enzo-engineering-hero-light.svg",
+    ROOT / "assets" / "career-arc.svg",
+    ROOT / "assets" / "career-arc-light.svg",
     ROOT / "assets" / "how-i-work.svg",
     ROOT / "assets" / "how-i-work-light.svg",
     ROOT / "profile-3d-contrib" / "profile-enzo-dark.svg",
@@ -52,9 +55,14 @@ def validate_readme() -> str:
     if len(text.encode("utf-8")) > 100_000:
         fail("README.md exceeded the 100 KiB profile budget")
 
+    previous_index = -1
     for section in REQUIRED_SECTIONS:
-        if section not in text:
+        index = text.find(section)
+        if index < 0:
             fail(f"required section missing: {section}")
+        if index <= previous_index:
+            fail(f"profile sections are out of order at: {section}")
+        previous_index = index
 
     for placeholder in ("YOUR-", "TODO", "example.com"):
         if placeholder in text:
@@ -66,8 +74,29 @@ def validate_readme() -> str:
     if "prefers-color-scheme: dark" not in text or "prefers-color-scheme: light" not in text:
         fail("README must provide adaptive dark/light imagery")
 
-    if "business ↔ technology" not in text:
-        fail("V3 delivery narrative is missing the business-to-technology bridge")
+    required_story = (
+        "Systems Analyst / Technical Lead",
+        "Industrial Engineer",
+        "GIDAS",
+        "AS-IS / TO-BE",
+        "BPMN",
+        "business ↔ technology",
+        "QA/UAT",
+        "English B2",
+    )
+    for contract in required_story:
+        if contract not in text:
+            fail(f"career narrative lost required contract: {contract}")
+
+    inflated_claims = (
+        "SAP expert",
+        "Dynamics expert",
+        "certified project manager",
+        "PMP certified",
+    )
+    for claim in inflated_claims:
+        if claim.lower() in text.lower():
+            fail(f"inflated/unverified career claim leaked into README: {claim}")
 
     landscape_versions = LANDSCAPE_IMAGE.findall(text)
     if len(landscape_versions) != 3:
