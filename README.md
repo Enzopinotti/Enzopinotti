@@ -109,7 +109,6 @@ I prefer understanding the business goal before choosing technology, keeping cha
 ## Links
 
 - 🌐 Portfolio: [enzopinotti.dev](https://enzopinotti.dev)
-- 💼 LinkedIn: [Enzo Pinotti](https://www.linkedin.com/in/enzo-pinotti/)
 - 📫 Email: **enzopinottii@gmail.com**
 
 ---
