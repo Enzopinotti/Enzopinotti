@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[2]
 README = ROOT / "README.md"
 SETTINGS = ROOT / ".github" / "profile-3d-settings.json"
 BRAND_SCRIPT = ROOT / ".github" / "scripts" / "brand-profile-3d.py"
+PROFILE_3D_WORKFLOW = ROOT / ".github" / "workflows" / "profile-3d.yml"
 
 REQUIRED_SECTIONS = [
     "01 // CURRENT MISSION",
@@ -39,6 +40,7 @@ LOCAL_IMAGE = re.compile(r'(?:src|srcset)="(\./[^"]+)"')
 LANDSCAPE_IMAGE = re.compile(
     r"\./profile-3d-contrib/profile-enzo-(?:dark|light)\.svg\?v=([0-9a-f]{12})"
 )
+BARE_GIT_PUSH = re.compile(r"(?m)^\s*git push\s*$")
 
 
 def fail(message: str) -> None:
@@ -158,6 +160,27 @@ def validate_brand_script() -> None:
             fail(f"3D branding postprocessor lost required contract: {contract}")
 
 
+def validate_profile_3d_workflow() -> None:
+    if not PROFILE_3D_WORKFLOW.exists():
+        fail("profile 3D refresh workflow is missing")
+
+    text = PROFILE_3D_WORKFLOW.read_text(encoding="utf-8")
+    for contract in (
+        "git status --porcelain -- README.md profile-3d-contrib",
+        "git add README.md profile-3d-contrib",
+        "for attempt in 1 2 3; do",
+        "git fetch --no-tags origin main",
+        "git rebase origin/main",
+        "git push origin HEAD:main",
+        "main kept advancing while publishing generated profile assets; giving up safely after 3 attempts.",
+    ):
+        if contract not in text:
+            fail(f"profile 3D workflow lost required publish safety contract: {contract}")
+
+    if BARE_GIT_PUSH.search(text):
+        fail("profile 3D workflow must not use a bare git push during generated asset publishing")
+
+
 def validate_svgs() -> None:
     for svg in REQUIRED_SVGS:
         if not svg.exists():
@@ -174,6 +197,7 @@ def main() -> None:
     validate_readme()
     validate_settings()
     validate_brand_script()
+    validate_profile_3d_workflow()
     validate_svgs()
     print("profile validation passed")
 
