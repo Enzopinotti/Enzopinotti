@@ -28,18 +28,51 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
           SETTING_JSON: .github/profile-3d-settings.json
 
+      - name: Version README landscape references
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          cache_key="$(
+            sha256sum \
+              profile-3d-contrib/profile-enzo-dark.svg \
+              profile-3d-contrib/profile-enzo-light.svg \
+              | sha256sum \
+              | cut -c1-12
+          )"
+
+          python3 - "$cache_key" <<'PY'
+          from pathlib import Path
+          import re
+          import sys
+
+          cache_key = sys.argv[1]
+          readme = Path("README.md")
+          text = readme.read_text(encoding="utf-8")
+          pattern = re.compile(
+              r"(\./profile-3d-contrib/profile-enzo-(?:dark|light)\.svg)(?:\?v=[0-9a-f]{12})?"
+          )
+          updated, count = pattern.subn(lambda match: f"{match.group(1)}?v={cache_key}", text)
+
+          if count != 3:
+              raise SystemExit(f"expected 3 landscape references, updated {count}")
+
+          readme.write_text(updated, encoding="utf-8")
+          print(f"README landscape cache version: {cache_key}")
+          PY
+
       - name: Commit changed generated assets
         shell: bash
         run: |
           set -euo pipefail
 
-          if [[ -z "$(git status --porcelain -- profile-3d-contrib)" ]]; then
-            echo "3D contribution assets are already current."
+          if [[ -z "$(git status --porcelain -- README.md profile-3d-contrib)" ]]; then
+            echo "3D contribution assets and README cache key are already current."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile-3d-contrib
+          git add README.md profile-3d-contrib
           git commit -m "chore(profile): refresh 3d contribution landscape"
           git push
