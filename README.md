@@ -68,17 +68,17 @@ React + Node.js portfolio with SQL-backed data, authentication/integration work,
 
 → [Source: Enzopinotti/portafolio-personal](https://github.com/Enzopinotti/portafolio-personal)
 
+### 🎨 [Mora Petraglia — Landing + CMS](https://github.com/Enzopinotti/Mora-Petraglia-Landing)
+**Product interface + content operations + integrations**
+
+React + TypeScript public portfolio paired with a private `/admin` CMS, using Google Apps Script as an HTTP API and Google Sheets / Drive as operational content services.
+
 ### 🧠 [Bitora](https://github.com/Enzopinotti/Bitora)
 **Algorithms + testable product behavior**
 
 Educational full-stack laboratory for comparing **Huffman** and **Shannon-Fano** lossless compression through an interactive React UI, Express API, algorithm tests, file-format work and Docker execution.
 
-### 🧰 [Plantilla-de-Proyecto](https://github.com/Enzopinotti/Plantilla-de-Proyecto)
-**Developer experience + reusable engineering standards**
-
-An older backend starter now being rebuilt as a smaller Node.js / TypeScript service foundation with explicit runtime contracts, tests and CI instead of inherited boilerplate.
-
-> Older public repositories are being reviewed and classified so the profile clearly distinguishes **current work**, **reusable tooling**, **experiments** and **historical projects**.
+> Older public repositories are being reviewed and classified so the profile clearly distinguishes **current work**, **reusable tooling**, **experiments** and **historical projects**. The Node.js starter modernization will join this section only after its public `main` branch matches that standard.
 
 ---
 
