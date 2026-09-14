@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">Enzo Pinotti — Career arc</title>
+  <desc id="desc">Light career progression from data and visualization coordination to full-stack engineering and systems analysis / technical leadership.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F8FAFC"/></linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0891B2"/><stop offset="0.5" stop-color="#7C3AED"/><stop offset="1" stop-color="#D97706"/></linearGradient>
+    <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M26 0H0V26" fill="none" stroke="#CBD5E1" stroke-opacity="0.25" stroke-width="1"/></pattern>
+  </defs>
+  <rect width="1200" height="300" rx="24" fill="url(#bg)" stroke="#E2E8F0"/><rect width="1200" height="300" rx="24" fill="url(#grid)"/>
+  <text x="48" y="42" fill="#64748B" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12" letter-spacing="1.2">CAREER ARC // DATA → SOFTWARE → SYSTEMS &amp; DELIVERY</text>
+  <rect x="48" y="58" width="500" height="3" rx="1.5" fill="url(#flow)"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <g transform="translate(48 88)">
+      <rect width="330" height="120" rx="18" fill="#ECFEFF" stroke="#A5F3FC"/>
+      <text x="20" y="30" fill="#0891B2" font-size="12" font-weight="800">2021 → PRESENT · GIDAS</text>
+      <text x="20" y="56" fill="#164E63" font-size="16" font-weight="700">Data &amp; Visualization Coordination</text>
+      <text x="20" y="81" fill="#64748B" font-size="11">requirements · KPIs · dashboards · iterative validation</text>
+      <text x="20" y="101" fill="#78909C" font-size="10">development ↔ statistics ↔ engineering coordination</text>
+    </g>
+    <g transform="translate(404 88)">
+      <rect width="330" height="120" rx="18" fill="#F5F3FF" stroke="#C4B5FD"/>
+      <text x="20" y="30" fill="#7C3AED" font-size="12" font-weight="800">2024 → 2025 · FEDES</text>
+      <text x="20" y="56" fill="#4C1D95" font-size="16" font-weight="700">Web / Full-Stack Engineer</text>
+      <text x="20" y="81" fill="#64748B" font-size="11">React · Node.js · APIs · SQL · integrations</text>
+      <text x="20" y="101" fill="#7C6CA6" font-size="10">VPS · Docker · Nginx · SSL · deployments · troubleshooting</text>
+    </g>
+    <g transform="translate(760 88)">
+      <rect width="392" height="120" rx="18" fill="#FFFBEB" stroke="#FCD34D"/>
+      <text x="20" y="30" fill="#B45309" font-size="12" font-weight="800">2025 → PRESENT · FEDES</text>
+      <text x="20" y="56" fill="#92400E" font-size="16" font-weight="700">Systems Analyst / Technical Lead</text>
+      <text x="20" y="81" fill="#7C5C2B" font-size="11">ERP/SaaS · AS-IS/TO-BE · BPMN · scope · backlog · risks</text>
+      <text x="20" y="101" fill="#A16207" font-size="10">coordination · QA/UAT · releases · production follow-up</text>
+    </g>
+  </g>
+  <path d="M378 148H398M734 148H754" stroke="#94A3B8" stroke-width="2"/>
+  <circle cx="388" cy="148" r="4" fill="#7C3AED"/><circle cx="744" cy="148" r="4" fill="#D97706"/>
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10">
+    <text x="48" y="246" fill="#64748B">EDUCATION</text><text x="130" y="246" fill="#0F172A">Industrial Engineering · UTN La Plata · 2017–2023</text>
+    <text x="528" y="246" fill="#64748B">CURRENT</text><text x="596" y="246" fill="#0F172A">Systems Engineering · since 2022</text>
+    <text x="892" y="246" fill="#64748B">ENGLISH</text><text x="956" y="246" fill="#0F172A">B2 conversational</text>
+    <text x="48" y="272" fill="#94A3B8">direction: technical-functional systems delivery · IT project coordination · ERP / operational software</text>
+  </g>
+</svg>
