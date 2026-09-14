@@ -2,17 +2,17 @@
   {
     "type": "normal",
     "fileName": "profile-enzo-dark.svg",
-    "backgroundColor": "#050816",
-    "foregroundColor": "#E6EDF7",
+    "backgroundColor": "#020617",
+    "foregroundColor": "#F8FAFC",
     "strongColor": "#F59E0B",
-    "weakColor": "#64748B",
+    "weakColor": "#475569",
     "radarColor": "#22D3EE",
     "growingAnimation": true,
     "contribColors": [
       "#111827",
-      "#312E81",
-      "#6D28D9",
-      "#0EA5E9",
+      "#3730A3",
+      "#7C3AED",
+      "#06B6D4",
       "#F59E0B"
     ]
   },
@@ -23,14 +23,14 @@
     "foregroundColor": "#0F172A",
     "strongColor": "#B45309",
     "weakColor": "#64748B",
-    "radarColor": "#0284C7",
+    "radarColor": "#0891B2",
     "growingAnimation": true,
     "contribColors": [
       "#E2E8F0",
-      "#C4B5FD",
-      "#818CF8",
-      "#38BDF8",
-      "#F59E0B"
+      "#A5B4FC",
+      "#C084FC",
+      "#67E8F9",
+      "#FBBF24"
     ]
   }
 ]
