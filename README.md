@@ -1,11 +1,16 @@
 <p align="center">
-  <img src="./assets/enzo-engineering-hero.svg" alt="Enzo Pinotti — Product Systems, AI and Infrastructure" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/enzo-engineering-hero.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/enzo-engineering-hero-light.svg">
+    <img src="./assets/enzo-engineering-hero.svg" alt="Enzo Pinotti — Product Systems, AI and Infrastructure" width="100%" />
+  </picture>
 </p>
 
 <p align="center">
   <a href="https://enzopinotti.dev"><img src="https://img.shields.io/badge/PORTFOLIO-enzopinotti.dev-0EA5E9?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" /></a>
   <a href="mailto:enzopinottii@gmail.com"><img src="https://img.shields.io/badge/CONTACT-email-8B5CF6?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
   <img src="https://img.shields.io/badge/BASE-La_Plata,_Argentina-111827?style=for-the-badge&logo=googlemaps&logoColor=22D3EE" alt="La Plata, Argentina" />
+  <a href="https://github.com/Enzopinotti/Enzopinotti/actions/workflows/profile-quality.yml"><img src="https://github.com/Enzopinotti/Enzopinotti/actions/workflows/profile-quality.yml/badge.svg?branch=main" alt="Profile quality" /></a>
 </p>
 
 <h1 align="center">Hi, I'm Enzo 👋</h1>
@@ -13,7 +18,7 @@
   <strong>Full Stack / Product Engineer</strong> · Industrial Engineer · Systems Engineering in progress
 </p>
 <p align="center">
-  I like turning messy real-world processes into software that is clear, testable, observable and actually useful.
+  I turn messy real-world processes into software that is clear, testable, observable and useful.
 </p>
 
 ---
@@ -28,9 +33,9 @@ BUILDING
 └─ delivery discipline  → Docker, CI, regression testing, release evidence
 ```
 
-My main current work is a **private modular work-management product** that brings together tasks, scheduling, collaboration, workforce operations, integrations and an AI assistant.
+My main current work is a **private modular work-management product** spanning scheduling, tasks, collaboration, workforce operations, integrations and an AI assistant.
 
-I work across the whole path from requirements and product decisions to frontend, backend, data integrity, infrastructure and release qualification. The source is private, so this profile intentionally shares only public-safe engineering themes.
+I work across requirements, product decisions, frontend, backend, data integrity, infrastructure and release qualification. The source is private, so this profile intentionally exposes engineering themes rather than private implementation details.
 
 ---
 
@@ -50,27 +55,30 @@ I work across the whole path from requirements and product decisions to frontend
 | Confirmation boundaries | CI and regression gates |
 | Memory, retrieval and voice | Release and operational documentation |
 
-I care less about collecting frameworks and more about understanding **where authority lives in a system**, how failures behave, what can be tested, and how another developer can continue the work without guessing.
+I care less about collecting frameworks and more about understanding **where authority lives**, how failures behave, what can be verified, and how another developer can continue the work without guessing.
 
 ---
 
 ## 03 // SELECTED BUILDS
 
 ### 🌐 [Portfolio — enzopinotti.dev](https://enzopinotti.dev)
+**Full-stack product + production operations**
 
-A full-stack personal portfolio that evolved beyond a static website into a React + Node.js application with SQL-backed data, authentication/integration work, Docker environments and production deployment tooling.
+React + Node.js portfolio with SQL-backed data, authentication/integration work, Docker environments and production deployment tooling.
 
-**Repository:** [Enzopinotti/portafolio-personal](https://github.com/Enzopinotti/portafolio-personal)
+→ [Source: Enzopinotti/portafolio-personal](https://github.com/Enzopinotti/portafolio-personal)
 
 ### 🧠 [Bitora](https://github.com/Enzopinotti/Bitora)
+**Algorithms + testable product behavior**
 
-An educational full-stack laboratory for comparing **Huffman** and **Shannon-Fano** lossless compression. It combines an interactive React interface, an Express API, algorithm tests, file-format work and Docker-based execution.
+Educational full-stack laboratory for comparing **Huffman** and **Shannon-Fano** lossless compression through an interactive React UI, Express API, algorithm tests, file-format work and Docker execution.
 
 ### 🧰 [Plantilla-de-Proyecto](https://github.com/Enzopinotti/Plantilla-de-Proyecto)
+**Developer experience + reusable engineering standards**
 
-An older backend starter currently being rebuilt as a smaller, modern and reusable Node.js / TypeScript service foundation with real quality gates instead of inherited boilerplate.
+An older backend starter now being rebuilt as a smaller Node.js / TypeScript service foundation with explicit runtime contracts, tests and CI instead of inherited boilerplate.
 
-> I am actively reviewing older public repositories so this profile clearly separates **current work**, **reusable tooling**, **experiments** and **historical projects**.
+> Older public repositories are being reviewed and classified so the profile clearly distinguishes **current work**, **reusable tooling**, **experiments** and **historical projects**.
 
 ---
 
@@ -89,19 +97,23 @@ flowchart LR
     I --> B
 ```
 
-The loop matters more to me than the individual tool. A good implementation should leave behind enough evidence — tests, contracts, docs, decisions — that the next iteration is easier than the previous one.
+The loop matters more to me than the individual tool. A good implementation should leave behind enough evidence — tests, contracts, docs and decisions — that the next iteration is easier than the previous one.
 
 ---
 
 ## 05 // ACTIVITY LANDSCAPE
 
 <p align="center">
-  <img src="./profile-3d-contrib/profile-enzo-dark.svg" alt="Enzo Pinotti GitHub 3D contribution landscape" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-enzo-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-enzo-light.svg">
+    <img src="./profile-3d-contrib/profile-enzo-dark.svg" alt="Enzo Pinotti GitHub 3D contribution landscape" width="100%" />
+  </picture>
 </p>
 
-This graph uses a custom Enzo palette over the MIT-licensed [`github-profile-3d-contrib`](https://github.com/yoshi389111/github-profile-3d-contrib) generator. The refresh workflow uses the GitHub Actions bot identity and only commits when the generated asset actually changes.
+The landscape uses a custom palette over the MIT-licensed [`github-profile-3d-contrib`](https://github.com/yoshi389111/github-profile-3d-contrib) generator. Its refresh workflow is manual, SHA-pinned, uses the GitHub Actions bot identity and commits only when generated assets actually change.
 
-The graph is a visualization, not the goal. I want the activity behind it to keep following the same pattern:
+The visualization is not the goal. The activity behind it should keep following the same pattern:
 
 ```text
 real issue → scoped branch → meaningful commits → validation → review → merge
