@@ -10,13 +10,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 README = ROOT / "README.md"
 SETTINGS = ROOT / ".github" / "profile-3d-settings.json"
+BRAND_SCRIPT = ROOT / ".github" / "scripts" / "brand-profile-3d.py"
 
 REQUIRED_SECTIONS = [
     "01 // CURRENT MISSION",
-    "02 // ENGINEERING MAP",
-    "03 // SELECTED BUILDS",
-    "04 // HOW I BUILD",
-    "05 // ACTIVITY LANDSCAPE",
+    "02 // SELECTED BUILDS",
+    "03 // BUILD SIGNAL LANDSCAPE",
+    "04 // HOW I WORK",
+    "05 // ENGINEERING MAP",
     "06 // CORE TOOLCHAIN",
     "07 // ENGINEERING PRINCIPLES",
 ]
@@ -24,12 +25,14 @@ REQUIRED_SECTIONS = [
 REQUIRED_SVGS = [
     ROOT / "assets" / "enzo-engineering-hero.svg",
     ROOT / "assets" / "enzo-engineering-hero-light.svg",
+    ROOT / "assets" / "how-i-work.svg",
+    ROOT / "assets" / "how-i-work-light.svg",
     ROOT / "profile-3d-contrib" / "profile-enzo-dark.svg",
     ROOT / "profile-3d-contrib" / "profile-enzo-light.svg",
 ]
 
 HEX_COLOR = re.compile(r"^#[0-9A-Fa-f]{6}$")
-LOCAL_IMAGE = re.compile(r"(?:src|srcset)=\"(\./[^\"]+)\"")
+LOCAL_IMAGE = re.compile(r'(?:src|srcset)="(\./[^"]+)"')
 LANDSCAPE_IMAGE = re.compile(
     r"\./profile-3d-contrib/profile-enzo-(?:dark|light)\.svg\?v=([0-9a-f]{12})"
 )
@@ -57,8 +60,14 @@ def validate_readme() -> str:
         if placeholder in text:
             fail(f"placeholder leaked into README: {placeholder}")
 
+    if "```mermaid" in text:
+        fail("live Mermaid should not return to the profile; use repository-owned SVG assets")
+
     if "prefers-color-scheme: dark" not in text or "prefers-color-scheme: light" not in text:
         fail("README must provide adaptive dark/light imagery")
+
+    if "business ↔ technology" not in text:
+        fail("V3 delivery narrative is missing the business-to-technology bridge")
 
     landscape_versions = LANDSCAPE_IMAGE.findall(text)
     if len(landscape_versions) != 3:
@@ -91,7 +100,7 @@ def validate_settings() -> None:
 
     for theme in settings:
         if theme.get("type") != "normal":
-            fail("V1 themes must use the deterministic normal color mode")
+            fail("V3 themes use deterministic normal color mode before branding")
 
         for key in ("backgroundColor", "foregroundColor", "strongColor", "weakColor", "radarColor"):
             value = theme.get(key)
@@ -103,6 +112,21 @@ def validate_settings() -> None:
             fail(f"{theme.get('fileName')} must define five contribution colors")
         if any(not isinstance(color, str) or not HEX_COLOR.match(color) for color in colors):
             fail(f"invalid contribution color in {theme.get('fileName')}")
+
+
+def validate_brand_script() -> None:
+    if not BRAND_SCRIPT.exists():
+        fail("3D branding postprocessor is missing")
+
+    text = BRAND_SCRIPT.read_text(encoding="utf-8")
+    for contract in (
+        "ENZO_BUILD_SIGNAL_BRAND_START",
+        "BUILD SIGNAL // ENZO PINOTTI",
+        "profile-enzo-dark.svg",
+        "profile-enzo-light.svg",
+    ):
+        if contract not in text:
+            fail(f"3D branding postprocessor lost required contract: {contract}")
 
 
 def validate_svgs() -> None:
@@ -120,6 +144,7 @@ def validate_svgs() -> None:
 def main() -> None:
     validate_readme()
     validate_settings()
+    validate_brand_script()
     validate_svgs()
     print("profile validation passed")
 
