@@ -1,86 +1,117 @@
 # Hi, I'm Enzo Pinotti 👋
 
-I'm a Web / Full Stack Developer from La Plata, Argentina, with around three years of experience working in a digital marketing environment at **Fedes Consultora**.
+I'm a **Full Stack / Product Engineer** from La Plata, Argentina. I work across frontend, backend, data, infrastructure and product delivery, with a strong focus on turning real business processes into maintainable software.
 
-I started focused on frontend development, building landing pages, email templates, commercial websites and e-commerce projects. As I gained experience, I moved into a more full stack role, working on backend tasks, databases, API integrations, internal platforms and real production projects.
+My background combines **Industrial Engineering** with ongoing **Systems Engineering** studies, so I naturally approach software from both sides: how the system should work technically and how it should improve the process around it.
 
-My background as an Industrial Engineer helps me understand processes, business needs and real user problems. I like building solutions that are not only technically solid, but also useful, clear and aligned with business goals.
+## Currently building
+
+I'm currently focused on a private modular work-management platform that brings together areas such as tasks, calendar, collaboration, workforce operations, integrations and an AI assistant.
+
+The engineering work around it includes:
+
+- multi-tenant application architecture;
+- permissions, roles and entitlement boundaries;
+- React product interfaces and dense operational workflows;
+- Node.js APIs and SQL/PostgreSQL data integrity;
+- realtime collaboration and event-driven behavior;
+- AI provider abstractions, tool/capability execution, memory and voice experiments;
+- OAuth/integration flows;
+- Docker-based development and deployment tooling;
+- CI, regression testing and release-readiness work;
+- architecture and developer documentation.
+
+The repository is private, so this profile only describes the engineering themes that are safe to share publicly.
+
+## Engineering focus
+
+### Product systems
+
+I enjoy building software where frontend decisions are tightly connected to domain behavior rather than treated as separate layers.
+
+Recent work includes operational interfaces for scheduling, tasks, chat, administration and workforce flows, with attention to responsive behavior, accessibility, permissions, loading/error states and real-world edge cases.
+
+### Backend, APIs and data
+
+I work mainly with **Node.js**, REST APIs and SQL-backed applications. I care about explicit contracts, validation, concurrency/integrity rules, predictable errors and keeping business logic out of presentation code.
+
+I'm increasingly interested in treating APIs and architecture documentation as product surfaces themselves: versioned contracts, generated documentation, diagrams and reproducible developer workflows.
+
+### AI and agent-oriented systems
+
+My AI work is focused less on isolated chat demos and more on integrating assistants into real products:
+
+- provider abstraction;
+- tool/capability execution;
+- confirmation boundaries for actions;
+- conversation context and summarization;
+- memory and retrieval;
+- voice interaction;
+- structured extraction;
+- source provenance and permission-aware knowledge access.
+
+### Infrastructure and engineering quality
+
+I also work with **Docker, Linux/VPS environments, reverse proxies, SSL, CI pipelines and deployment workflows**.
+
+I like repositories that make their quality visible through tests, reproducible commands, useful documentation and small recoverable commits instead of relying on tribal knowledge.
+
+## Selected public work
+
+### [Portfolio — enzopinotti.dev](https://enzopinotti.dev)
+
+Full-stack personal portfolio built as a React + Node.js application with a SQL database, authentication/integration work, Docker-based environments and production deployment tooling.
+
+Repository: [Enzopinotti/portafolio-personal](https://github.com/Enzopinotti/portafolio-personal)
+
+### [Bitora](https://github.com/Enzopinotti/Bitora)
+
+Educational full-stack application for studying and comparing lossless compression algorithms such as **Huffman** and **Shannon-Fano**. It combines an interactive React interface, an Express API, algorithm tests and Docker-based local execution.
+
+### Client and product work
+
+My public repositories also include websites, e-commerce projects, academic systems and experiments built while moving from frontend development toward full-stack, infrastructure and product engineering.
+
+I'm progressively reviewing those repositories so the profile clearly distinguishes current work, reusable projects, experiments and historical code.
+
+## Core stack
+
+**Frontend**  
+React · Vite · JavaScript / TypeScript · Sass / CSS · responsive UI · Figma-to-code
+
+**Backend & data**  
+Node.js · Fastify / Express · REST APIs · PostgreSQL / SQL · MongoDB · Prisma / ORM patterns
+
+**AI & integrations**  
+LLM APIs · capability/tool orchestration · OAuth · Google Workspace integrations · structured extraction
+
+**Infrastructure & quality**  
+Docker · Linux / VPS · Nginx · GitHub · CI/CD · automated tests · API/architecture documentation
+
+**Web / commerce**  
+WordPress · Shopify · SEO basics · analytics · landing pages · e-commerce
+
+## How I like to work
+
+```text
+problem
+  -> requirements
+  -> architecture / contract
+  -> implementation
+  -> tests
+  -> documentation
+  -> review
+  -> release and iteration
+```
+
+I prefer understanding the business goal before choosing technology, keeping changes reviewable and making important system behavior explicit enough that another developer can continue the work without guessing.
+
+## Links
+
+- 🌐 Portfolio: [enzopinotti.dev](https://enzopinotti.dev)
+- 💼 LinkedIn: [Enzo Pinotti](https://www.linkedin.com/in/enzo-pinotti/)
+- 📫 Email: **enzopinottii@gmail.com**
 
 ---
 
-## What I work with
-
-**Frontend**
-- React
-- Vite
-- JavaScript
-- HTML / CSS
-- Responsive interfaces
-- Figma to code
-
-**Backend**
-- Node.js
-- REST APIs
-- SQL databases
-- MongoDB
-- Google Apps Script
-- Basic Python scripting
-
-**Web & Marketing**
-- WordPress
-- Shopify
-- Landing pages
-- E-commerce projects
-- SEO basics
-- Performance optimization
-- Google Analytics / Looker Studio
-
-**Other tools**
-- Git / GitHub
-- Docker
-- VPS environments
-- API integrations
-- Dashboards and automations
-
----
-
-## Main experience
-
-### Axxis — Management platform / SaaS
-
-One of my most important projects is **Axxis**, a management platform that started as an internal tool and later evolved into a product used by real users and clients.
-
-Working on Axxis helped me understand the difference between building something that works in development and building something that people actually use every day.
-
-I was involved in development, requirements, feedback, support, documentation, version improvements and release preparation.
-
-### Marketing websites and client projects
-
-At Fedes Consultora, I worked on landing pages, commercial websites, e-commerce projects, internal tools and client solutions.
-
-I usually work closely with designers and marketing teams to turn ideas and Figma designs into real interfaces, paying attention to usability, visual details, loading speed, responsive behavior and basic SEO.
-
-### Automation, APIs and data
-
-I have experience connecting tools and services through APIs, building internal automations, working with Google Apps Script and creating dashboards with business and marketing data.
-
-I like finding practical technical solutions that make sense for the client's real problem, budget and timeline.
-
----
-
-## What I care about
-
-- Writing clear and maintainable code
-- Understanding the business goal before building
-- Creating fast and responsive web experiences
-- Choosing the right technology for the problem
-- Improving products through real user feedback
-- Working closely with design, marketing and business teams
-
----
-
-## Portfolio
-
-🌐 **Portfolio:** [enzopinotti.dev](https://enzopinotti.dev)
-
-📫 **Email:** enzopinottii@gmail.com
+This profile is being actively improved as part of a broader repository-maturity effort: fewer disconnected projects, clearer engineering evidence, better documentation and more reusable work.
