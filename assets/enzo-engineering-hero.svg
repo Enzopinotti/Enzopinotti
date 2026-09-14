@@ -1,101 +1,82 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
-  <title id="title">Enzo Pinotti — Product Systems, AI and Infrastructure</title>
-  <desc id="desc">Dark engineering control-room style banner with an abstract system map connecting web, API, data, AI and delivery layers.</desc>
+  <title id="title">Enzo Pinotti — Product Systems, Delivery, AI and Infrastructure</title>
+  <desc id="desc">Engineering control-room banner connecting business context, requirements, build, data, AI, validation and release.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#050816"/>
-      <stop offset="0.52" stop-color="#0B1024"/>
-      <stop offset="1" stop-color="#101733"/>
+      <stop offset="0" stop-color="#020617"/>
+      <stop offset="0.5" stop-color="#070D20"/>
+      <stop offset="1" stop-color="#111936"/>
     </linearGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#8B5CF6"/>
-      <stop offset="0.55" stop-color="#38BDF8"/>
+      <stop offset="0.5" stop-color="#38BDF8"/>
       <stop offset="1" stop-color="#22D3EE"/>
     </linearGradient>
-    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#FDE68A"/>
-      <stop offset="1" stop-color="#F59E0B"/>
-    </linearGradient>
     <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
-      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#334155" stroke-opacity="0.18" stroke-width="1"/>
+      <path d="M28 0H0V28" fill="none" stroke="#334155" stroke-opacity="0.16" stroke-width="1"/>
     </pattern>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
-
   <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
   <rect width="1200" height="360" rx="28" fill="url(#grid)"/>
-
-  <circle cx="1010" cy="58" r="170" fill="#7C3AED" opacity="0.07"/>
-  <circle cx="1115" cy="265" r="155" fill="#0EA5E9" opacity="0.06"/>
-
-  <g transform="translate(64 58)">
-    <rect width="78" height="26" rx="13" fill="#11182F" stroke="#334155"/>
+  <circle cx="1020" cy="50" r="180" fill="#7C3AED" opacity="0.07"/>
+  <circle cx="1115" cy="275" r="160" fill="#06B6D4" opacity="0.05"/>
+  <g transform="translate(64 54)">
+    <rect width="92" height="26" rx="13" fill="#11182F" stroke="#334155"/>
     <circle cx="14" cy="13" r="4" fill="#22D3EE" filter="url(#glow)"/>
-    <text x="27" y="17" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1.2">SYSTEM</text>
-
-    <text x="0" y="88" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="48" font-weight="800" letter-spacing="-1.6">ENZO PINOTTI</text>
-    <rect x="0" y="106" width="395" height="4" rx="2" fill="url(#accent)"/>
-    <text x="0" y="145" fill="#C4B5FD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="1.4">PRODUCT ENGINEERING · AI · INFRASTRUCTURE</text>
-
-    <text x="0" y="186" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16">I turn messy real-world processes into systems that are</text>
-    <text x="0" y="211" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="600">clear, testable, observable and useful.</text>
-
-    <g transform="translate(0 244)">
-      <rect width="124" height="34" rx="9" fill="#11182F" stroke="#273449"/>
-      <text x="62" y="22" text-anchor="middle" fill="#67E8F9" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">FULL STACK</text>
-      <rect x="136" width="126" height="34" rx="9" fill="#11182F" stroke="#273449"/>
-      <text x="199" y="22" text-anchor="middle" fill="#C4B5FD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">PRODUCT</text>
-      <rect x="274" width="126" height="34" rx="9" fill="#11182F" stroke="#273449"/>
-      <text x="337" y="22" text-anchor="middle" fill="#93C5FD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">SYSTEMS</text>
+    <text x="27" y="17" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1.2">SYSTEMS</text>
+    <text x="0" y="90" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="48" font-weight="800" letter-spacing="-1.6">ENZO PINOTTI</text>
+    <rect x="0" y="108" width="430" height="4" rx="2" fill="url(#accent)"/>
+    <text x="0" y="146" fill="#C4B5FD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="1.2">PRODUCT SYSTEMS · DELIVERY · AI · INFRASTRUCTURE</text>
+    <text x="0" y="188" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16">I connect business context, system design and delivery into</text>
+    <text x="0" y="213" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="600">software that teams can understand, verify and trust.</text>
+    <g transform="translate(0 246)">
+      <rect width="142" height="34" rx="9" fill="#11182F" stroke="#273449"/>
+      <text x="71" y="22" text-anchor="middle" fill="#67E8F9" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" font-weight="700">PRODUCT SYSTEMS</text>
+      <rect x="154" width="118" height="34" rx="9" fill="#11182F" stroke="#273449"/>
+      <text x="213" y="22" text-anchor="middle" fill="#C4B5FD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" font-weight="700">DELIVERY</text>
+      <rect x="284" width="132" height="34" rx="9" fill="#11182F" stroke="#273449"/>
+      <text x="350" y="22" text-anchor="middle" fill="#FDE68A" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" font-weight="700">AI / INFRA</text>
     </g>
   </g>
-
   <g transform="translate(690 42)">
-    <rect x="0" y="0" width="438" height="276" rx="22" fill="#09101F" fill-opacity="0.72" stroke="#23304A"/>
-    <text x="24" y="34" fill="#64748B" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" letter-spacing="1">LIVE ARCHITECTURE MAP</text>
+    <rect width="438" height="276" rx="22" fill="#07101F" fill-opacity="0.78" stroke="#23304A"/>
+    <text x="24" y="34" fill="#64748B" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" letter-spacing="1">DELIVERY SYSTEM MAP</text>
     <circle cx="398" cy="28" r="4" fill="#22D3EE" filter="url(#glow)"/>
     <circle cx="414" cy="28" r="4" fill="#8B5CF6"/>
-
     <g stroke="#334155" stroke-width="2" fill="none">
-      <path d="M82 93 C140 58 165 63 218 104"/>
-      <path d="M218 104 C272 77 315 75 355 107"/>
-      <path d="M218 104 C212 143 215 165 219 203"/>
-      <path d="M82 93 C96 142 126 171 162 205"/>
-      <path d="M162 205 C185 220 199 220 219 203"/>
-      <path d="M219 203 C270 219 312 199 348 172"/>
-      <path d="M355 107 C362 128 359 148 348 172"/>
+      <path d="M68 92 C118 64 145 70 188 105"/>
+      <path d="M188 105 C225 78 262 78 300 105"/>
+      <path d="M300 105 C342 125 354 151 346 184"/>
+      <path d="M188 105 C182 145 184 173 190 210"/>
+      <path d="M68 92 C82 145 111 176 148 210"/>
+      <path d="M148 210 C165 219 176 219 190 210"/>
+      <path d="M190 210 C250 226 307 217 346 184"/>
     </g>
-
     <g>
-      <circle cx="82" cy="93" r="30" fill="#111B35" stroke="#38BDF8" stroke-width="2"/>
-      <text x="82" y="90" text-anchor="middle" fill="#E0F2FE" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="700">WEB</text>
-      <text x="82" y="105" text-anchor="middle" fill="#64748B" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="8">UX</text>
-
-      <circle cx="218" cy="104" r="36" fill="#171331" stroke="#8B5CF6" stroke-width="2"/>
-      <text x="218" y="101" text-anchor="middle" fill="#EDE9FE" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12" font-weight="700">API</text>
-      <text x="218" y="117" text-anchor="middle" fill="#7C6CA6" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="8">DOMAIN</text>
-
-      <circle cx="355" cy="107" r="30" fill="#0B2030" stroke="#22D3EE" stroke-width="2"/>
-      <text x="355" y="104" text-anchor="middle" fill="#CFFAFE" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="700">DATA</text>
-      <text x="355" y="119" text-anchor="middle" fill="#527887" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="8">SQL</text>
-
-      <circle cx="162" cy="205" r="31" fill="#171331" stroke="#A78BFA" stroke-width="2"/>
-      <text x="162" y="202" text-anchor="middle" fill="#EDE9FE" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="700">AI</text>
-      <text x="162" y="217" text-anchor="middle" fill="#7C6CA6" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="8">TOOLS</text>
-
-      <circle cx="219" cy="203" r="23" fill="#271B0A" stroke="#F59E0B" stroke-width="2"/>
-      <text x="219" y="207" text-anchor="middle" fill="#FDE68A" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10" font-weight="800">SHIP</text>
-
-      <circle cx="348" cy="172" r="30" fill="#101D2E" stroke="#60A5FA" stroke-width="2"/>
-      <text x="348" y="169" text-anchor="middle" fill="#DBEAFE" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="700">CI</text>
-      <text x="348" y="184" text-anchor="middle" fill="#5F7899" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="8">VERIFY</text>
+      <circle cx="68" cy="92" r="31" fill="#0C1B31" stroke="#38BDF8" stroke-width="2"/>
+      <text x="68" y="88" text-anchor="middle" fill="#E0F2FE" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10" font-weight="700">BUSINESS</text>
+      <text x="68" y="104" text-anchor="middle" fill="#64748B" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="8">PROCESS</text>
+      <circle cx="188" cy="105" r="35" fill="#171331" stroke="#8B5CF6" stroke-width="2"/>
+      <text x="188" y="101" text-anchor="middle" fill="#EDE9FE" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10" font-weight="700">CONTRACT</text>
+      <text x="188" y="117" text-anchor="middle" fill="#7C6CA6" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="8">REQS</text>
+      <circle cx="300" cy="105" r="32" fill="#101D2E" stroke="#60A5FA" stroke-width="2"/>
+      <text x="300" y="101" text-anchor="middle" fill="#DBEAFE" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10" font-weight="700">BUILD</text>
+      <text x="300" y="117" text-anchor="middle" fill="#5F7899" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="8">SYSTEM</text>
+      <circle cx="148" cy="210" r="31" fill="#171331" stroke="#A78BFA" stroke-width="2"/>
+      <text x="148" y="206" text-anchor="middle" fill="#EDE9FE" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="700">AI</text>
+      <text x="148" y="222" text-anchor="middle" fill="#7C6CA6" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="8">TOOLS</text>
+      <circle cx="190" cy="210" r="24" fill="#271B0A" stroke="#F59E0B" stroke-width="2"/>
+      <text x="190" y="214" text-anchor="middle" fill="#FDE68A" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="9" font-weight="800">SHIP</text>
+      <circle cx="346" cy="184" r="31" fill="#08232A" stroke="#22D3EE" stroke-width="2"/>
+      <text x="346" y="180" text-anchor="middle" fill="#CFFAFE" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10" font-weight="700">VERIFY</text>
+      <text x="346" y="196" text-anchor="middle" fill="#527887" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="8">UAT / CI</text>
     </g>
-
-    <g transform="translate(24 246)">
-      <text x="0" y="0" fill="#475569" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="9">contract → implementation → evidence → iteration</text>
+    <g transform="translate(24 248)">
+      <text fill="#475569" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="9">discover → define → build → verify → ship → learn</text>
       <circle cx="388" cy="-4" r="3" fill="#F59E0B"/>
     </g>
   </g>
