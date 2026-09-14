@@ -1,0 +1,36 @@
+[
+  {
+    "type": "normal",
+    "fileName": "profile-enzo-dark.svg",
+    "backgroundColor": "#050816",
+    "foregroundColor": "#E6EDF7",
+    "strongColor": "#F59E0B",
+    "weakColor": "#64748B",
+    "radarColor": "#22D3EE",
+    "growingAnimation": true,
+    "contribColors": [
+      "#111827",
+      "#312E81",
+      "#6D28D9",
+      "#0EA5E9",
+      "#F59E0B"
+    ]
+  },
+  {
+    "type": "normal",
+    "fileName": "profile-enzo-light.svg",
+    "backgroundColor": "#F8FAFC",
+    "foregroundColor": "#0F172A",
+    "strongColor": "#B45309",
+    "weakColor": "#64748B",
+    "radarColor": "#0284C7",
+    "growingAnimation": true,
+    "contribColors": [
+      "#E2E8F0",
+      "#C4B5FD",
+      "#818CF8",
+      "#38BDF8",
+      "#F59E0B"
+    ]
+  }
+]
