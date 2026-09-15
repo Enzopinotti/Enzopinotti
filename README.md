@@ -91,7 +91,12 @@ React + TypeScript public portfolio paired with a private `/admin` CMS, using Go
 
 Educational full-stack lab comparing **Huffman** and **Shannon-Fano** lossless compression through an interactive React UI, Express API, algorithm tests, file-format handling and Docker execution.
 
-> Public repositories are being reviewed and classified so this profile clearly distinguishes **current work**, **reusable tooling**, **experiments** and **historical projects**. The modern Node.js starter will join this section when its public `main` branch matches the same standard.
+### 🧰 [Plantilla de Proyecto — Node Service Starter](https://github.com/Enzopinotti/Plantilla-de-Proyecto)
+**Reusable backend foundation + explicit runtime contracts**
+
+A deliberately small **Node.js 22 + TypeScript + Fastify 5 + Zod** HTTP starter with validated configuration, deterministic `/health`, structured 404/500 behavior, graceful shutdown, Vitest coverage, `npm ci` reproducibility and a read-only SHA-pinned GitHub Actions quality gate. Product-specific auth, databases, mail, queues and realtime dependencies stay out of the baseline until they are actually needed.
+
+> Selected builds are intentionally limited to a small set of repositories that show different engineering signals: product delivery, integrations, algorithms, evolutionary modernization and reusable foundations.
 
 ---
 
@@ -157,7 +162,7 @@ I also work with **Power BI, Looker Studio, Excel and Google Apps Script** when 
 
 ## 07 // CORE TOOLCHAIN
 
-Recent public compatibility proof in `El_Nucleo_Web`: **Node.js 24 · pnpm 9.15.9 · React 19.3 · Vite 8.3 · TypeScript 6.0.3 · Vitest 5 · ESLint 10 · Prettier 3.9**. Those versions are implementation evidence from one qualified project, not a claim that every repository should chase the same majors.
+Recent public compatibility proof in `El_Nucleo_Web`: **Node.js 24 · pnpm 9.15.9 · React 19.3 · Vite 8.3 · TypeScript 6.0.3 · Vitest 5 · ESLint 10 · Prettier 3.9**. A second public proof, `Plantilla-de-Proyecto`, intentionally uses **Node.js 22 + Fastify 5 + Zod** as a stable reusable-service baseline. The point is verified compatibility and fit-for-purpose choices, not chasing the highest major everywhere.
 
 <p>
   <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
