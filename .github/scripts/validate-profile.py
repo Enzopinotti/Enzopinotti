@@ -88,6 +88,8 @@ def validate_readme() -> str:
         "English B2",
         "Repository portfolio roadmap — 2026",
         "pnpm 11.26.0",
+        "Web-de-profesores",
+        "Pint.ar_Ecommerce",
     )
     for contract in required_story:
         if contract not in text:
@@ -138,6 +140,8 @@ def validate_roadmap() -> None:
         "El_Nucleo_Web",
         "Security beats aesthetics",
         "One major legacy modernization lane at a time",
+        "COMPLETED MODERNIZATIONS / REFERENCE",
+        "NEXT FULL MODERNIZATION",
     )
     for contract in required_contracts:
         if contract not in text:

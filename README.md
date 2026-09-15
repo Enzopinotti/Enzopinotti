@@ -41,9 +41,9 @@ My current focus is building and evolving **operational software and ERP/SaaS-st
 
 What differentiates my profile is the bridge between **business context and technical execution**: I can move from user/stakeholder discovery, AS-IS / TO-BE process analysis and acceptance criteria into frontend/backend work, APIs, data, infrastructure, QA/UAT, release qualification and production follow-up.
 
-A completed public example is **[El_Nucleo_Web](https://github.com/Enzopinotti/El_Nucleo_Web)**: a 2022 HTML/SCSS learning project rebuilt into a modern, tested application **without deleting its history or pretending historical content is current**. The 2026 reconstruction is now deployed and publicly smoke-tested under its production security policy, while the original source remains auditable in Git.
+Two completed public modernization cases now show the method from different angles. **[El_Nucleo_Web](https://github.com/Enzopinotti/El_Nucleo_Web)** rebuilt a 2022 HTML/SCSS project into a production-qualified React application while preserving historical provenance. **[Web-de-profesores](https://github.com/Enzopinotti/Web-de-profesores)** took the opposite architectural lesson: a 2023 JavaScript/localStorage simulator matured into a safe, tested local teaching workspace with Vite + TypeScript **without adding React, backend authentication or a database that the product did not need**.
 
-I am applying the same evidence-first method across older repositories without forcing the same stack onto every project. The current portfolio-wide plan is versioned in **[Repository portfolio roadmap — 2026](./docs/repository-portfolio-roadmap-2026.md)**.
+Both preserve their historical baselines, qualify real deployments and keep rollback evidence. I am applying the same evidence-first method across older repositories without forcing the same stack onto every project. The next full lane is `Pint.ar_Ecommerce`, tracked in **[Repository portfolio roadmap — 2026](./docs/repository-portfolio-roadmap-2026.md)**.
 
 ---
 
@@ -75,6 +75,13 @@ That progression is also why I am increasingly interested in **technical project
 A completed public legacy-to-modern case that keeps the original HTML/SCSS source auditable while the current product runs from **Node.js 24, pnpm 11.26.0, React 19, Vite 8, TypeScript 6, modern Sass and Vitest**. The repository finishes with **30/30 permanent tests**, immutable-SHA CI, provenance/truth-boundary contracts, versioned Netlify deployment policy and a real production smoke in Chrome under enforced CSP.
 
 The engineering constraint is part of the result: historical copy and media keep explicit source context instead of being silently rewritten into present-day commercial claims. The modern deployment is live at **[el-nucleo-producciones.netlify.app](https://el-nucleo-producciones.netlify.app/)** while the 2022 baseline remains recoverable.
+
+### 🎓 [Modderhouse — 2023 → 2026 teaching workspace](https://github.com/Enzopinotti/Web-de-profesores)
+**Fit-for-purpose modernization + recoverable local data + browser-qualified delivery**
+
+A completed JavaScript-learning project that now preserves its exact 2023 baseline while the maintained 2026 workspace uses **Node.js 24, pnpm 11.26.0, Vite 8 and TypeScript 6** with no framework inflation. The current product removes fake password/auth semantics, adds versioned storage recovery, backup/restore, stable-ID editing, undo and neutral classroom summaries, and finishes with **41/41 tests** plus a real Chrome production smoke at 360 / 768 / 1440.
+
+The deployment itself became part of the engineering story: when GitHub's legacy Pages publisher competed with the custom workflow, the repository was changed so both publication paths resolve to a verified equivalent 2026 artifact while the original 14-file project remains byte-for-byte auditable under `historical/2023/`.
 
 ### 🌐 [Portfolio — enzopinotti.dev](https://enzopinotti.dev)
 **Full-stack product + production operations**
