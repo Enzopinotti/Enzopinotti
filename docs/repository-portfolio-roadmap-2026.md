@@ -1,6 +1,7 @@
 # Repository portfolio roadmap — 2026
 
 Snapshot date: 2026-09-15  
+Last program update: 2026-09-15 — `Web-de-profesores` P1 completed and P2 selected  
 Owner: `Enzopinotti`  
 Scope: repositories accessible under the owner's GitHub installation at the time of this audit
 
@@ -123,7 +124,7 @@ Several names clearly form lineages or pairs and should be audited together befo
 | Repository | Visibility | Class | Current interpretation | Recommended treatment | Priority |
 | --- | --- | --- | --- | --- | --- |
 | `El_Nucleo_Web` | Public | A | Completed historical reconstruction | Maintain; use as modernization reference | Done |
-| `Web-de-profesores` | Public | B | 2023 JavaScript teacher/student simulator with localStorage and JSON | Next full historical modernization; remove credential-like demo behavior from current authority | P1 |
+| `Web-de-profesores` | Public | A | Completed 2023 → 2026 teaching-workspace modernization with exact historical archive, local-data recovery and production-qualified Pages delivery | Maintain as fit-for-purpose modernization reference; do not reopen as a generic rewrite | Done |
 | `Pint.ar_Ecommerce` | Public | B | 2023 React 18 / CRA / Firebase ecommerce learning project | Platform migration + Firebase/data/security audit while preserving course context | P2 |
 | `App_Agenda_Medico` | Public | C | Python TAD/data-structure medical agenda exercise | Preserve academic purpose; add packaging, typing, tests, CLI quality and repo hygiene | P3 |
 | `Web_de_vinos` | Public | B | HTML/SCSS learning site with `node-sass` and committed `node_modules` | Repository hygiene + modern Sass/tooling; avoid duplicating El Núcleo rewrite for appearance | P4 |
@@ -179,22 +180,26 @@ Reason: a public committed `.env` is a potential exposure boundary. Determine wh
 
 This is intentionally a small security lane, not a full product rewrite.
 
-### P1 — `Web-de-profesores`
+### P1 — `Web-de-profesores` — COMPLETED
 
-This is the recommended next **full modernization case**.
+This lane is complete and now acts as a second modernization reference with a deliberately different architecture from El Núcleo.
 
-Why it is strategically useful:
+Final evidence:
 
-- it follows the historical timeline directly after El Núcleo;
-- it introduces JavaScript application behavior rather than repeating another static HTML/SCSS modernization;
-- it has login/registration-like flows, student state, filtering and JSON-backed tutor data;
-- it stores demo credentials in browser localStorage and sends credential-like values through GET forms;
-- it has GitHub Pages enabled;
-- it can demonstrate the important distinction between **a local simulation and real authentication**.
+- historical baseline: `d6a38f5795569131ff4cd0db63640aff8dc09007`;
+- exact navigable archive under `historical/2023/`, with 14/14 historical files verified against their original Git blob SHA-1;
+- maintained 2026 source under `modern/` using Node 24, pnpm 11.26.0, Vite 8 and TypeScript 6 without React or a backend;
+- no current password collection or fake authentication; legacy `Usuarios` storage is purged by the maintained app;
+- versioned local persistence, explicit recovery, backup/restore, stable-ID editing, undo, neutral summaries and sorting;
+- 5 test files / 41 tests / 41 passed plus lint, typecheck, docs, build and Pages-mirror integrity gates;
+- production Pages authority made deterministic even while GitHub's legacy branch publisher remains enabled;
+- final main merge: `46bcd66f1a25f5c0879f40dfb924011959368225`;
+- final quality run `35016810900`: success;
+- custom Pages run `35016810998`: success;
+- legacy Pages run `35016808192`: success;
+- real-Chrome production smoke `35001016659`: success after validating recovery and 360 / 768 / 1440 responsive contracts.
 
-Modernization should not invent a backend. A likely target is a safe local demo/session model with no password collection, semantic UI, typed domain state, deterministic fixtures, tests, accessibility, package/runtime authority, CI and a controlled Pages/deployment decision.
-
-The stack must be chosen after repository discovery. React is not mandatory. A small Vite + TypeScript application may be the better proof of fit-for-purpose engineering.
+The important portfolio signal is not the toolchain itself. This repository demonstrates that maturity can mean **choosing a smaller architecture, removing false security semantics, making destructive operations recoverable and turning deployment ambiguity into a tested contract**.
 
 ### P2 — `Pint.ar_Ecommerce`
 
@@ -331,17 +336,17 @@ Each modernization/audit should evaluate the following, but adopt implementation
 ## 11. Current portfolio program state
 
 ```text
-COMPLETED REFERENCE
+COMPLETED MODERNIZATIONS / REFERENCE
 El_Nucleo_Web
+Web-de-profesores
 
 IMMEDIATE SECURITY TRIAGE
 TrackIt_Frontend
 
 NEXT FULL MODERNIZATION
-Web-de-profesores
+Pint.ar_Ecommerce
 
 FOLLOWING HISTORICAL LANES
-Pint.ar_Ecommerce
 App_Agenda_Medico
 Web_de_vinos
 backend/full-stack lineage
@@ -366,16 +371,17 @@ empty and near-empty repositories
 
 ## 12. Next decision gate
 
-Before implementation begins in `Web-de-profesores`, perform a repository-specific baseline audit:
+Before implementation begins in `Pint.ar_Ecommerce`, perform a repository-specific audit before choosing migrations or upgrading Firebase/React:
 
-- identify baseline/main SHA and material history;
-- inventory views, CSS, JS, JSON and media;
-- inspect the current GitHub Pages deployment;
-- document exact historical behaviors;
-- classify credential-like and personal-data flows;
-- choose the smallest appropriate 2026 stack;
-- create an umbrella issue + standards issue/contract;
-- preserve the historical source until an explicit cutover;
-- update this portfolio roadmap when the lane moves from planned → active → completed.
+- identify the exact historical baseline, commit chronology and course/project context;
+- inventory CRA/React dependencies, routes, cart/order state, Firebase integration, assets and deployment files;
+- classify Firebase configuration separately from secrets and never print sensitive values into issues/logs;
+- determine what Firestore collections/documents/rules the frontend actually assumes, without inventing missing backend behavior;
+- verify cart totals, quantities, checkout/order creation and error/loading states from the existing implementation;
+- probe the current public deployment and distinguish historical URLs from maintained authority;
+- review accessibility, responsive behavior and current media cost;
+- choose the smallest justified migration path only after the runtime/data contracts are understood;
+- create the repository umbrella issue from evidence, not from a framework-upgrade checklist;
+- preserve the historical learning version and update this roadmap when P2 moves planned → active → completed.
 
-This document is an execution map, not a promise that every repository will be rewritten.
+`TrackIt_Frontend` remains a separate P0 security triage and must not be folded into this P2 implementation lane.
