@@ -9,6 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 README = ROOT / "README.md"
+ROADMAP = ROOT / "docs" / "repository-portfolio-roadmap-2026.md"
 SETTINGS = ROOT / ".github" / "profile-3d-settings.json"
 BRAND_SCRIPT = ROOT / ".github" / "scripts" / "brand-profile-3d.py"
 PROFILE_3D_WORKFLOW = ROOT / ".github" / "workflows" / "profile-3d.yml"
@@ -85,10 +86,12 @@ def validate_readme() -> str:
         "business ↔ technology",
         "QA/UAT",
         "English B2",
+        "Repository portfolio roadmap — 2026",
+        "pnpm 11.26.0",
     )
     for contract in required_story:
         if contract not in text:
-            fail(f"career narrative lost required contract: {contract}")
+            fail(f"career/profile narrative lost required contract: {contract}")
 
     inflated_claims = (
         "SAP expert",
@@ -113,6 +116,36 @@ def validate_readme() -> str:
             fail(f"local image referenced by README does not exist: {raw_path}")
 
     return text
+
+
+def validate_roadmap() -> None:
+    if not ROADMAP.exists():
+        fail("repository portfolio roadmap is missing")
+
+    text = ROADMAP.read_text(encoding="utf-8")
+
+    if len(text.encode("utf-8")) > 100_000:
+        fail("repository portfolio roadmap exceeded the 100 KiB documentation budget")
+
+    required_contracts = (
+        "46 repositories",
+        "## 5. Complete repository classification",
+        "## 6. Recommended execution order",
+        "TrackIt_Frontend",
+        "Web-de-profesores",
+        "Pint.ar_Ecommerce",
+        "App_Agenda_Medico",
+        "El_Nucleo_Web",
+        "Security beats aesthetics",
+        "One major legacy modernization lane at a time",
+    )
+    for contract in required_contracts:
+        if contract not in text:
+            fail(f"portfolio roadmap lost required contract: {contract}")
+
+    for placeholder in ("YOUR-", "TODO", "example.com"):
+        if placeholder in text:
+            fail(f"placeholder leaked into portfolio roadmap: {placeholder}")
 
 
 def validate_settings() -> None:
@@ -195,6 +228,7 @@ def validate_svgs() -> None:
 
 def main() -> None:
     validate_readme()
+    validate_roadmap()
     validate_settings()
     validate_brand_script()
     validate_profile_3d_workflow()
