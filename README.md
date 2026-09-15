@@ -41,6 +41,8 @@ My current focus is building and evolving **operational software and ERP/SaaS-st
 
 What differentiates my profile is the bridge between **business context and technical execution**: I can move from user/stakeholder discovery, AS-IS / TO-BE process analysis and acceptance criteria into frontend/backend work, APIs, data, infrastructure, QA/UAT, release qualification and production follow-up.
 
+A current public example is **[El_Nucleo_Web](https://github.com/Enzopinotti/El_Nucleo_Web)**: I am rebuilding a 2022 HTML/SCSS learning project as a modern application **without deleting its history or pretending old content is current**. The merged Home and Nosotros slices are backed by locked-dependency CI, behavior tests, source/blob provenance and production-build browser evidence across mobile, tablet and desktop.
+
 ---
 
 ## 02 // CAREER ARC
@@ -65,6 +67,13 @@ That progression is also why I am increasingly interested in **technical project
 
 ## 03 // SELECTED BUILDS
 
+### 🎬 [El Núcleo — 2022 → 2026 reconstruction](https://github.com/Enzopinotti/El_Nucleo_Web)
+**Evolutionary modernization + provenance + browser-qualified delivery**
+
+A public legacy-to-modern migration that keeps the original HTML/SCSS site intact while rebuilding the product surface with **Node.js 24, pnpm, React 19, Vite 8, TypeScript 6, modern Sass and Vitest**. The merged Home and Nosotros slices combine accessible archive navigation with explicit 2022 → 2026 truth boundaries and have been revalidated on `main` through immutable-SHA CI plus real Chrome evidence at 360 / 768 / 1440 px.
+
+The engineering constraint is part of the project: historical copy and media keep explicit source context instead of being silently rewritten into present-day commercial claims.
+
 ### 🌐 [Portfolio — enzopinotti.dev](https://enzopinotti.dev)
 **Full-stack product + production operations**
 
@@ -82,7 +91,12 @@ React + TypeScript public portfolio paired with a private `/admin` CMS, using Go
 
 Educational full-stack lab comparing **Huffman** and **Shannon-Fano** lossless compression through an interactive React UI, Express API, algorithm tests, file-format handling and Docker execution.
 
-> Public repositories are being reviewed and classified so this profile clearly distinguishes **current work**, **reusable tooling**, **experiments** and **historical projects**. The modern Node.js starter will join this section when its public `main` branch matches the same standard.
+### 🧰 [Plantilla de Proyecto — Node Service Starter](https://github.com/Enzopinotti/Plantilla-de-Proyecto)
+**Reusable backend foundation + explicit runtime contracts**
+
+A deliberately small **Node.js 22 + TypeScript + Fastify 5 + Zod** HTTP starter with validated configuration, deterministic `/health`, structured 404/500 behavior, graceful shutdown, Vitest coverage, `npm ci` reproducibility and a read-only SHA-pinned GitHub Actions quality gate. Product-specific auth, databases, mail, queues and realtime dependencies stay out of the baseline until they are actually needed.
+
+> Selected builds are intentionally limited to a small set of repositories that show different engineering signals: product delivery, integrations, algorithms, evolutionary modernization and reusable foundations.
 
 ---
 
@@ -147,6 +161,8 @@ I also work with **Power BI, Looker Studio, Excel and Google Apps Script** when 
 ---
 
 ## 07 // CORE TOOLCHAIN
+
+Recent public compatibility proof in `El_Nucleo_Web`: **Node.js 24 · pnpm 9.15.9 · React 19.3 · Vite 8.3 · TypeScript 6.0.3 · Vitest 5 · ESLint 10 · Prettier 3.9**. A second public proof, `Plantilla-de-Proyecto`, intentionally uses **Node.js 22 + Fastify 5 + Zod** as a stable reusable-service baseline. The point is verified compatibility and fit-for-purpose choices, not chasing the highest major everywhere.
 
 <p>
   <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
