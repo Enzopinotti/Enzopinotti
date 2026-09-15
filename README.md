@@ -41,7 +41,7 @@ My current focus is building and evolving **operational software and ERP/SaaS-st
 
 What differentiates my profile is the bridge between **business context and technical execution**: I can move from user/stakeholder discovery, AS-IS / TO-BE process analysis and acceptance criteria into frontend/backend work, APIs, data, infrastructure, QA/UAT, release qualification and production follow-up.
 
-A current public example is **[El_Nucleo_Web](https://github.com/Enzopinotti/El_Nucleo_Web)**: I am rebuilding a 2022 HTML/SCSS learning project as a modern application **without deleting its history or pretending old content is current**. The first merged product slice is backed by locked-dependency CI, behavior tests, source/blob provenance and production-build browser evidence across mobile, tablet and desktop.
+A current public example is **[El_Nucleo_Web](https://github.com/Enzopinotti/El_Nucleo_Web)**: I am rebuilding a 2022 HTML/SCSS learning project as a modern application **without deleting its history or pretending old content is current**. The merged Home and Nosotros slices are backed by locked-dependency CI, behavior tests, source/blob provenance and production-build browser evidence across mobile, tablet and desktop.
 
 ---
 
@@ -70,7 +70,7 @@ That progression is also why I am increasingly interested in **technical project
 ### 🎬 [El Núcleo — 2022 → 2026 reconstruction](https://github.com/Enzopinotti/El_Nucleo_Web)
 **Evolutionary modernization + provenance + browser-qualified delivery**
 
-A public legacy-to-modern migration that keeps the original HTML/SCSS site intact while rebuilding the product surface with **Node.js 24, pnpm, React 19, Vite 8, TypeScript 6, modern Sass and Vitest**. The merged Home slice replaces duplicated Bootstrap interaction with an accessible archive experience and has been revalidated on `main` through immutable-SHA CI plus real Chrome evidence at 360 / 768 / 1440 px.
+A public legacy-to-modern migration that keeps the original HTML/SCSS site intact while rebuilding the product surface with **Node.js 24, pnpm, React 19, Vite 8, TypeScript 6, modern Sass and Vitest**. The merged Home and Nosotros slices combine accessible archive navigation with explicit 2022 → 2026 truth boundaries and have been revalidated on `main` through immutable-SHA CI plus real Chrome evidence at 360 / 768 / 1440 px.
 
 The engineering constraint is part of the project: historical copy and media keep explicit source context instead of being silently rewritten into present-day commercial claims.
 
