@@ -1,7 +1,7 @@
 # Repository portfolio roadmap — 2026
 
 Snapshot date: 2026-09-15  
-Last program update: 2026-09-15 — `Web-de-profesores` P1 completed and P2 selected  
+Last program update: 2026-09-15 — `Pint.ar_Ecommerce` P2 completed; Meow Matrix selected as next ecommerce showcase
 Owner: `Enzopinotti`  
 Scope: repositories accessible under the owner's GitHub installation at the time of this audit
 
@@ -125,7 +125,7 @@ Several names clearly form lineages or pairs and should be audited together befo
 | --- | --- | --- | --- | --- | --- |
 | `El_Nucleo_Web` | Public | A | Completed historical reconstruction | Maintain; use as modernization reference | Done |
 | `Web-de-profesores` | Public | A | Completed 2023 → 2026 teaching-workspace modernization with exact historical archive, local-data recovery and production-qualified Pages delivery | Maintain as fit-for-purpose modernization reference; do not reopen as a generic rewrite | Done |
-| `Pint.ar_Ecommerce` | Public | B | 2023 React 18 / CRA / Firebase ecommerce learning project | Platform migration + Firebase/data/security audit while preserving course context | P2 |
+| `Pint.ar_Ecommerce` | Public | A | Completed 2023 → 2026 React ecommerce modernization with typed domain contracts, hardened Docker runtime and production-qualified Pages | Maintain as storefront/product-engineering reference; historical CRA/Firebase source remains auditable | Done |
 | `App_Agenda_Medico` | Public | C | Python TAD/data-structure medical agenda exercise | Preserve academic purpose; add packaging, typing, tests, CLI quality and repo hygiene | P3 |
 | `Web_de_vinos` | Public | B | HTML/SCSS learning site with `node-sass` and committed `node_modules` | Repository hygiene + modern Sass/tooling; avoid duplicating El Núcleo rewrite for appearance | P4 |
 | `Proyecto_Backend` | Public | D | Express/Mongo/Auth/Swagger/tests/Docker/Kubernetes learning backend | Deep backend/security/runtime audit; remove repo artifacts; determine lineage with Meow backend | P5 |
@@ -133,8 +133,8 @@ Several names clearly form lineages or pairs and should be audited together befo
 | `GIUCT-SQL-v1` | Public | F | Empty/stub repository | Verify history; archive/supersede if appropriate | Later |
 | `Plantilla-de-Proyecto` | Public | A | Current reusable Node/TypeScript/Fastify service starter | Maintain as reference; periodic compatibility/security audit only | Reference |
 | `Ecommerce_NestJS` | Public | C/D | NestJS TypeScript ecommerce exercise with tests/config | Audit as backend learning artifact; modernize only after earlier lineage | P6 |
-| `Meow-Matrix---Frontend` | Public | D | React 18 CRA frontend | Audit with Meow backend as one full-stack product lineage | P5 |
-| `MeowMatrix---Backend-2v` | Public | D | Express/Mongo/Auth backend similar to Proyecto_Backend | Compare lineage/supersession first; then one consolidated hardening plan | P5 |
+| `Meow-Matrix---Frontend` | Public | D | React 18 CRA ecommerce frontend paired with Meow backend | Audit with backend as the next full-stack ecommerce showcase; preserve historical course/product lineage | Next ecommerce |
+| `MeowMatrix---Backend-2v` | Public | D | Express/Mongo/Auth ecommerce backend paired with Meow frontend | Deep security/runtime/data audit, then one consolidated full-stack modernization plan | Next ecommerce |
 | `StarWars_App_NextJS` | Public | C/B | Next.js 14 + React 18 + i18n learning app | Framework-maintenance audit; preserve API/content-learning purpose | P7 |
 | `Portfolio_Backend` | Public | F/C | Small NestJS-style backend scaffold | Determine whether superseded by `portafolio-personal`; avoid parallel fake maintenance | Later |
 | `luciano-legnoverde` | Public | E | Client/person landing by naming/context | Ownership/deploy/content/privacy audit before technical changes | Client lane |
@@ -201,20 +201,28 @@ Final evidence:
 
 The important portfolio signal is not the toolchain itself. This repository demonstrates that maturity can mean **choosing a smaller architecture, removing false security semantics, making destructive operations recoverable and turning deployment ambiguity into a tested contract**.
 
-### P2 — `Pint.ar_Ecommerce`
+### P2 — `Pint.ar_Ecommerce` — COMPLETED
 
-This is the first substantial React/Firebase modernization candidate.
+Pint.ar is complete and now acts as the portfolio's storefront/product-engineering ecommerce reference while keeping its 2023 learning context explicit.
 
-Primary questions:
+Final evidence:
 
-- CRA → current build platform;
-- Firebase configuration and rules/data contract;
-- order/cart correctness;
-- routing and loading/error states;
-- dependency/runtime authority;
-- testing and deployment;
-- current Vercel endpoint validity;
-- historical course claims vs any present-day product claims.
+- exact historical baseline: `3224d89c0c512b3509cea25f1c49a119d371e338`;
+- maintained authority: `modern/`;
+- final main: `811b223aeea0568d4eae0422fc5ad673e6b10c01`;
+- Node 24 + pnpm 11.26.0 + React 19.3 + React Router 7.18 + Vite 8.2 + TypeScript 6 strict + Sass 1.104;
+- typed catalogue/cart/checkout boundaries, deterministic search/filter/sort and truthful local demo-order semantics;
+- no runtime dependency on the historical Firebase project and no unsupported payment/email/auth claims;
+- 6 test files / 20 tests / 20 passed;
+- multi-stage Docker Node → Nginx runtime qualified as non-root, read-only, capability-dropped and `no-new-privileges`;
+- public authority: `https://enzopinotti.github.io/Pint.ar_Ecommerce/`;
+- a real custom-vs-branch Pages publication race was reproduced, then neutralized with a repository-root compatibility mirror verified byte-for-byte against the maintained Pages artifact;
+- final permanent quality run `35049775048`: success;
+- final custom Pages run `35049775023`: build + deploy + public-smoke success;
+- final dynamic branch/Jekyll Pages run `35049772400`: success;
+- public smoke verifies the live HTML/canonical/assets/robots/sitemap and direct `/carrito` navigation in Chrome.
+
+The portfolio signal is deliberately different from Web-de-profesores: here React, state and Docker are justified by the ecommerce workflow, while backend/auth/payment infrastructure is still omitted because the storefront demo does not need to pretend to be a commercial transaction platform.
 
 ### P3 — `App_Agenda_Medico`
 
@@ -339,15 +347,18 @@ Each modernization/audit should evaluate the following, but adopt implementation
 COMPLETED MODERNIZATIONS / REFERENCE
 El_Nucleo_Web
 Web-de-profesores
+Pint.ar_Ecommerce
 
 IMMEDIATE SECURITY TRIAGE
 TrackIt_Frontend
 
-NEXT FULL MODERNIZATION
-Pint.ar_Ecommerce
+NEXT ECOMMERCE SHOWCASE
+Meow-Matrix---Frontend + MeowMatrix---Backend-2v
+
+FOLLOWING GENERAL PORTFOLIO LANE
+App_Agenda_Medico
 
 FOLLOWING HISTORICAL LANES
-App_Agenda_Medico
 Web_de_vinos
 backend/full-stack lineage
 Ecommerce_NestJS
@@ -371,17 +382,18 @@ empty and near-empty repositories
 
 ## 12. Next decision gate
 
-Before implementation begins in `Pint.ar_Ecommerce`, perform a repository-specific audit before choosing migrations or upgrading Firebase/React:
+Before implementation begins in the Meow Matrix lineage, perform a paired frontend/backend audit and decide architecture from evidence rather than copying TOP wholesale:
 
-- identify the exact historical baseline, commit chronology and course/project context;
-- inventory CRA/React dependencies, routes, cart/order state, Firebase integration, assets and deployment files;
-- classify Firebase configuration separately from secrets and never print sensitive values into issues/logs;
-- determine what Firestore collections/documents/rules the frontend actually assumes, without inventing missing backend behavior;
-- verify cart totals, quantities, checkout/order creation and error/loading states from the existing implementation;
-- probe the current public deployment and distinguish historical URLs from maintained authority;
-- review accessibility, responsive behavior and current media cost;
-- choose the smallest justified migration path only after the runtime/data contracts are understood;
-- create the repository umbrella issue from evidence, not from a framework-upgrade checklist;
-- preserve the historical learning version and update this roadmap when P2 moves planned → active → completed.
+- identify the exact historical baseline and chronology of both `Meow-Matrix---Frontend` and `MeowMatrix---Backend-2v`;
+- establish whether `Proyecto_Backend` is an ancestor, sibling or superseded backend before moving code between repositories;
+- inventory frontend routes, catalogue/cart/checkout/auth state, API assumptions, environment variables, assets, tests and deployment files;
+- inventory backend routes/controllers/models, Mongo/Mongoose contracts, sessions/JWT/OAuth, password handling, mail/uploads, Swagger/tests and runtime configuration;
+- inspect Docker/Kubernetes history and remove current-authority vendor/binary artifacts such as committed `kubectl.exe` without rewriting Git history;
+- classify every environment/config value without reproducing secrets or credentials in issues/logs/docs;
+- determine which authentication/session flows are actually safe and which are only historical learning implementations;
+- map the real frontend ↔ backend API contract, error/loading states and checkout/order ownership before framework upgrades;
+- choose the smallest justified 2026 full-stack architecture, borrowing TOP practices for typing, boundaries, CI, Docker, security and documentation without importing multi-tenant SaaS complexity;
+- create or update the Meow Matrix umbrella modernization issue from evidence before implementation;
+- keep `App_Agenda_Medico` as the following general portfolio lane once the ecommerce pair is closed.
 
-`TrackIt_Frontend` remains a separate P0 security triage and must not be folded into this P2 implementation lane.
+The target distinction is explicit: **Pint.ar demonstrates a mature storefront; Meow Matrix should demonstrate a mature full-stack ecommerce system**. The two repositories should complement each other rather than converge into the same architecture.
