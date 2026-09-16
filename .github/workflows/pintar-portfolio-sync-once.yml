@@ -64,6 +64,14 @@ jobs:
           source = source.replace(old_story, new_story, 1)
 
           exec(compile(source, str(path), 'exec'), {'__file__': str(path), '__name__': '__main__'})
+
+          roadmap_path = Path('docs/repository-portfolio-roadmap-2026.md')
+          roadmap_text = roadmap_path.read_text(encoding='utf-8')
+          dirty_header = 'Last program update: 2026-09-15 — `Pint.ar_Ecommerce` P2 completed; Meow Matrix selected as next ecommerce showcase  \n'
+          clean_header = 'Last program update: 2026-09-15 — `Pint.ar_Ecommerce` P2 completed; Meow Matrix selected as next ecommerce showcase\n'
+          if roadmap_text.count(dirty_header) != 1:
+              raise SystemExit('expected one synchronized roadmap header with inherited Markdown whitespace')
+          roadmap_path.write_text(roadmap_text.replace(dirty_header, clean_header, 1), encoding='utf-8')
           PY
 
       - name: Validate profile authority
