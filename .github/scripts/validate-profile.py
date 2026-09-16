@@ -90,6 +90,8 @@ def validate_readme() -> str:
         "pnpm 11.26.0",
         "Web-de-profesores",
         "Pint.ar_Ecommerce",
+        "Meow Matrix",
+        "20/20 tests",
     )
     for contract in required_story:
         if contract not in text:
@@ -141,7 +143,9 @@ def validate_roadmap() -> None:
         "Security beats aesthetics",
         "One major legacy modernization lane at a time",
         "COMPLETED MODERNIZATIONS / REFERENCE",
-        "NEXT FULL MODERNIZATION",
+        "NEXT ECOMMERCE SHOWCASE",
+        "Meow-Matrix---Frontend + MeowMatrix---Backend-2v",
+        "811b223aeea0568d4eae0422fc5ad673e6b10c01",
     )
     for contract in required_contracts:
         if contract not in text:

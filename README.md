@@ -41,9 +41,9 @@ My current focus is building and evolving **operational software and ERP/SaaS-st
 
 What differentiates my profile is the bridge between **business context and technical execution**: I can move from user/stakeholder discovery, AS-IS / TO-BE process analysis and acceptance criteria into frontend/backend work, APIs, data, infrastructure, QA/UAT, release qualification and production follow-up.
 
-Two completed public modernization cases now show the method from different angles. **[El_Nucleo_Web](https://github.com/Enzopinotti/El_Nucleo_Web)** rebuilt a 2022 HTML/SCSS project into a production-qualified React application while preserving historical provenance. **[Web-de-profesores](https://github.com/Enzopinotti/Web-de-profesores)** took the opposite architectural lesson: a 2023 JavaScript/localStorage simulator matured into a safe, tested local teaching workspace with Vite + TypeScript **without adding React, backend authentication or a database that the product did not need**.
+Three completed public modernization cases now show the method from different angles. **[El_Nucleo_Web](https://github.com/Enzopinotti/El_Nucleo_Web)** rebuilt a 2022 HTML/SCSS project into a production-qualified React application while preserving historical provenance. **[Web-de-profesores](https://github.com/Enzopinotti/Web-de-profesores)** took the opposite architectural lesson: a 2023 JavaScript/localStorage simulator matured into a safe, tested local teaching workspace with Vite + TypeScript **without adding React, backend authentication or a database that the product did not need**. **[Pint.ar_Ecommerce](https://github.com/Enzopinotti/Pint.ar_Ecommerce)** keeps React because the ecommerce problem justifies it, but replaces browser-trusted Firebase order semantics with an explicit demo boundary, typed domain contracts, hardened Docker delivery and production-qualified Pages.
 
-Both preserve their historical baselines, qualify real deployments and keep rollback evidence. I am applying the same evidence-first method across older repositories without forcing the same stack onto every project. The next full lane is `Pint.ar_Ecommerce`, tracked in **[Repository portfolio roadmap — 2026](./docs/repository-portfolio-roadmap-2026.md)**.
+All three preserve their historical baselines, qualify real deployments and keep rollback evidence. I am applying the same evidence-first method across older repositories without forcing the same stack onto every project. The next ecommerce showcase is the paired **Meow Matrix frontend/backend** lineage, while `App_Agenda_Medico` remains the following general historical-modernization lane; both are tracked in **[Repository portfolio roadmap — 2026](./docs/repository-portfolio-roadmap-2026.md)**.
 
 ---
 
@@ -82,6 +82,13 @@ The engineering constraint is part of the result: historical copy and media keep
 A completed JavaScript-learning project that now preserves its exact 2023 baseline while the maintained 2026 workspace uses **Node.js 24, pnpm 11.26.0, Vite 8 and TypeScript 6** with no framework inflation. The current product removes fake password/auth semantics, adds versioned storage recovery, backup/restore, stable-ID editing, undo and neutral classroom summaries, and finishes with **41/41 tests** plus a real Chrome production smoke at 360 / 768 / 1440.
 
 The deployment itself became part of the engineering story: when GitHub's legacy Pages publisher competed with the custom workflow, the repository was changed so both publication paths resolve to a verified equivalent 2026 artifact while the original 14-file project remains byte-for-byte auditable under `historical/2023/`.
+
+### 🛒 [Pint.ar — 2023 → 2026 storefront](https://github.com/Enzopinotti/Pint.ar_Ecommerce)
+**Ecommerce product engineering + typed domain contracts + hardened delivery**
+
+A completed React/Firebase learning ecommerce that now preserves its exact 2023 Coderhouse + UTN context while the maintained `modern/` authority uses **Node.js 24, pnpm 11.26.0, React 19.3, Vite 8, TypeScript 6 and Sass**. The storefront adds deterministic search/filter/sort, immutable cart behavior, versioned recovery, a truthful guest checkout demo and **20/20 tests** without inventing payments, authentication or a backend the product does not need.
+
+Delivery is part of the case: a multi-stage Docker image serves through non-root Nginx with read-only/capability-reduced runtime controls, while GitHub Pages uses an explicit repository-subpath build. A real race between the custom Pages workflow and GitHub's legacy branch publisher was neutralized with a **byte-for-byte verified generated mirror**, and the final public workflow runs an Internet-facing Chrome smoke over the home, assets, metadata and direct `/carrito` navigation. Production: **[enzopinotti.github.io/Pint.ar_Ecommerce](https://enzopinotti.github.io/Pint.ar_Ecommerce/)**.
 
 ### 🌐 [Portfolio — enzopinotti.dev](https://enzopinotti.dev)
 **Full-stack product + production operations**
