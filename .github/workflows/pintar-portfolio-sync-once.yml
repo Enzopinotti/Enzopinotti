@@ -1,0 +1,38 @@
+name: Sync Pint.ar completion to portfolio once
+
+on:
+  push:
+    branches:
+      - docs/pintar-complete-meow-next
+    paths:
+      - ".github/workflows/pintar-portfolio-sync-once.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out portfolio branch
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          ref: docs/pintar-complete-meow-next
+
+      - name: Apply deterministic portfolio sync
+        run: python3 .github/scripts/sync-pintar-completion-once.py
+
+      - name: Validate profile authority
+        run: python3 .github/scripts/validate-profile.py
+
+      - name: Commit synchronized authority files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md docs/repository-portfolio-roadmap-2026.md .github/scripts/validate-profile.py
+          git diff --cached --check
+          git commit -m "docs: complete Pint.ar and select Meow Matrix ecommerce lane"
+          git push origin HEAD:docs/pintar-complete-meow-next
