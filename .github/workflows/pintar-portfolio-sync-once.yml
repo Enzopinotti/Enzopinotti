@@ -21,7 +21,30 @@ jobs:
           ref: docs/pintar-complete-meow-next
 
       - name: Apply deterministic portfolio sync
-        run: python3 .github/scripts/sync-pintar-completion-once.py
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path('.github/scripts/sync-pintar-completion-once.py')
+          source = path.read_text(encoding='utf-8')
+          old = '''roadmap = replace_section(
+              roadmap,
+              "## 12. Next decision gate",
+              "## 13.",
+              next_gate,
+              "roadmap next decision gate",
+          )'''
+          new = '''next_gate_start = roadmap.find("## 12. Next decision gate")
+          if next_gate_start < 0:
+              raise SystemExit("roadmap next decision gate: start marker missing")
+          roadmap = roadmap[:next_gate_start] + next_gate.rstrip() + "\\n"'''
+          if source.count(old) != 1:
+              raise SystemExit('expected one final decision-gate selector to repair')
+          fixed = source.replace(old, new, 1)
+          exec(compile(fixed, str(path), 'exec'), {'__file__': str(path), '__name__': '__main__'})
+          PY
 
       - name: Validate profile authority
         run: python3 .github/scripts/validate-profile.py
