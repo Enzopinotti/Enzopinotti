@@ -1,0 +1,88 @@
+name: Temporary portfolio lane sync
+
+on:
+  push:
+    branches:
+      - portfolio/close-app-agenda-wines-2026
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          ref: portfolio/close-app-agenda-wines-2026
+      - name: Update portfolio authorities
+        shell: bash
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+          import re
+
+          readme = Path('README.md')
+          text = readme.read_text()
+          old = "The next general historical-modernization lane is now **`App_Agenda_Medico`**, followed by **`Web_de_vinos`**, as tracked in **[Repository portfolio roadmap — 2026](./docs/repository-portfolio-roadmap-2026.md)**."
+          new = "The next two historical lanes — **`App_Agenda_Medico`** and **`Web_de_vinos`** — are now complete with their original provenance preserved and permanent CI in place. The next general maintenance lane is **`Ecommerce_NestJS`**, as tracked in **[Repository portfolio roadmap — 2026](./docs/repository-portfolio-roadmap-2026.md)**."
+          if old not in text:
+              raise SystemExit('README current-lane sentence not found')
+          readme.write_text(text.replace(old, new))
+
+          roadmap = Path('docs/repository-portfolio-roadmap-2026.md')
+          text = roadmap.read_text()
+          text = text.replace(
+              'Last program update: 2026-09-17 — Meow Matrix provider-neutral B7 carrier completed; `App_Agenda_Medico` selected as next general legacy lane',
+              'Last program update: 2026-09-17 — `App_Agenda_Medico` and `Web_de_vinos` completed; `Ecommerce_NestJS` selected as next general maintenance lane',
+          )
+          text = text.replace(
+              '| `App_Agenda_Medico` | Public | C/B | 2023 Python TAD/data-structure medical agenda | **Next active general lane**: preserve baseline, typing/tests/CI/hygiene |',
+              '| `App_Agenda_Medico` | Public | A/C | 2023 Python TAD exercise with separate 2026 typed authority | **Completed**: FIFO fix, 11 tests, Python 3.12/3.13/3.14 CI |',
+          )
+          text = text.replace(
+              '| `Web_de_vinos` | Public | B | Historical HTML/SCSS learning site; README now contextualized | Following lane: Sass/build/repo hygiene, no framework inflation |',
+              '| `Web_de_vinos` | Public | A/B | Nicolas Dadario 2023 HTML/SCSS baseline with 2026 maintenance lane | **Completed**: Dart Sass, portable HTML, truthful demo forms, CI + Pages |',
+          )
+
+          app_section = '''### P3 — `App_Agenda_Medico` — COMPLETED\n\nThe 2023 collaborative TAD/data-structure exercise remains auditable at baseline `390ac3591b089e0aefd6dc5f971c3e8d22e57794`, including original collaborator history. The maintained 2026 authority is deliberately separate under `modern/` and uses standard-library-first Python rather than turning the exercise into a web product.\n\nCompleted evidence:\n\n- `Paciente` / `Cita` immutable dataclasses and an encapsulated `Agenda`;\n- real FIFO `ColaCitas` via `deque.popleft()`, fixing the historical `list.pop()` LIFO behavior;\n- date/time represented by Python standard types;\n- maintained console interface with no external runtime dependencies;\n- eight tracked `.pyc`/`__pycache__` artifacts removed from current authority;\n- **11/11 behavior tests** across Python 3.12, 3.13 and 3.14;\n- PR #5 merged with exact-head guard;\n- final `main`: `d6a335738eb0c9b4dc8751049faa3c21a97bad00`;\n- post-merge `Python quality` run `35229223343` succeeded on all three Python versions.\n\n### P4 — `Web_de_vinos` — COMPLETED\n\nThe repository now preserves its actual provenance: the historical baseline `c95ca4bad1b11f0c946a3c04764c63ca18e6d7c6` was authored by Nicodadario / Nicolas Dadario, while Enzo's contribution is explicitly the 2026 modernization/maintenance lane.\n\nCompleted evidence:\n\n- thousands of generated `node_modules/` files removed from current Git authority while history remains intact;\n- `node-sass` + `nodemon` replaced by exact Dart Sass `1.104.1` with lockfile-v3 reproducibility;\n- legacy Sass `@import` entrypoint migrated to module-based `@use`;\n- committed `css/style.css` is verified as a deterministic build artifact;\n- language, viewport, favicon/local paths and navigation semantics corrected;\n- unnecessary remote Bootstrap JavaScript/jQuery/Popper removed;\n- contact/subscription forms are now visibly non-submitting demos and do not transmit data;\n- custom validator checks five pages, assets, alt text, local references, demo-form truth boundaries and dependency hygiene;\n- permanent CI runs exact install, high-severity audit, site validation, CSS reproducibility and HTTP smoke;\n- PR #3 merged with exact-head guard;\n- final `main`: `cadedaa822e87f7a2131625d2acc197efb6e184f`;\n- post-merge `Static quality` run `35234556753` succeeded;\n- GitHub Pages build/deploy run `35234554578` succeeded for `https://enzopinotti.github.io/Web_de_vinos/`.\n\n### P5 — `Ecommerce_NestJS` — NEXT GENERAL PORTFOLIO LANE\n\nThis is the next framework-specific learning repository to audit as code rather than only documentation. Its README is already contextualized; the dedicated lane should verify the NestJS 10 / Mongo-Mongoose / JWT-Passport application against its real modules and tests before changing dependencies.\n\nThe lane should prioritize dependency/runtime compatibility, configuration/secret boundaries, auth correctness, validation/error contracts, test truth and reproducible CI. It should **not** become a second Meow Matrix ecommerce product.\n'''
+          pattern = r'### P3 — `App_Agenda_Medico`.*?(?=### Later framework-specific learning lanes)'
+          if not re.search(pattern, text, flags=re.S):
+              raise SystemExit('roadmap P3/P4 block not found')
+          text = re.sub(pattern, app_section + '\n', text, count=1, flags=re.S)
+
+          text = text.replace(
+              '''NEXT GENERAL PORTFOLIO LANE\nApp_Agenda_Medico\n\nFOLLOWING HISTORICAL LANE\nWeb_de_vinos\n\nLATER FRAMEWORK-SPECIFIC LANES\nEcommerce_NestJS\nStarWars_App_NextJS''',
+              '''COMPLETED HISTORICAL / ACADEMIC LANES\nApp_Agenda_Medico\nWeb_de_vinos\n\nNEXT GENERAL PORTFOLIO LANE\nEcommerce_NestJS\n\nFOLLOWING FRAMEWORK-SPECIFIC LANE\nStarWars_App_NextJS''',
+          )
+
+          decision = '''## 12. Next decision gate\n\nThe next implementation gate is `Ecommerce_NestJS`.\n\nBefore changing behavior:\n\n- pin the current historical authority and inspect authorship/history;\n- inventory Nest modules, DTOs, guards/strategies, Mongo schemas, mail/configuration and test coverage;\n- identify any tracked secrets or misleading browser/server configuration before dependency upgrades;\n- establish the currently reproducible Node/package-manager/runtime boundary;\n- run existing unit/e2e tests and distinguish real regressions from stale starter scaffolding;\n- decide the smallest maintained Nest/Node/Mongoose upgrade that preserves the learning project;\n- add deterministic CI and dependency/security checks;\n- preserve its status as a framework-learning backend rather than duplicating Meow Matrix.\n\nThe target story is explicit: **a real NestJS learning backend whose auth, persistence, configuration and tests are understandable and reproducible in 2026, without inventing a second production ecommerce platform.**\n'''
+          text = re.sub(r'## 12\. Next decision gate\n.*\Z', decision, text, count=1, flags=re.S)
+          roadmap.write_text(text)
+
+          validator = Path('.github/scripts/validate-profile.py')
+          text = validator.read_text()
+          text = text.replace(
+              '        "App_Agenda_Medico",\n        "20/20 tests",',
+              '        "App_Agenda_Medico",\n        "Web_de_vinos",\n        "Ecommerce_NestJS",\n        "20/20 tests",',
+          )
+          text = text.replace(
+              '        "390ac3591b089e0aefd6dc5f971c3e8d22e57794",\n',
+              '        "390ac3591b089e0aefd6dc5f971c3e8d22e57794",\n        "d6a335738eb0c9b4dc8751049faa3c21a97bad00",\n        "c95ca4bad1b11f0c946a3c04764c63ca18e6d7c6",\n        "cadedaa822e87f7a2131625d2acc197efb6e184f",\n',
+          )
+          stale_marker = '        "The next ecommerce showcase is the paired",\n'
+          text = text.replace(
+              stale_marker,
+              stale_marker + '        "The next general historical-modernization lane is now **`App_Agenda_Medico`**",\n',
+          )
+          validator.write_text(text)
+          PY
+      - name: Commit synchronized authorities
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add README.md docs/repository-portfolio-roadmap-2026.md .github/scripts/validate-profile.py
+          git commit -m 'docs: close App Agenda and Web de vinos lanes'
+          git push origin HEAD:portfolio/close-app-agenda-wines-2026
