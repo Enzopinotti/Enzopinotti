@@ -92,6 +92,8 @@ def validate_readme() -> str:
         "Pint.ar_Ecommerce",
         "Meow Matrix",
         "App_Agenda_Medico",
+        "Web_de_vinos",
+        "Ecommerce_NestJS",
         "20/20 tests",
         "182071b3e8148196861ee2f38e99a1ebfd0e1294",
     )
@@ -101,6 +103,7 @@ def validate_readme() -> str:
 
     stale_story = (
         "The next ecommerce showcase is the paired",
+        "The next general historical-modernization lane is now **`App_Agenda_Medico`**",
         "Three completed public modernization cases",
     )
     for stale in stale_story:
@@ -160,6 +163,9 @@ def validate_roadmap() -> None:
         "811b223aeea0568d4eae0422fc5ad673e6b10c01",
         "182071b3e8148196861ee2f38e99a1ebfd0e1294",
         "390ac3591b089e0aefd6dc5f971c3e8d22e57794",
+        "d6a335738eb0c9b4dc8751049faa3c21a97bad00",
+        "c95ca4bad1b11f0c946a3c04764c63ca18e6d7c6",
+        "cadedaa822e87f7a2131625d2acc197efb6e184f",
     )
     for contract in required_contracts:
         if contract not in text:
