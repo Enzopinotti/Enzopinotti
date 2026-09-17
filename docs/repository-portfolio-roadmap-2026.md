@@ -139,10 +139,10 @@ Known pairs/lineages continue to be treated together where appropriate:
 | `Chat_En_Vivo` | Public | F | Near-empty/stub | Verify successor; document/archive rather than invent |
 | `GIUCT-SQL-v1` | Public | F | Empty/stub | Preserve/archive decision |
 | `Plantilla-de-Proyecto` | Public | A/G | Reusable Node/TS/Fastify starter | Maintain/reference |
-| `Ecommerce_NestJS` | Public | C/D | NestJS ecommerce learning backend; README contextualized | Future framework-specific maintenance |
+| `Ecommerce_NestJS` | Public | C/D | NestJS ecommerce learning backend; README contextualized | **Next active general lane**: runtime/auth/config/test maintenance |
 | `Meow-Matrix---Frontend` | Public | A/D | Maintained frontend authority for Meow Matrix | B7 engineering carrier complete; provider cutover external |
 | `MeowMatrix---Backend-2v` | Public | A/D | Maintained backend/release authority for Meow Matrix | B7 engineering carrier complete; provider cutover external |
-| `StarWars_App_NextJS` | Public | C/B | Next.js 14 learning app; README contextualized | Future framework-maintenance lane |
+| `StarWars_App_NextJS` | Public | C/B | Next.js 14 learning app; README contextualized | Following framework-maintenance lane |
 | `Portfolio_Backend` | Public | F/C | Small backend scaffold | Determine supersession vs `portafolio-personal` |
 | `luciano-legnoverde` | Public | E | Client/person landing | Ownership/deploy/content/privacy audit only |
 | `centuryLanding` | Public | E | Client landing | Audit with `centuryBackend` |
@@ -258,7 +258,6 @@ The lane should prioritize dependency/runtime compatibility, configuration/secre
 
 ### Later framework-specific learning lanes
 
-- `Ecommerce_NestJS` — README fixed; later dependency/runtime/auth/test maintenance.
 - `StarWars_App_NextJS` — README fixed; later Next/React/i18n/test maintenance.
 
 ### Historical backend lineage
