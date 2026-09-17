@@ -1,9 +1,9 @@
 # Repository portfolio roadmap — 2026
 
-Snapshot date: 2026-09-15  
-Last program update: 2026-09-15 — `Pint.ar_Ecommerce` P2 completed; Meow Matrix selected as next ecommerce showcase
+Snapshot date: 2026-09-17  
+Last program update: 2026-09-17 — Meow Matrix provider-neutral B7 carrier completed; `App_Agenda_Medico` selected as next general legacy lane  
 Owner: `Enzopinotti`  
-Scope: repositories accessible under the owner's GitHub installation at the time of this audit
+Scope: repositories accessible under the owner's GitHub installation at this audit point
 
 ## 1. Purpose
 
@@ -20,296 +20,262 @@ reference repo    -> reusable engineering baseline
 empty/stub repo   -> archive/supersession decision, not invented code
 ```
 
-The reusable method comes from the completed `El_Nucleo_Web` modernization and its standards issue #6: preserve history, define authority, make installs reproducible, test real risk, document truth boundaries, qualify deployments and keep rollback possible.
+The reusable method is now demonstrated by several different projects: preserve history, define authority, make installs reproducible, test real risk, document truth boundaries, qualify deployments/releases where applicable and keep rollback possible.
 
 ## 2. Inventory boundary
 
-The current snapshot contains **46 repositories**.
+The current snapshot contains **46 repositories** accessible under `Enzopinotti`.
 
-This count is a snapshot, not a permanent account invariant. New repositories may be created after this document and should be classified when they become materially relevant.
+This count is a snapshot, not a permanent account invariant. Visibility matters: public repositories affect portfolio truth and possible secret exposure, while private repositories can contain active product/client material that must not be made public merely to improve the portfolio.
 
-Visibility is important because public repositories affect portfolio truth and possible secret exposure, while private repositories can contain active client/product work that should not automatically be made public.
+The modernization program therefore distinguishes four different actions:
+
+1. **modernize** historical work where engineering progression is valuable;
+2. **maintain** current/reference projects without rewriting them;
+3. **audit** client/product repositories according to ownership, privacy and production need;
+4. **preserve/archive/supersede** empty or obsolete stubs rather than inventing code.
 
 ## 3. Classification model
 
 ### A — Completed modernization / reference implementation
 
-A repository already demonstrates the target method or has recently completed a controlled modernization. These repositories should receive focused maintenance, not another rewrite.
+Controlled modernization is complete. These repositories should receive focused maintenance, not another generic rewrite.
 
 ### B — Historical learning repository worth modernizing
 
-A repository has meaningful historical/product behavior and can demonstrate engineering progression. Modernization should preserve the original learning context and improve reproducibility, safety, testing, accessibility and deployment without inventing present-day product claims.
+Meaningful historical/product behavior can demonstrate progression. Preserve the original context and improve reproducibility, safety, testing, accessibility and deployment where relevant.
 
 ### C — Academic / algorithmic artifact
 
-The learning objective is the core value. Modernization should improve packaging, tests, typing, documentation and reproducibility without turning the exercise into an unrelated SaaS product.
+The exercise itself is the value. Improve packaging, tests, typing and documentation without turning it into unrelated SaaS.
 
-### D — Product / full-stack lineage requiring a dedicated audit
+### D — Product / full-stack lineage requiring dedicated architecture/security treatment
 
-The repository has enough backend/auth/data/infrastructure surface that it needs a security and architecture audit before framework upgrades. Related frontend/backend repositories should be evaluated as one product lineage where appropriate.
+Enough auth/data/infrastructure surface exists that changes must be evidence-led and related repositories may need to be treated as one lineage.
 
 ### E — Client / landing / delivery repository
 
-The main questions are ownership, current deployment, privacy, integrations, content truth and maintainability. These repositories should not receive blanket rewrites merely to increase stack complexity.
+Ownership, current deployment, privacy, integrations, content truth and maintainability matter more than framework novelty.
 
 ### F — Empty, near-empty, superseded or experimental stub
 
-Do not manufacture implementation to make these repositories appear mature. Determine whether the repository should be documented, linked to a successor, archived, kept private or deleted only after explicit ownership/history review.
+Do not manufacture implementation. Determine successor/history and preserve, archive, privatize or remove only with explicit reasoning.
 
 ### G — Active / current engineering system
 
-These repositories are current products, operations tooling or portfolio infrastructure. They need normal product maintenance and targeted audits, not legacy modernization treatment.
+Current product, tooling or portfolio infrastructure. Apply normal product evolution rather than legacy-modernization treatment.
 
-## 4. Immediate cross-portfolio findings
+## 4. Program findings and decisions
 
-### 4.1 `El_Nucleo_Web` is the completed reference case
+### 4.1 Completed public modernization references
 
-The 2022 HTML/SCSS project is now a completed 2026 reconstruction with:
+The completed reference set now covers different architectural lessons:
 
-- historical root preserved;
-- `modern/src` as current source authority;
-- React 19 + Vite 8 + TypeScript 6;
-- Node 24 + pnpm 11.26.0;
-- frozen install and pnpm supply-chain policy;
-- 30/30 permanent tests;
-- accessibility / provenance / truth-boundary contracts;
-- versioned Netlify deployment policy;
-- public production smoke under enforced CSP;
-- production authority at `https://el-nucleo-producciones.netlify.app/`.
+- `El_Nucleo_Web` — historical HTML/SCSS → production-qualified React/Vite/TypeScript reconstruction with provenance and rollback;
+- `Web-de-profesores` — JavaScript/localStorage learning app → safer Vite/TypeScript workspace **without** unnecessary React/backend/database complexity;
+- `Pint.ar_Ecommerce` — React/Firebase learning storefront → typed ecommerce demo with honest trust boundaries, hardened Docker and qualified Pages delivery;
+- `Meow-Matrix---Frontend` + `MeowMatrix---Backend-2v` — full-stack ecommerce lineage brought through backend-owned auth, Mongo persistence, transactional/idempotent commerce, private files, durable side effects, Docker/recovery qualification and immutable no-rebuild registry-promotion rehearsal.
 
-Cutover merge: `c3342e111ba4d7bbe88f04407c0510bfe0fcd1da`.
+Meow Matrix is different from the first three: **the provider-neutral engineering carrier is complete through B7, while the final production cutover remains external-provider work**. It must not be described as publicly deployed until real registry/provider credentials, production services, deploy-by-digest and public qualification exist.
 
-This repository should now be treated as a reference implementation, not reopened as a generic modernization lane.
+Current Meow authorities:
 
-### 4.2 The profile repository is a portfolio authority and must stay synchronized
+- backend `main`: `182071b3e8148196861ee2f38e99a1ebfd0e1294`;
+- frontend pin: `9d64c48d2324703cb594acad8e1bb0c9a3d6191c`;
+- backend post-merge quality: `35224512304` success;
+- backend full-stack/release-chain run: `35224512258` success;
+- backend recovery rehearsal: `35224512305` success;
+- retained release bundle and registry-rehearsal artifacts were published from that full-stack run.
 
-`Enzopinotti/Enzopinotti` is not just decorative README content. It is the public index that explains which repositories represent current engineering ability.
+### 4.2 The profile repository is an authority, not decoration
 
-At the start of this audit its README was stale in two material ways:
+`Enzopinotti/Enzopinotti` must move with proven repository state. A project cannot remain described as “next” after it has already been integrated and qualified.
 
-- it still described El Núcleo as an in-progress Home/Nosotros reconstruction;
-- it still cited pnpm 9.15.9 for El Núcleo even though the completed repository uses pnpm 11.26.0.
+The profile should stay selective; this roadmap carries the full inventory and sequencing.
 
-The profile should remain concise, while this document carries the full portfolio roadmap.
+### 4.3 Security beats aesthetics
 
-### 4.3 Security triage must outrank cosmetic modernization
+`TrackIt_Frontend` entered P0 because a public root `.env` was tracked. The maintained tree hygiene is now corrected by PR #2 / merge `185d6a99239349566421b45483ff57b79d08e3b8`:
 
-`TrackIt_Frontend` currently contains a committed `.env` file in the public repository tree.
+- root `.env` removed from current authority;
+- `.env` files ignored;
+- value-free `.env.example` retained;
+- README now documents that `REACT_APP_*` variables are browser-public.
 
-The file contents were deliberately **not** inspected or reproduced during this portfolio audit. The correct next action for that lineage is exposure review / credential rotation if applicable, followed by repository hygiene. Visual modernization comes later.
+This does **not** prove historical values were revoked/rotated. The issue remains open only for that external/historical determination.
 
-### 4.4 Generated/vendor artifacts exist in historical repositories
+### 4.4 Repository presentation is part of portfolio hygiene
 
-Examples found during discovery:
+Several older repositories contained useful code but presented only framework starter text or no README. A documentation-only pass corrected that without pretending the code itself had been modernized:
 
-- `Web_de_vinos` versions `node_modules/` and uses `node-sass`;
-- `App_Agenda_Medico` versions `__pycache__/`;
-- `Proyecto_Backend` versions a large `kubectl.exe` binary and a warning log.
+- `Web_de_vinos` — first project-specific README merged at `c6e6add18cf8bd081689d8b3403f1e835500400c`;
+- `Ecommerce_NestJS` — Nest starter README replaced at `d3313889bf6a774e5cddf2b34685d789c9eecf00`;
+- `StarWars_App_NextJS` — create-next-app README replaced at `95a8372019faab3306ef1ddd87467959526c37ec`;
+- `Proyecto_Backend` — historical Meow/ecommerce lineage clarified at `089e133b47a40a323be94492d1c9077134e38bfb`.
 
-These are useful historical signals. They should normally be removed from current authority through explicit hygiene work, while Git history remains intact.
+These merges are **documentation/hygiene**, not completion of their future code-maintenance lanes.
 
 ### 4.5 Not every separate repository is a separate product
 
-Several names clearly form lineages or pairs and should be audited together before deciding their future:
+Known pairs/lineages continue to be treated together where appropriate:
 
-- `Meow-Matrix---Frontend` + `MeowMatrix---Backend-2v`;
+- `Meow-Matrix---Frontend` + `MeowMatrix---Backend-2v`; historical context also includes `Proyecto_Backend`;
 - `centuryLanding` + `centuryBackend`;
 - `Antigal_Frontend_Enzo` + `AntigalBackend`;
 - `TrackIt_Frontend` + `TrackIt_Backend`;
 - `Landing_Branko` + private `Landing_Branko_CMS`;
-- `portafolio-personal` + historical/experimental `Portfolio_Backend` must be checked for supersession rather than assumed to be one active system.
+- `portafolio-personal` + historical/experimental `Portfolio_Backend` require supersession review rather than assumed parallel maintenance.
 
 ## 5. Complete repository classification
 
-| Repository | Visibility | Class | Current interpretation | Recommended treatment | Priority |
-| --- | --- | --- | --- | --- | --- |
-| `El_Nucleo_Web` | Public | A | Completed historical reconstruction | Maintain; use as modernization reference | Done |
-| `Web-de-profesores` | Public | A | Completed 2023 → 2026 teaching-workspace modernization with exact historical archive, local-data recovery and production-qualified Pages delivery | Maintain as fit-for-purpose modernization reference; do not reopen as a generic rewrite | Done |
-| `Pint.ar_Ecommerce` | Public | A | Completed 2023 → 2026 React ecommerce modernization with typed domain contracts, hardened Docker runtime and production-qualified Pages | Maintain as storefront/product-engineering reference; historical CRA/Firebase source remains auditable | Done |
-| `App_Agenda_Medico` | Public | C | Python TAD/data-structure medical agenda exercise | Preserve academic purpose; add packaging, typing, tests, CLI quality and repo hygiene | P3 |
-| `Web_de_vinos` | Public | B | HTML/SCSS learning site with `node-sass` and committed `node_modules` | Repository hygiene + modern Sass/tooling; avoid duplicating El Núcleo rewrite for appearance | P4 |
-| `Proyecto_Backend` | Public | D | Express/Mongo/Auth/Swagger/tests/Docker/Kubernetes learning backend | Deep backend/security/runtime audit; remove repo artifacts; determine lineage with Meow backend | P5 |
-| `Chat_En_Vivo` | Public | F | Near-empty/stub repository | Verify intent/successor; document or archive rather than invent implementation | Later |
-| `GIUCT-SQL-v1` | Public | F | Empty/stub repository | Verify history; archive/supersede if appropriate | Later |
-| `Plantilla-de-Proyecto` | Public | A | Current reusable Node/TypeScript/Fastify service starter | Maintain as reference; periodic compatibility/security audit only | Reference |
-| `Ecommerce_NestJS` | Public | C/D | NestJS TypeScript ecommerce exercise with tests/config | Audit as backend learning artifact; modernize only after earlier lineage | P6 |
-| `Meow-Matrix---Frontend` | Public | D | React 18 CRA ecommerce frontend paired with Meow backend | Audit with backend as the next full-stack ecommerce showcase; preserve historical course/product lineage | Next ecommerce |
-| `MeowMatrix---Backend-2v` | Public | D | Express/Mongo/Auth ecommerce backend paired with Meow frontend | Deep security/runtime/data audit, then one consolidated full-stack modernization plan | Next ecommerce |
-| `StarWars_App_NextJS` | Public | C/B | Next.js 14 + React 18 + i18n learning app | Framework-maintenance audit; preserve API/content-learning purpose | P7 |
-| `Portfolio_Backend` | Public | F/C | Small NestJS-style backend scaffold | Determine whether superseded by `portafolio-personal`; avoid parallel fake maintenance | Later |
-| `luciano-legnoverde` | Public | E | Client/person landing by naming/context | Ownership/deploy/content/privacy audit before technical changes | Client lane |
-| `centuryLanding` | Public | E | React landing with server-related deployment files | Audit together with `centuryBackend` | Client lane |
-| `centuryBackend` | Public | E/D | Small Node backend with uploads directory | Audit data/upload/security contract with `centuryLanding` | Client lane |
-| `2024-UTN-GRUPO-2` | Public | C | Collaborative academic frontend/backend project | Preserve collaboration/history; improve docs/tests only with authorship context | Academic lane |
-| `odoo-practice` | Public | F | Empty Odoo practice stub | Keep as practice marker or archive; do not manufacture an Odoo project | Later |
-| `portafolio-personal` | Public | G | Current full-stack portfolio/product infrastructure | Active maintenance, production/security/performance audits only | Active |
-| `AntigalBackend` | Public | F/E | Empty backend repository paired by name with Antigal frontend | Verify whether intentionally unused/superseded before archive | Client lane |
-| `Vicky-Pellegrino-Landing` | Public | E | Public client landing | Deployment/content/privacy/accessibility audit, not blanket rewrite | Client lane |
-| `Antigal_Frontend_Enzo` | Public | E | Client frontend under `antigal.client` | Audit with backend/history and ownership context | Client lane |
-| `TrackIt_Backend` | Public | F/D | Empty backend repository | Verify intended backend/successor | Security lane |
-| `TrackIt_Frontend` | Public | D | React 18 CRA product prototype; committed `.env` detected | **Security triage first**, then architecture/hygiene | P0 security |
-| `ejercicioDjango` | Public | C | Small Django exercise | Preserve as learning artifact; packaging/tests/docs if retained | Later |
-| `PortfolioAndreCoronel` | Public | E | Large portfolio/client repository | Ownership/media/deploy review before changes | Client lane |
-| `marina_landing` | Private | E | Private landing/client work | Keep private; maintenance only with client/deployment need | Private client |
-| `odontApp` | Private | G/E | Private application in healthcare/odontology domain | Keep private; security/privacy/data review before any publication | Private product |
-| `losApuntes` | Public | F/C | Current tree contains only a tiny README despite large repository size/history | Inspect history/supersession before deciding whether to archive | Later |
-| `diezy90-bot-presupuestos` | Private | G | Private automation/bot | Active/private maintenance according to real use | Private active |
-| `trenAlSur` | Public | G/C | Modern Vite/TypeScript project with tests/docs/agent guidance | Focused current audit; not legacy rewrite | Current |
-| `Podometro` | Private | G/C | Private application/prototype | Keep private; assess only when product work resumes | Private |
-| `SolarCasares_Landing` | Public | E | Public landing | Client/deploy/content audit | Client lane |
-| `C21dosil_Landing` | Public | E | Large public landing/media repository | Performance/media/deploy/ownership audit | Client lane |
-| `Muelle85_Landing` | Public | E | Large public landing/media repository | Performance/media/deploy/ownership audit | Client lane |
-| `Messina_Landing` | Public | E | Public landing/media repository | Client/deploy/content audit | Client lane |
-| `Landing_Branko` | Public | E | Public client landing | Audit together with private CMS; preserve public/private boundary | Client lane |
-| `Ecommerce_Alejandra` | Public | E/B | Public ecommerce project | Determine client vs learning ownership, then choose maintenance strategy | Discovery |
-| `Enzopinotti` | Public | G | GitHub profile and portfolio index | Keep synchronized with proven repository state; host this roadmap | Continuous |
-| `Bitora` | Public | A/G | Modern educational full-stack algorithms lab with CI/Docker/docs | Maintain as reference/current build | Reference |
-| `Mora-Petraglia-Landing` | Public | E/G | Current portfolio/client landing with CMS/integrations context | Focused production/content audit only | Current client |
-| `TOP` | Private | G | Active private SaaS/product engineering repository | Continue product roadmap; do not mix with legacy modernization | Active |
-| `Landing_Branko_CMS` | Private | E/G | Private CMS paired with public Branko landing | Audit with landing; never expose private operational details by default | Private client |
-| `Assetelier-Studio` | Private | G | Active private asset/product tooling | Normal product evolution | Active |
-| `linkedin-content-ops` | Private | G | Active private content-operations tooling | Normal product evolution | Active |
+| Repository | Visibility | Class | Current interpretation | Treatment / status |
+| --- | --- | --- | --- | --- |
+| `El_Nucleo_Web` | Public | A | Completed 2022 → 2026 reconstruction | Maintain as reference |
+| `Web-de-profesores` | Public | A | Completed 2023 → 2026 teaching-workspace modernization | Maintain as fit-for-purpose reference |
+| `Pint.ar_Ecommerce` | Public | A | Completed storefront modernization | Maintain as ecommerce frontend reference |
+| `App_Agenda_Medico` | Public | C/B | 2023 Python TAD/data-structure medical agenda | **Next active general lane**: preserve baseline, typing/tests/CI/hygiene |
+| `Web_de_vinos` | Public | B | Historical HTML/SCSS learning site; README now contextualized | Following lane: Sass/build/repo hygiene, no framework inflation |
+| `Proyecto_Backend` | Public | D/B | Historical Express/Mongo ecommerce lineage | Lineage resolved toward Meow; preserve/audit rather than duplicate |
+| `Chat_En_Vivo` | Public | F | Near-empty/stub | Verify successor; document/archive rather than invent |
+| `GIUCT-SQL-v1` | Public | F | Empty/stub | Preserve/archive decision |
+| `Plantilla-de-Proyecto` | Public | A/G | Reusable Node/TS/Fastify starter | Maintain/reference |
+| `Ecommerce_NestJS` | Public | C/D | NestJS ecommerce learning backend; README contextualized | Future framework-specific maintenance |
+| `Meow-Matrix---Frontend` | Public | A/D | Maintained frontend authority for Meow Matrix | B7 engineering carrier complete; provider cutover external |
+| `MeowMatrix---Backend-2v` | Public | A/D | Maintained backend/release authority for Meow Matrix | B7 engineering carrier complete; provider cutover external |
+| `StarWars_App_NextJS` | Public | C/B | Next.js 14 learning app; README contextualized | Future framework-maintenance lane |
+| `Portfolio_Backend` | Public | F/C | Small backend scaffold | Determine supersession vs `portafolio-personal` |
+| `luciano-legnoverde` | Public | E | Client/person landing | Ownership/deploy/content/privacy audit only |
+| `centuryLanding` | Public | E | Client landing | Audit with `centuryBackend` |
+| `centuryBackend` | Public | E/D | Small backend/upload surface | Audit with landing, focus data/upload security |
+| `2024-UTN-GRUPO-2` | Public | C | Collaborative academic project | Preserve authorship; docs/tests only with context |
+| `odoo-practice` | Public | F | Empty practice stub | Keep/archive; do not manufacture project |
+| `portafolio-personal` | Public | G | Current portfolio/product infrastructure | Active maintenance only |
+| `AntigalBackend` | Public | F/E | Empty paired backend | Verify intentional supersession |
+| `Vicky-Pellegrino-Landing` | Public | E | Client landing | Production/content/accessibility audit only |
+| `Antigal_Frontend_Enzo` | Public | E | Client frontend | Audit with paired history/ownership |
+| `TrackIt_Backend` | Public | F/D | Empty backend repository | Determine intended successor/authority |
+| `TrackIt_Frontend` | Public | D/B | React 18 CRA prototype | Current-tree security hygiene done; historical secret review still open |
+| `ejercicioDjango` | Public | C | Small Django exercise | Preserve; packaging/tests/docs if retained |
+| `PortfolioAndreCoronel` | Public | E | Large portfolio/client repository | Ownership/media/deploy audit before changes |
+| `marina_landing` | Private | E | Private landing/client work | Keep private; maintenance by real need |
+| `odontApp` | Private | G/E | Private healthcare/odontology app | Security/privacy/data review; no public exposure |
+| `losApuntes` | Public | F/C | Tiny current tree with larger history | Inspect history/supersession first |
+| `diezy90-bot-presupuestos` | Private | G | Private automation/bot | Active/private maintenance |
+| `trenAlSur` | Public | G/C | Current Vite/TS project with tests/docs | Focused current audit; no legacy rewrite |
+| `Podometro` | Private | G/C | Private app/prototype | Assess when product work resumes |
+| `SolarCasares_Landing` | Public | E | Public landing | Client/deploy/content audit |
+| `C21dosil_Landing` | Public | E | Large public landing/media repo | Performance/media/deploy/ownership audit |
+| `Muelle85_Landing` | Public | E | Public landing/media repo | Performance/media/deploy/ownership audit |
+| `Messina_Landing` | Public | E | Public landing/media repo | Client/deploy/content audit |
+| `Landing_Branko` | Public | E | Public client landing | Audit with private CMS; preserve boundary |
+| `Ecommerce_Alejandra` | Public | E/B | Public ecommerce project | Determine client vs learning ownership first |
+| `Enzopinotti` | Public | G | Profile/portfolio index + roadmap | Continuous synchronization authority |
+| `Bitora` | Public | A/G | Modern educational algorithms lab | Maintain/reference |
+| `Mora-Petraglia-Landing` | Public | E/G | Current client/portfolio landing | Focused production/content maintenance |
+| `TOP` | Private | G | Active private SaaS/product | Product roadmap; never mix with legacy lane |
+| `Landing_Branko_CMS` | Private | E/G | Private CMS paired with public landing | Keep operational details private |
+| `Assetelier-Studio` | Private | G | Active private product/tooling | Normal product evolution |
+| `linkedin-content-ops` | Private | G | Active private content tooling | Normal product evolution |
 
 ## 6. Recommended execution order
 
-### P0 — security triage before modernization
+### P0 — `TrackIt_Frontend` security triage — CURRENT TREE FIXED / EXTERNAL REVIEW OPEN
 
-`TrackIt_Frontend`
+The maintained tree is now hygienic after PR #2. Remaining work is only to determine whether any historically committed value represented a privileged live credential and, if so, verify rotation/revocation outside the public repository. Do not reproduce old values in issues/logs/docs.
 
-Reason: a public committed `.env` is a potential exposure boundary. Determine whether it contains only non-secret public build variables or anything that must be rotated. Do not print secrets into issues, logs or documentation. Review Git history only as needed for exposure remediation.
-
-This is intentionally a small security lane, not a full product rewrite.
+A CRA→Vite migration or product redesign is a **separate future decision** and must not be used to hide this security boundary.
 
 ### P1 — `Web-de-profesores` — COMPLETED
 
-This lane is complete and now acts as a second modernization reference with a deliberately different architecture from El Núcleo.
-
-Final evidence:
-
-- historical baseline: `d6a38f5795569131ff4cd0db63640aff8dc09007`;
-- exact navigable archive under `historical/2023/`, with 14/14 historical files verified against their original Git blob SHA-1;
-- maintained 2026 source under `modern/` using Node 24, pnpm 11.26.0, Vite 8 and TypeScript 6 without React or a backend;
-- no current password collection or fake authentication; legacy `Usuarios` storage is purged by the maintained app;
-- versioned local persistence, explicit recovery, backup/restore, stable-ID editing, undo, neutral summaries and sorting;
-- 5 test files / 41 tests / 41 passed plus lint, typecheck, docs, build and Pages-mirror integrity gates;
-- production Pages authority made deterministic even while GitHub's legacy branch publisher remains enabled;
-- final main merge: `46bcd66f1a25f5c0879f40dfb924011959368225`;
-- final quality run `35016810900`: success;
-- custom Pages run `35016810998`: success;
-- legacy Pages run `35016808192`: success;
-- real-Chrome production smoke `35001016659`: success after validating recovery and 360 / 768 / 1440 responsive contracts.
-
-The important portfolio signal is not the toolchain itself. This repository demonstrates that maturity can mean **choosing a smaller architecture, removing false security semantics, making destructive operations recoverable and turning deployment ambiguity into a tested contract**.
+Historical baseline preserved, maintained Vite/TypeScript authority, 41/41 tests, recovery/backup behavior and qualified Pages publishing. Final `main`: `46bcd66f1a25f5c0879f40dfb924011959368225`.
 
 ### P2 — `Pint.ar_Ecommerce` — COMPLETED
 
-Pint.ar is complete and now acts as the portfolio's storefront/product-engineering ecommerce reference while keeping its 2023 learning context explicit.
+Historical CRA/Firebase context remains auditable; maintained React/Vite/TypeScript storefront has typed demo-order boundaries, **20/20 tests**, hardened Docker and qualified Pages deployment. Final `main`: `811b223aeea0568d4eae0422fc5ad673e6b10c01`.
 
-Final evidence:
+### Full-stack ecommerce showcase — Meow Matrix — PROVIDER-NEUTRAL RELEASE CARRIER COMPLETED
 
-- exact historical baseline: `3224d89c0c512b3509cea25f1c49a119d371e338`;
-- maintained authority: `modern/`;
-- final main: `811b223aeea0568d4eae0422fc5ad673e6b10c01`;
-- Node 24 + pnpm 11.26.0 + React 19.3 + React Router 7.18 + Vite 8.2 + TypeScript 6 strict + Sass 1.104;
-- typed catalogue/cart/checkout boundaries, deterministic search/filter/sort and truthful local demo-order semantics;
-- no runtime dependency on the historical Firebase project and no unsupported payment/email/auth claims;
-- 6 test files / 20 tests / 20 passed;
-- multi-stage Docker Node → Nginx runtime qualified as non-root, read-only, capability-dropped and `no-new-privileges`;
-- public authority: `https://enzopinotti.github.io/Pint.ar_Ecommerce/`;
-- a real custom-vs-branch Pages publication race was reproduced, then neutralized with a repository-root compatibility mirror verified byte-for-byte against the maintained Pages artifact;
-- final permanent quality run `35049775048`: success;
-- final custom Pages run `35049775023`: build + deploy + public-smoke success;
-- final dynamic branch/Jekyll Pages run `35049772400`: success;
-- public smoke verifies the live HTML/canonical/assets/robots/sitemap and direct `/carrito` navigation in Chrome.
+The paired `Meow-Matrix---Frontend + MeowMatrix---Backend-2v` lane has completed the engineering work that can be verified without inventing production infrastructure.
 
-The portfolio signal is deliberately different from Web-de-profesores: here React, state and Docker are justified by the ecommerce workflow, while backend/auth/payment infrastructure is still omitted because the storefront demo does not need to pretend to be a commercial transaction platform.
+Completed scope includes:
 
-### P3 — `App_Agenda_Medico`
+- Node/TypeScript modernization and typed `/api/v1` contracts;
+- backend-owned opaque sessions and password recovery;
+- Mongo identity/catalog/cart/order persistence;
+- transactional/idempotent checkout and stock invariants;
+- private upload authorization/lifecycle;
+- durable outbox/retry delivery;
+- full-stack Compose with replica-set Mongo and dev SMTP;
+- restart persistence and target-data preflight;
+- recovery/restore rehearsal;
+- immutable release evidence and retained API/web image bundle;
+- isolated registry rehearsal proving **no rebuild**, pull-by-digest, exact image-ID preservation and hardened smoke;
+- cutover manifest v3 binding bundle → promotion evidence → registry digest → deploy/public qualification.
 
-Use this repo to show that modernization does **not** always mean web UI.
+External B7 cutover still requires real provider choices and credentials. Do not simulate those merely to mark a checkbox green.
 
-A strong target would be:
+### P3 — `App_Agenda_Medico` — NEXT GENERAL PORTFOLIO LANE
 
-- modern Python packaging;
-- supported Python version contract;
-- type hints;
-- pytest unit tests for TAD invariants;
-- deterministic CLI separation from domain logic;
-- removal of generated caches from current authority;
-- clear academic README and examples.
+This is the next major legacy implementation lane.
 
-### P4 — `Web_de_vinos`
+Historical truth:
 
-Focus on hygiene and build modernization:
+- 2023 collaborative Python project;
+- TADs for Paciente, Cita, Cola and Agenda;
+- interactive menu/application code;
+- list-based data structures and a committed `__pycache__/`;
+- lower-case `readme.md` is primarily a long TAD specification rather than a project landing page.
 
-- remove tracked vendor output from current authority;
-- replace `node-sass` with supported Sass tooling;
-- define runtime/package manager;
-- preserve original HTML/SCSS design history;
-- add minimal validation/CI;
-- decide whether public deployment still has value.
+Modernization goals:
 
-Avoid another large React rewrite unless a product requirement appears.
+1. preserve the exact 2023 baseline and collaborator authorship;
+2. make the maintained authority explicit instead of silently rewriting original modules;
+3. remove generated Python cache artifacts from current authority;
+4. add modern typed Python domain structures without database/web/SaaS invention;
+5. fix behavior only with tests — including the historical queue implementation that currently removes from the end (`pop()`) rather than FIFO;
+6. add deterministic tests and GitHub Actions;
+7. turn the root README into useful project/history/run documentation while retaining the original TAD specification as historical documentation;
+8. finish with a clear completion SHA and central-profile synchronization.
 
-### P5 — backend/full-stack lineage audit
+### P4 — `Web_de_vinos` — FOLLOWING HISTORICAL LANE
 
-Audit together before changing code:
+The README/context pass is already done. The dedicated code lane should remove committed `node_modules` from current authority, replace `node-sass` with maintained Sass tooling, make the build reproducible and review paths/accessibility/responsive behavior. Avoid another React rewrite unless a genuine product requirement appears.
 
-- `Proyecto_Backend`;
-- `MeowMatrix---Backend-2v`;
-- `Meow-Matrix---Frontend`.
+### Later framework-specific learning lanes
 
-Questions:
+- `Ecommerce_NestJS` — README fixed; later dependency/runtime/auth/test maintenance.
+- `StarWars_App_NextJS` — README fixed; later Next/React/i18n/test maintenance.
 
-- are the two backends ancestors/successors/copies?
-- which repository contains the authoritative final product behavior?
-- which auth/session flows are real vs course exercises?
-- are secrets/configuration safely excluded?
-- what tests genuinely pass?
-- are Docker/Kubernetes assets operational or learning artifacts?
-- can large committed binaries be removed from current authority?
+### Historical backend lineage
 
-Only after lineage is resolved should dependency/framework upgrades begin.
-
-### P6/P7 — framework-specific learning repos
-
-- `Ecommerce_NestJS`;
-- `StarWars_App_NextJS`.
-
-These should demonstrate framework maintenance, not speculative feature expansion.
+`Proyecto_Backend` now explicitly points to Meow Matrix as the current full-stack authority. Future work is preservation/security/hygiene only unless a concrete historical-study need appears.
 
 ## 7. Client repository strategy
 
-Client/landing work should use a different Definition of Done from learning repositories.
+For client/landing work, first determine:
 
-For each client lane, first determine:
-
-1. ownership and whether the client relationship/content is still public;
-2. current production URL and provider;
+1. ownership and whether client relationship/content is still public;
+2. current production URL/provider;
 3. whether forms, email, CMS or upload endpoints still operate;
-4. whether personal/client data is present in Git history or runtime storage;
+4. whether personal/client data exists in Git history or runtime storage;
 5. whether large media is intentional and optimized;
 6. accessibility/responsive/SEO baseline;
-7. whether the repo is portfolio evidence, operational production, or both;
-8. rollback and current maintainer expectations.
+7. whether the repository is portfolio evidence, operational production, or both;
+8. rollback and maintainer expectations.
 
-Do not migrate a client landing to a new framework simply because an old framework is no longer fashionable.
+Do not migrate a client landing to a fashionable framework without a real need, and never expose private CMS/product material to improve the public portfolio.
 
 ## 8. Empty/stub strategy
-
-Empty or near-empty repositories are not failures that need artificial code.
-
-For each stub:
 
 ```text
 identify purpose -> identify successor -> decide preserve / archive / private / delete
 ```
 
-Deletion should be rare and explicit because Git history can still be useful evidence. Archiving plus a short README is often the better outcome when the repository has historical meaning.
+Empty repositories are not failures that need artificial code. Archiving plus an honest short README is generally better than manufacturing implementation.
 
 ## 9. Cross-portfolio standards to reuse
 
-Each modernization/audit should evaluate the following, but adopt implementation only where relevant:
+Every lane should evaluate what is relevant from this set:
 
 - historical baseline and rollback;
 - source vs generated authority;
@@ -323,23 +289,23 @@ Each modernization/audit should evaluate the following, but adopt implementation
 - provenance for promoted historical/client media;
 - privacy and data-collection boundaries;
 - deployment/public-origin truth;
-- security headers where a web host supports them;
+- security headers where hosting supports them;
 - docs-as-code;
 - post-merge verification for infrastructure/release changes;
 - explicit non-adoptions to avoid stack inflation.
 
 ## 10. Portfolio-level rules
 
-1. **Do not rewrite history to look more senior.** The progression is more valuable when the old limitations remain visible and contextualized.
+1. **Do not rewrite history to look more senior.** Progression is more valuable when old limitations remain contextualized.
 2. **Do not use one stack everywhere.** React, Next, Nest, Docker and databases are choices, not maturity badges.
-3. **Security beats aesthetics.** Potential secrets, credential collection and privacy issues are addressed before visual polish.
-4. **Do not invent backends for prototypes.** If the historical product was local/demo-only, the modern version may remain a safe local demo.
-5. **Do not invent current client relationships.** Public historical work must be labeled honestly.
+3. **Security beats aesthetics.** Potential secrets, credential collection and privacy issues come first.
+4. **Do not invent backends for prototypes.** A safe local demo can stay local.
+5. **Do not invent current client relationships.** Historical public work must be labeled honestly.
 6. **Do not expose private client/product material to improve the public portfolio.**
-7. **Do not duplicate active products.** Resolve lineage/supersession before maintaining multiple copies.
-8. **Keep the profile repository synchronized.** A completed project must not remain described as in-progress in the profile.
-9. **One major legacy modernization lane at a time.** Small security triage can run separately when needed.
-10. **Close each lane completely.** Code, CI, docs, production evidence and central roadmap all move together.
+7. **Do not duplicate active products.** Resolve lineage/supersession first.
+8. **Keep the profile repository synchronized.** Completed work must not stay described as future work.
+9. **One major legacy modernization lane at a time.** Small documentation/security hygiene may run separately.
+10. **Close each lane completely.** Code, CI, docs, evidence and central roadmap move together.
 
 ## 11. Current portfolio program state
 
@@ -348,19 +314,18 @@ COMPLETED MODERNIZATIONS / REFERENCE
 El_Nucleo_Web
 Web-de-profesores
 Pint.ar_Ecommerce
+Meow Matrix — provider-neutral full-stack/release carrier through B7
 
 IMMEDIATE SECURITY TRIAGE
-TrackIt_Frontend
+TrackIt_Frontend — current-tree hygiene merged; historical/external credential classification remains
 
-NEXT ECOMMERCE SHOWCASE
-Meow-Matrix---Frontend + MeowMatrix---Backend-2v
-
-FOLLOWING GENERAL PORTFOLIO LANE
+NEXT GENERAL PORTFOLIO LANE
 App_Agenda_Medico
 
-FOLLOWING HISTORICAL LANES
+FOLLOWING HISTORICAL LANE
 Web_de_vinos
-backend/full-stack lineage
+
+LATER FRAMEWORK-SPECIFIC LANES
 Ecommerce_NestJS
 StarWars_App_NextJS
 
@@ -382,18 +347,17 @@ empty and near-empty repositories
 
 ## 12. Next decision gate
 
-Before implementation begins in the Meow Matrix lineage, perform a paired frontend/backend audit and decide architecture from evidence rather than copying TOP wholesale:
+The next implementation gate is `App_Agenda_Medico`.
 
-- identify the exact historical baseline and chronology of both `Meow-Matrix---Frontend` and `MeowMatrix---Backend-2v`;
-- establish whether `Proyecto_Backend` is an ancestor, sibling or superseded backend before moving code between repositories;
-- inventory frontend routes, catalogue/cart/checkout/auth state, API assumptions, environment variables, assets, tests and deployment files;
-- inventory backend routes/controllers/models, Mongo/Mongoose contracts, sessions/JWT/OAuth, password handling, mail/uploads, Swagger/tests and runtime configuration;
-- inspect Docker/Kubernetes history and remove current-authority vendor/binary artifacts such as committed `kubectl.exe` without rewriting Git history;
-- classify every environment/config value without reproducing secrets or credentials in issues/logs/docs;
-- determine which authentication/session flows are actually safe and which are only historical learning implementations;
-- map the real frontend ↔ backend API contract, error/loading states and checkout/order ownership before framework upgrades;
-- choose the smallest justified 2026 full-stack architecture, borrowing TOP practices for typing, boundaries, CI, Docker, security and documentation without importing multi-tenant SaaS complexity;
-- create or update the Meow Matrix umbrella modernization issue from evidence before implementation;
-- keep `App_Agenda_Medico` as the following general portfolio lane once the ecommerce pair is closed.
+Before changing behavior:
 
-The target distinction is explicit: **Pint.ar demonstrates a mature storefront; Meow Matrix should demonstrate a mature full-stack ecommerce system**. The two repositories should complement each other rather than converge into the same architecture.
+- pin the historical 2023 authority (`390ac3591b089e0aefd6dc5f971c3e8d22e57794`) and preserve collaborator authorship;
+- inspect the interactive menu and all TAD operations against the documented specification;
+- inventory behavior worth preserving vs. correctness bugs worth fixing;
+- create a separate maintained Python authority rather than rewriting the original exercise in place;
+- choose standard-library-first packaging/testing unless a dependency is justified;
+- qualify FIFO queue behavior, patient/citation semantics, agenda deletion/filtering and rescheduling through tests;
+- add CI and repository hygiene;
+- synchronize this roadmap/profile only after the repository lane is actually integrated.
+
+The target story is explicit: **the project should still look like a data-structures/algorithm exercise, but one that a 2026 engineer can install, understand, test and safely evolve.**

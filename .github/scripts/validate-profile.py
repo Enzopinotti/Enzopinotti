@@ -91,11 +91,21 @@ def validate_readme() -> str:
         "Web-de-profesores",
         "Pint.ar_Ecommerce",
         "Meow Matrix",
+        "App_Agenda_Medico",
         "20/20 tests",
+        "182071b3e8148196861ee2f38e99a1ebfd0e1294",
     )
     for contract in required_story:
         if contract not in text:
             fail(f"career/profile narrative lost required contract: {contract}")
+
+    stale_story = (
+        "The next ecommerce showcase is the paired",
+        "Three completed public modernization cases",
+    )
+    for stale in stale_story:
+        if stale in text:
+            fail(f"stale portfolio state leaked into README: {stale}")
 
     inflated_claims = (
         "SAP expert",
@@ -139,17 +149,29 @@ def validate_roadmap() -> None:
         "Web-de-profesores",
         "Pint.ar_Ecommerce",
         "App_Agenda_Medico",
+        "Web_de_vinos",
         "El_Nucleo_Web",
         "Security beats aesthetics",
         "One major legacy modernization lane at a time",
         "COMPLETED MODERNIZATIONS / REFERENCE",
-        "NEXT ECOMMERCE SHOWCASE",
+        "NEXT GENERAL PORTFOLIO LANE",
         "Meow-Matrix---Frontend + MeowMatrix---Backend-2v",
+        "PROVIDER-NEUTRAL RELEASE CARRIER COMPLETED",
         "811b223aeea0568d4eae0422fc5ad673e6b10c01",
+        "182071b3e8148196861ee2f38e99a1ebfd0e1294",
+        "390ac3591b089e0aefd6dc5f971c3e8d22e57794",
     )
     for contract in required_contracts:
         if contract not in text:
             fail(f"portfolio roadmap lost required contract: {contract}")
+
+    stale_contracts = (
+        "NEXT ECOMMERCE SHOWCASE",
+        "Before implementation begins in the Meow Matrix lineage",
+    )
+    for stale in stale_contracts:
+        if stale in text:
+            fail(f"stale portfolio roadmap state leaked into current authority: {stale}")
 
     for placeholder in ("YOUR-", "TODO", "example.com"):
         if placeholder in text:

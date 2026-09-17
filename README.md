@@ -41,9 +41,9 @@ My current focus is building and evolving **operational software and ERP/SaaS-st
 
 What differentiates my profile is the bridge between **business context and technical execution**: I can move from user/stakeholder discovery, AS-IS / TO-BE process analysis and acceptance criteria into frontend/backend work, APIs, data, infrastructure, QA/UAT, release qualification and production follow-up.
 
-Three completed public modernization cases now show the method from different angles. **[El_Nucleo_Web](https://github.com/Enzopinotti/El_Nucleo_Web)** rebuilt a 2022 HTML/SCSS project into a production-qualified React application while preserving historical provenance. **[Web-de-profesores](https://github.com/Enzopinotti/Web-de-profesores)** took the opposite architectural lesson: a 2023 JavaScript/localStorage simulator matured into a safe, tested local teaching workspace with Vite + TypeScript **without adding React, backend authentication or a database that the product did not need**. **[Pint.ar_Ecommerce](https://github.com/Enzopinotti/Pint.ar_Ecommerce)** keeps React because the ecommerce problem justifies it, but replaces browser-trusted Firebase order semantics with an explicit demo boundary, typed domain contracts, hardened Docker delivery and production-qualified Pages.
+Four public modernization cases now show that method at different levels. **[El_Nucleo_Web](https://github.com/Enzopinotti/El_Nucleo_Web)** reconstructs an early HTML/SCSS site while preserving provenance. **[Web-de-profesores](https://github.com/Enzopinotti/Web-de-profesores)** matures a JavaScript/localStorage simulator without adding a backend or React it does not need. **[Pint.ar_Ecommerce](https://github.com/Enzopinotti/Pint.ar_Ecommerce)** turns a React/Firebase learning storefront into a typed, testable and honestly bounded ecommerce demo. The paired **Meow Matrix** frontend/backend then carries the same discipline into a real full-stack architecture: backend-owned sessions, Mongo persistence, transactional checkout, private uploads, durable side effects, Docker integration, recovery rehearsal and an immutable no-rebuild release chain that reaches registry-digest promotion.
 
-All three preserve their historical baselines, qualify real deployments and keep rollback evidence. I am applying the same evidence-first method across older repositories without forcing the same stack onto every project. The next ecommerce showcase is the paired **Meow Matrix frontend/backend** lineage, while `App_Agenda_Medico` remains the following general historical-modernization lane; both are tracked in **[Repository portfolio roadmap — 2026](./docs/repository-portfolio-roadmap-2026.md)**.
+Meow Matrix's **provider-neutral engineering carrier is complete through B7**; what remains there is deliberately external production work — real registry/provider credentials, production data/storage/SMTP/DNS/TLS, deploy-by-digest and final public qualification — rather than more simulated infrastructure. The next general historical-modernization lane is now **`App_Agenda_Medico`**, followed by **`Web_de_vinos`**, as tracked in **[Repository portfolio roadmap — 2026](./docs/repository-portfolio-roadmap-2026.md)**.
 
 ---
 
@@ -90,6 +90,13 @@ A completed React/Firebase learning ecommerce that now preserves its exact 2023 
 
 Delivery is part of the case: a multi-stage Docker image serves through non-root Nginx with read-only/capability-reduced runtime controls, while GitHub Pages uses an explicit repository-subpath build. A real race between the custom Pages workflow and GitHub's legacy branch publisher was neutralized with a **byte-for-byte verified generated mirror**, and the final public workflow runs an Internet-facing Chrome smoke over the home, assets, metadata and direct `/carrito` navigation. Production: **[enzopinotti.github.io/Pint.ar_Ecommerce](https://enzopinotti.github.io/Pint.ar_Ecommerce/)**.
 
+### 🐈 [Meow Matrix — full-stack ecommerce modernization](https://github.com/Enzopinotti/MeowMatrix---Backend-2v)
+**Backend-owned security + transactional commerce + recoverable release engineering**
+
+A paired modernization across **[MeowMatrix---Backend-2v](https://github.com/Enzopinotti/MeowMatrix---Backend-2v)** and **[Meow-Matrix---Frontend](https://github.com/Enzopinotti/Meow-Matrix---Frontend)**. The current authority replaces browser-owned auth and partial checkout semantics with opaque HttpOnly sessions, Mongo-backed identity/catalog/cart/order state, atomic/idempotent checkout, order snapshots, durable outbox delivery, private authenticated file handling and typed frontend contracts.
+
+The delivery path is qualified as a system rather than two isolated builds: Mongo replica-set transactions, dev SMTP, persistence/restart smoke, recovery rehearsal, exact frontend pinning, immutable API/web image bundles and registry promotion **without rebuilding source**. Backend authority after the B7 promotion carrier: `182071b3e8148196861ee2f38e99a1ebfd0e1294`; frontend pin: `9d64c48d2324703cb594acad8e1bb0c9a3d6191c`. This is intentionally **not labeled as a completed public production cutover** until the real provider, credentials and public endpoints are qualified.
+
 ### 🌐 [Portfolio — enzopinotti.dev](https://enzopinotti.dev)
 **Full-stack product + production operations**
 
@@ -112,7 +119,7 @@ Educational full-stack lab comparing **Huffman** and **Shannon-Fano** lossless c
 
 A deliberately small **Node.js 22 + TypeScript + Fastify 5 + Zod** HTTP starter with validated configuration, deterministic `/health`, structured 404/500 behavior, graceful shutdown, Vitest coverage, `npm ci` reproducibility and a read-only SHA-pinned GitHub Actions quality gate. Product-specific auth, databases, mail, queues and realtime dependencies stay out of the baseline until they are actually needed.
 
-> Selected builds are intentionally limited to a small set of repositories that show different engineering signals: product delivery, integrations, algorithms, evolutionary modernization and reusable foundations.
+> Selected builds stay deliberately small: each repository has to show a distinct engineering signal rather than merely increasing the project count.
 
 ---
 
@@ -178,7 +185,7 @@ I also work with **Power BI, Looker Studio, Excel and Google Apps Script** when 
 
 ## 07 // CORE TOOLCHAIN
 
-Recent public compatibility proof in `El_Nucleo_Web`: **Node.js 24 · pnpm 11.26.0 · React 19.3 · Vite 8.3 · TypeScript 6.0.3 · Vitest 5 · ESLint 10 · Prettier 3.9**. A second public proof, `Plantilla-de-Proyecto`, intentionally uses **Node.js 22 + Fastify 5 + Zod** as a stable reusable-service baseline. The point is verified compatibility and fit-for-purpose choices, not chasing the highest major everywhere.
+Recent public compatibility proof in `El_Nucleo_Web`: **Node.js 24 · pnpm 11.26.0 · React 19.3 · Vite 8.3 · TypeScript 6.0.3 · Vitest 5 · ESLint 10 · Prettier 3.9**. `Plantilla-de-Proyecto` intentionally uses **Node.js 22 + Fastify 5 + Zod** as a smaller reusable-service baseline, while Meow Matrix demonstrates direct MongoDB-driver persistence, Docker/Compose integration, transactional data and release/recovery qualification. The point is verified compatibility and fit-for-purpose choices, not chasing the highest major everywhere.
 
 <p>
   <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
@@ -186,6 +193,7 @@ Recent public compatibility proof in `El_Nucleo_Web`: **Node.js 24 · pnpm 11.26
   <img src="https://img.shields.io/badge/Node.js-111827?style=flat-square&logo=nodedotjs&logoColor=5FA04E" alt="Node.js" />
   <img src="https://img.shields.io/badge/Fastify-111827?style=flat-square&logo=fastify&logoColor=FFFFFF" alt="Fastify" />
   <img src="https://img.shields.io/badge/PostgreSQL-111827?style=flat-square&logo=postgresql&logoColor=4169E1" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/MongoDB-111827?style=flat-square&logo=mongodb&logoColor=47A248" alt="MongoDB" />
   <img src="https://img.shields.io/badge/Docker-111827?style=flat-square&logo=docker&logoColor=2496ED" alt="Docker" />
   <img src="https://img.shields.io/badge/Linux-111827?style=flat-square&logo=linux&logoColor=FCC624" alt="Linux" />
   <img src="https://img.shields.io/badge/GitHub_Actions-111827?style=flat-square&logo=githubactions&logoColor=2088FF" alt="GitHub Actions" />
@@ -212,7 +220,9 @@ JavaScript · Sass / CSS · MongoDB · Redis · ORM patterns · OAuth · Google 
 05. Treat tests, UAT evidence and documentation as part of delivery.
 06. Communicate status, risks and decisions in a way stakeholders can act on.
 07. Automate evidence — not activity for activity's sake.
-08. Build for the person who has to understand the system six months later.
+08. Preserve historical truth; modernization should explain progression, not erase it.
+09. Security and privacy outrank cosmetic modernization.
+10. Build for the person who has to understand the system six months later.
 ```
 
 ---
