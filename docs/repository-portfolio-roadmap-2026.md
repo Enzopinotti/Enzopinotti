@@ -1,7 +1,7 @@
 # Repository portfolio roadmap — 2026
 
 Snapshot date: 2026-09-17  
-Last program update: 2026-09-17 — Meow Matrix provider-neutral B7 carrier completed; `App_Agenda_Medico` selected as next general legacy lane  
+Last program update: 2026-09-17 — `App_Agenda_Medico` and `Web_de_vinos` completed; `Ecommerce_NestJS` selected as next general maintenance lane  
 Owner: `Enzopinotti`  
 Scope: repositories accessible under the owner's GitHub installation at this audit point
 
@@ -133,16 +133,16 @@ Known pairs/lineages continue to be treated together where appropriate:
 | `El_Nucleo_Web` | Public | A | Completed 2022 → 2026 reconstruction | Maintain as reference |
 | `Web-de-profesores` | Public | A | Completed 2023 → 2026 teaching-workspace modernization | Maintain as fit-for-purpose reference |
 | `Pint.ar_Ecommerce` | Public | A | Completed storefront modernization | Maintain as ecommerce frontend reference |
-| `App_Agenda_Medico` | Public | C/B | 2023 Python TAD/data-structure medical agenda | **Next active general lane**: preserve baseline, typing/tests/CI/hygiene |
-| `Web_de_vinos` | Public | B | Historical HTML/SCSS learning site; README now contextualized | Following lane: Sass/build/repo hygiene, no framework inflation |
+| `App_Agenda_Medico` | Public | A/C | 2023 Python TAD exercise with separate 2026 typed authority | **Completed**: FIFO fix, 11 tests, Python 3.12/3.13/3.14 CI |
+| `Web_de_vinos` | Public | A/B | Nicolas Dadario 2023 HTML/SCSS baseline with 2026 maintenance lane | **Completed**: Dart Sass, portable HTML, truthful demo forms, CI + Pages |
 | `Proyecto_Backend` | Public | D/B | Historical Express/Mongo ecommerce lineage | Lineage resolved toward Meow; preserve/audit rather than duplicate |
 | `Chat_En_Vivo` | Public | F | Near-empty/stub | Verify successor; document/archive rather than invent |
 | `GIUCT-SQL-v1` | Public | F | Empty/stub | Preserve/archive decision |
 | `Plantilla-de-Proyecto` | Public | A/G | Reusable Node/TS/Fastify starter | Maintain/reference |
-| `Ecommerce_NestJS` | Public | C/D | NestJS ecommerce learning backend; README contextualized | Future framework-specific maintenance |
+| `Ecommerce_NestJS` | Public | C/D | NestJS ecommerce learning backend; README contextualized | **Next active general lane**: runtime/auth/config/test maintenance |
 | `Meow-Matrix---Frontend` | Public | A/D | Maintained frontend authority for Meow Matrix | B7 engineering carrier complete; provider cutover external |
 | `MeowMatrix---Backend-2v` | Public | A/D | Maintained backend/release authority for Meow Matrix | B7 engineering carrier complete; provider cutover external |
-| `StarWars_App_NextJS` | Public | C/B | Next.js 14 learning app; README contextualized | Future framework-maintenance lane |
+| `StarWars_App_NextJS` | Public | C/B | Next.js 14 learning app; README contextualized | Following framework-maintenance lane |
 | `Portfolio_Backend` | Public | F/C | Small backend scaffold | Determine supersession vs `portafolio-personal` |
 | `luciano-legnoverde` | Public | E | Client/person landing | Ownership/deploy/content/privacy audit only |
 | `centuryLanding` | Public | E | Client landing | Audit with `centuryBackend` |
@@ -214,36 +214,50 @@ Completed scope includes:
 
 External B7 cutover still requires real provider choices and credentials. Do not simulate those merely to mark a checkbox green.
 
-### P3 — `App_Agenda_Medico` — NEXT GENERAL PORTFOLIO LANE
+### P3 — `App_Agenda_Medico` — COMPLETED
 
-This is the next major legacy implementation lane.
+The 2023 collaborative TAD/data-structure exercise remains auditable at baseline `390ac3591b089e0aefd6dc5f971c3e8d22e57794`, including original collaborator history. The maintained 2026 authority is deliberately separate under `modern/` and uses standard-library-first Python rather than turning the exercise into a web product.
 
-Historical truth:
+Completed evidence:
 
-- 2023 collaborative Python project;
-- TADs for Paciente, Cita, Cola and Agenda;
-- interactive menu/application code;
-- list-based data structures and a committed `__pycache__/`;
-- lower-case `readme.md` is primarily a long TAD specification rather than a project landing page.
+- `Paciente` / `Cita` immutable dataclasses and an encapsulated `Agenda`;
+- real FIFO `ColaCitas` via `deque.popleft()`, fixing the historical `list.pop()` LIFO behavior;
+- date/time represented by Python standard types;
+- maintained console interface with no external runtime dependencies;
+- eight tracked `.pyc`/`__pycache__` artifacts removed from current authority;
+- **11/11 behavior tests** across Python 3.12, 3.13 and 3.14;
+- PR #5 merged with exact-head guard;
+- final `main`: `d6a335738eb0c9b4dc8751049faa3c21a97bad00`;
+- post-merge `Python quality` run `35229223343` succeeded on all three Python versions.
 
-Modernization goals:
+### P4 — `Web_de_vinos` — COMPLETED
 
-1. preserve the exact 2023 baseline and collaborator authorship;
-2. make the maintained authority explicit instead of silently rewriting original modules;
-3. remove generated Python cache artifacts from current authority;
-4. add modern typed Python domain structures without database/web/SaaS invention;
-5. fix behavior only with tests — including the historical queue implementation that currently removes from the end (`pop()`) rather than FIFO;
-6. add deterministic tests and GitHub Actions;
-7. turn the root README into useful project/history/run documentation while retaining the original TAD specification as historical documentation;
-8. finish with a clear completion SHA and central-profile synchronization.
+The repository now preserves its actual provenance: the historical baseline `c95ca4bad1b11f0c946a3c04764c63ca18e6d7c6` was authored by Nicodadario / Nicolas Dadario, while Enzo's contribution is explicitly the 2026 modernization/maintenance lane.
 
-### P4 — `Web_de_vinos` — FOLLOWING HISTORICAL LANE
+Completed evidence:
 
-The README/context pass is already done. The dedicated code lane should remove committed `node_modules` from current authority, replace `node-sass` with maintained Sass tooling, make the build reproducible and review paths/accessibility/responsive behavior. Avoid another React rewrite unless a genuine product requirement appears.
+- thousands of generated `node_modules/` files removed from current Git authority while history remains intact;
+- `node-sass` + `nodemon` replaced by exact Dart Sass `1.104.1` with lockfile-v3 reproducibility;
+- legacy Sass `@import` entrypoint migrated to module-based `@use`;
+- committed `css/style.css` is verified as a deterministic build artifact;
+- language, viewport, favicon/local paths and navigation semantics corrected;
+- unnecessary remote Bootstrap JavaScript/jQuery/Popper removed;
+- contact/subscription forms are now visibly non-submitting demos and do not transmit data;
+- custom validator checks five pages, assets, alt text, local references, demo-form truth boundaries and dependency hygiene;
+- permanent CI runs exact install, high-severity audit, site validation, CSS reproducibility and HTTP smoke;
+- PR #3 merged with exact-head guard;
+- final `main`: `cadedaa822e87f7a2131625d2acc197efb6e184f`;
+- post-merge `Static quality` run `35234556753` succeeded;
+- GitHub Pages build/deploy run `35234554578` succeeded for `https://enzopinotti.github.io/Web_de_vinos/`.
+
+### P5 — `Ecommerce_NestJS` — NEXT GENERAL PORTFOLIO LANE
+
+This is the next framework-specific learning repository to audit as code rather than only documentation. Its README is already contextualized; the dedicated lane should verify the NestJS 10 / Mongo-Mongoose / JWT-Passport application against its real modules and tests before changing dependencies.
+
+The lane should prioritize dependency/runtime compatibility, configuration/secret boundaries, auth correctness, validation/error contracts, test truth and reproducible CI. It should **not** become a second Meow Matrix ecommerce product.
 
 ### Later framework-specific learning lanes
 
-- `Ecommerce_NestJS` — README fixed; later dependency/runtime/auth/test maintenance.
 - `StarWars_App_NextJS` — README fixed; later Next/React/i18n/test maintenance.
 
 ### Historical backend lineage
@@ -319,14 +333,14 @@ Meow Matrix — provider-neutral full-stack/release carrier through B7
 IMMEDIATE SECURITY TRIAGE
 TrackIt_Frontend — current-tree hygiene merged; historical/external credential classification remains
 
-NEXT GENERAL PORTFOLIO LANE
+COMPLETED HISTORICAL / ACADEMIC LANES
 App_Agenda_Medico
-
-FOLLOWING HISTORICAL LANE
 Web_de_vinos
 
-LATER FRAMEWORK-SPECIFIC LANES
+NEXT GENERAL PORTFOLIO LANE
 Ecommerce_NestJS
+
+FOLLOWING FRAMEWORK-SPECIFIC LANE
 StarWars_App_NextJS
 
 CURRENT / REFERENCE — MAINTAIN, DON'T REWRITE
@@ -347,17 +361,17 @@ empty and near-empty repositories
 
 ## 12. Next decision gate
 
-The next implementation gate is `App_Agenda_Medico`.
+The next implementation gate is `Ecommerce_NestJS`.
 
 Before changing behavior:
 
-- pin the historical 2023 authority (`390ac3591b089e0aefd6dc5f971c3e8d22e57794`) and preserve collaborator authorship;
-- inspect the interactive menu and all TAD operations against the documented specification;
-- inventory behavior worth preserving vs. correctness bugs worth fixing;
-- create a separate maintained Python authority rather than rewriting the original exercise in place;
-- choose standard-library-first packaging/testing unless a dependency is justified;
-- qualify FIFO queue behavior, patient/citation semantics, agenda deletion/filtering and rescheduling through tests;
-- add CI and repository hygiene;
-- synchronize this roadmap/profile only after the repository lane is actually integrated.
+- pin the current historical authority and inspect authorship/history;
+- inventory Nest modules, DTOs, guards/strategies, Mongo schemas, mail/configuration and test coverage;
+- identify any tracked secrets or misleading browser/server configuration before dependency upgrades;
+- establish the currently reproducible Node/package-manager/runtime boundary;
+- run existing unit/e2e tests and distinguish real regressions from stale starter scaffolding;
+- decide the smallest maintained Nest/Node/Mongoose upgrade that preserves the learning project;
+- add deterministic CI and dependency/security checks;
+- preserve its status as a framework-learning backend rather than duplicating Meow Matrix.
 
-The target story is explicit: **the project should still look like a data-structures/algorithm exercise, but one that a 2026 engineer can install, understand, test and safely evolve.**
+The target story is explicit: **a real NestJS learning backend whose auth, persistence, configuration and tests are understandable and reproducible in 2026, without inventing a second production ecommerce platform.**
