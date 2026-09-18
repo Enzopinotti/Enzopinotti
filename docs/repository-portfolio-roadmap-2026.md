@@ -1,7 +1,7 @@
 # Repository portfolio roadmap — 2026
 
 Snapshot date: 2026-09-17  
-Last program update: 2026-09-18 — `StarWars_App_NextJS` completed and post-merge verified; `ejercicioDjango` selected as next general framework-maintenance lane  
+Last program update: 2026-09-18 — `ejercicioDjango` completed and post-merge verified; `2024-UTN-GRUPO-2` selected as the next authorship-first academic discovery lane  
 Owner: `Enzopinotti`  
 Scope: repositories accessible under the owner's GitHub installation at this audit point
 
@@ -147,7 +147,7 @@ Known pairs/lineages continue to be treated together where appropriate:
 | `luciano-legnoverde` | Public | E | Client/person landing | Ownership/deploy/content/privacy audit only |
 | `centuryLanding` | Public | E | Client landing | Audit with `centuryBackend` |
 | `centuryBackend` | Public | E/D | Small backend/upload surface | Audit with landing, focus data/upload security |
-| `2024-UTN-GRUPO-2` | Public | C | Collaborative academic project | Preserve authorship; docs/tests only with context |
+| `2024-UTN-GRUPO-2` | Public | C | Collaborative academic project with multiple authors | **Next discovery lane**: provenance/authorship first; preserve team contributions before any docs/tests maintenance |
 | `odoo-practice` | Public | F | Empty practice stub | Keep/archive; do not manufacture project |
 | `portafolio-personal` | Public | G | Current portfolio/product infrastructure | Active maintenance only |
 | `AntigalBackend` | Public | F/E | Empty paired backend | Verify intentional supersession |
@@ -155,7 +155,7 @@ Known pairs/lineages continue to be treated together where appropriate:
 | `Antigal_Frontend_Enzo` | Public | E | Client frontend | Audit with paired history/ownership |
 | `TrackIt_Backend` | Public | F/D | Empty backend repository | Determine intended successor/authority |
 | `TrackIt_Frontend` | Public | D/B | React 18 CRA prototype | Current-tree security hygiene done; historical secret review still open |
-| `ejercicioDjango` | Public | C | Small Django exercise | **Next general lane**: establish provenance/runtime/package/test truth before any framework changes |
+| `ejercicioDjango` | Public | A/C | Small Django exercise with completed 2026 maintenance lane | **Completed**: Python 3.12.14, Django 5.2.17 LTS, 25 tests, clean migration rebuild, HTTP smoke, permanent CI |
 | `PortfolioAndreCoronel` | Public | E | Large portfolio/client repository | Ownership/media/deploy audit before changes |
 | `marina_landing` | Private | E | Private landing/client work | Keep private; maintenance by real need |
 | `odontApp` | Private | G/E | Private healthcare/odontology app | Security/privacy/data review; no public exposure |
@@ -297,23 +297,50 @@ Final evidence:
 
 The lane also caught and repaired a real deployment portability regression: local/CI versions remain exactly pinned, while deployment-facing engines now express the supported Node 24.x / npm 11 major contract rather than a platform-hostile minor/patch floor.
 
-### P7 — `ejercicioDjango` — NEXT GENERAL PORTFOLIO LANE
+### P7 — `ejercicioDjango` — COMPLETED
 
-This is a small public Django exercise and is the next low-risk framework-specific learning lane.
+The small Django learning exercise is now a completed framework-maintenance case with its academic scope preserved.
 
-Begin with discovery only:
+Final evidence:
 
-- pin the historical/current code authority and inspect authorship;
-- identify Python and Django versions from repository evidence;
-- inspect dependency/virtual-environment authority and whether a reproducible lock/requirements contract exists;
-- inventory project/apps, routes, models, migrations, templates/static assets and database assumptions;
-- run the existing project/tests before adding or upgrading anything;
-- determine whether tests, packaging and documentation are justified by the actual exercise scope;
-- preserve it as a compact Django learning artifact rather than expanding it into an unrelated production product.
+- repository issue: `Enzopinotti/ejercicioDjango#1` — closed as completed;
+- integration PR: `Enzopinotti/ejercicioDjango#2` — squash merged;
+- reviewed branch head: `1a28aecf2e5d33afd6126d11f18f9561f4baa9dd`;
+- final squash-merged `main`: `d85ae524973cacfef3f9fb418a092e8dcc37c0c4`;
+- branch Quality run: `35364889681` — success;
+- pull-request Quality run: `35373406247` — success;
+- post-merge `main` Quality run: `35373621002` — success;
+- historical runtime reconstructed as Python 3.12 + Django 5.0 before maintenance changes;
+- maintained runtime: Python `3.12.14` + Django `5.2.17` LTS;
+- tracked SQLite runtime state and 12 tracked `.pyc` files removed from maintained Git authority;
+- database is rebuilt from migrations on clean CI;
+- behavior/accessibility/admin suite expanded from 0 to **25 tests**;
+- future-question visibility/voting defects and hidden vote-error feedback were fixed;
+- local configuration is explicit through optional environment overrides without inventing production HTTPS infrastructure;
+- real `runserver` HTTP smoke verifies polls index/detail/results/static/admin behavior;
+- maintained dependency audit reports no known vulnerabilities;
+- SHA-pinned Actions, evidence artifacts and monthly Dependabot are permanent.
 
-### Later framework-specific learning lanes
+This repository remains intentionally small: no REST rewrite, React frontend, PostgreSQL, Docker or custom auth was added.
 
-After the completed `StarWars_App_NextJS` lane, `ejercicioDjango` is the selected next framework-specific learning lane under the same one-major-lane-at-a-time rule.
+### P8 — `2024-UTN-GRUPO-2` — NEXT AUTHORSHIP-FIRST DISCOVERY LANE
+
+This repository is a collaborative 2024 academic project, so provenance is the first constraint rather than framework novelty.
+
+Initial inspection already proves multiple authors in the mainline history, including Enzo Pinotti, Matias Rau Bekerman, Patricio and Natasha Cadabon. The current `main` authority is `b63af0a8092ae4ce69aad4013affc6159cf7fafa`.
+
+The first block must remain discovery-only:
+
+- map authorship and branch/merge history before attributing work;
+- identify the academic assignment/course context from repository evidence;
+- inventory `Frontend/` and `Backend/` stacks, package/runtime authority and deployment assumptions;
+- inspect authentication/data/API boundaries without reproducing secrets or private values;
+- run existing build/test commands before dependency changes;
+- distinguish team-authored behavior from Enzo-authored contributions;
+- preserve team history rather than rewriting the project into an individual portfolio artifact;
+- choose docs/tests/maintenance only after the provenance boundary is explicit.
+
+No behavior modernization is authorized merely by selecting the lane.
 
 ### Historical backend lineage
 
@@ -395,9 +422,10 @@ Web_de_vinos
 COMPLETED FRAMEWORK-SPECIFIC LANES
 Ecommerce_NestJS
 StarWars_App_NextJS
-
-NEXT GENERAL PORTFOLIO LANE
 ejercicioDjango
+
+NEXT AUTHORSHIP-FIRST ACADEMIC DISCOVERY LANE
+2024-UTN-GRUPO-2
 
 CURRENT / REFERENCE — MAINTAIN, DON'T REWRITE
 Plantilla-de-Proyecto
@@ -417,17 +445,24 @@ empty and near-empty repositories
 
 ## 12. Next decision gate
 
-The next implementation gate is `ejercicioDjango`.
+The next implementation gate is **discovery-only** for `2024-UTN-GRUPO-2`.
 
 Before changing behavior:
 
-- pin the current historical/code authority and inspect authorship/history;
-- identify the actual Python/Django runtime and dependency authority from repository evidence;
-- run the current application/test commands, if present, before changing packages;
-- inventory Django project/apps, URLs, views, models, migrations, templates/static files and database assumptions;
-- distinguish missing packaging/tests/docs from intentionally small academic scope;
-- measure dependency/security state only after the runtime can be reproduced;
-- choose the smallest maintenance update justified by reproducibility and tests;
-- preserve the project as a compact Django learning exercise rather than inventing production architecture.
+- pin current `main` and inspect the complete authorship/merge history;
+- identify the academic assignment and team context from repository evidence;
+- inventory the frontend/backend stacks, package managers, runtime versions, routes/APIs, persistence and deployment assumptions;
+- run existing build/test commands before changing dependencies;
+- inspect public configuration and secret-handling boundaries without reproducing historical values;
+- separate Enzo-authored contributions from work authored by collaborators;
+- decide whether the correct treatment is maintenance, documentation/testing only, or preservation;
+- do not rewrite collaborative history into an individual-origin story.
 
-The target story is explicit: **a small Django learning artifact whose provenance, runtime, structure and tests are understandable and reproducible in 2026, without inflating its original scope.**
+Current discovery authority:
+
+- repository: `Enzopinotti/2024-UTN-GRUPO-2`;
+- `main`: `b63af0a8092ae4ce69aad4013affc6159cf7fafa`;
+- visible top-level structure: `Frontend/`, `Backend/`, `.gitignore`, `README.md`;
+- history already shows multiple authors, so provenance is a hard gate.
+
+The target story is not “modernize everything.” It is: **understand the collaborative academic artifact accurately, then make only the smallest maintenance changes that can be attributed and justified.**
