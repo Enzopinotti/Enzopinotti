@@ -1,7 +1,7 @@
 # Repository portfolio roadmap — 2026
 
 Snapshot date: 2026-09-17  
-Last program update: 2026-09-17 — `App_Agenda_Medico` and `Web_de_vinos` completed; `Ecommerce_NestJS` selected as next general maintenance lane  
+Last program update: 2026-09-18 — `Ecommerce_NestJS` completed and post-merge verified; `StarWars_App_NextJS` selected as next general framework-maintenance lane  
 Owner: `Enzopinotti`  
 Scope: repositories accessible under the owner's GitHub installation at this audit point
 
@@ -139,10 +139,10 @@ Known pairs/lineages continue to be treated together where appropriate:
 | `Chat_En_Vivo` | Public | F | Near-empty/stub | Verify successor; document/archive rather than invent |
 | `GIUCT-SQL-v1` | Public | F | Empty/stub | Preserve/archive decision |
 | `Plantilla-de-Proyecto` | Public | A/G | Reusable Node/TS/Fastify starter | Maintain/reference |
-| `Ecommerce_NestJS` | Public | C/D | NestJS ecommerce learning backend; README contextualized | **Next active general lane**: runtime/auth/config/test maintenance |
+| `Ecommerce_NestJS` | Public | C/D | NestJS ecommerce learning backend; 2026 modernization complete | **Completed**: Node 24, Nest 12, secure auth/recovery boundaries, 38 unit + 3 integration + 5 E2E tests, permanent CI |
 | `Meow-Matrix---Frontend` | Public | A/D | Maintained frontend authority for Meow Matrix | B7 engineering carrier complete; provider cutover external |
 | `MeowMatrix---Backend-2v` | Public | A/D | Maintained backend/release authority for Meow Matrix | B7 engineering carrier complete; provider cutover external |
-| `StarWars_App_NextJS` | Public | C/B | Next.js 14 learning app; README contextualized | Following framework-maintenance lane |
+| `StarWars_App_NextJS` | Public | C/B | Next.js 14 learning app; README contextualized | **Next active general lane**: framework/runtime/i18n/test maintenance |
 | `Portfolio_Backend` | Public | F/C | Small backend scaffold | Determine supersession vs `portafolio-personal` |
 | `luciano-legnoverde` | Public | E | Client/person landing | Ownership/deploy/content/privacy audit only |
 | `centuryLanding` | Public | E | Client landing | Audit with `centuryBackend` |
@@ -250,15 +250,40 @@ Completed evidence:
 - post-merge `Static quality` run `35234556753` succeeded;
 - GitHub Pages build/deploy run `35234554578` succeeded for `https://enzopinotti.github.io/Web_de_vinos/`.
 
-### P5 — `Ecommerce_NestJS` — NEXT GENERAL PORTFOLIO LANE
+### P5 — `Ecommerce_NestJS` — COMPLETED
 
-This is the next framework-specific learning repository to audit as code rather than only documentation. Its README is already contextualized; the dedicated lane should verify the NestJS 10 / Mongo-Mongoose / JWT-Passport application against its real modules and tests before changing dependencies.
+The 2024 NestJS/Mongo learning backend is now a completed framework-maintenance case rather than a future lane.
 
-The lane should prioritize dependency/runtime compatibility, configuration/secret boundaries, auth correctness, validation/error contracts, test truth and reproducible CI. It should **not** become a second Meow Matrix ecommerce product.
+Completed evidence:
+
+- contextual baseline on `main`: `d3313889bf6a774e5cddf2b34685d789c9eecf00`;
+- complete B0–B8 modernization reviewed in PR #3;
+- exact PR head before merge: `ff89607cf70784b32085e36799c184f22f83b84f`;
+- squash-merged final `main`: `e47d27899fd775b06399be6cb128fdeeab624ff0`;
+- exact-head PR Quality run `35301362232` succeeded after explicitly verifying the checked-out SHA equals the PR head;
+- post-merge Quality run `35301527433` succeeded on final `main`;
+- Node 24 / npm 11 reproducibility;
+- NestJS 12 + TypeScript 5.9.3 maintenance baseline;
+- fail-fast configuration and production asset/build contract;
+- one cookie-session auth authority with no JWT returned in auth JSON;
+- password recovery uses opaque tokens, digest-at-rest, expiry and one-use consumption;
+- truthful read-only product/category surface with ObjectId and bounded-query validation;
+- lint 0 / formatting clean / production high audit blocking;
+- **14 unit suites / 38 unit tests + 3 integration tests + 5 E2E tests**;
+- permanent two-job CI plus weekly Dependabot;
+- no payments, transactional cart/checkout, invented roles or production infrastructure added.
+
+### P6 — `StarWars_App_NextJS` — NEXT GENERAL PORTFOLIO LANE
+
+The repository already has a contextual README and is now the next framework-specific learning lane.
+
+The lane should begin with repository-specific discovery rather than a framework upgrade by default. It should verify the current Next.js 14 / React learning app, Node/package-manager boundary, routing/data-fetching behavior, i18n/localization surface, tests, build/deploy assumptions and dependency/security state before changing majors.
+
+The goal is a reproducible and truthful Next.js learning artifact in 2026, not a rewrite into an unrelated full-stack product.
 
 ### Later framework-specific learning lanes
 
-- `StarWars_App_NextJS` — README fixed; later Next/React/i18n/test maintenance.
+After `StarWars_App_NextJS`, select the next repository from the classification table using the same one-major-lane-at-a-time rule.
 
 ### Historical backend lineage
 
@@ -337,10 +362,10 @@ COMPLETED HISTORICAL / ACADEMIC LANES
 App_Agenda_Medico
 Web_de_vinos
 
-NEXT GENERAL PORTFOLIO LANE
+COMPLETED FRAMEWORK-SPECIFIC LANE
 Ecommerce_NestJS
 
-FOLLOWING FRAMEWORK-SPECIFIC LANE
+NEXT GENERAL PORTFOLIO LANE
 StarWars_App_NextJS
 
 CURRENT / REFERENCE — MAINTAIN, DON'T REWRITE
@@ -361,17 +386,17 @@ empty and near-empty repositories
 
 ## 12. Next decision gate
 
-The next implementation gate is `Ecommerce_NestJS`.
+The next implementation gate is `StarWars_App_NextJS`.
 
 Before changing behavior:
 
-- pin the current historical authority and inspect authorship/history;
-- inventory Nest modules, DTOs, guards/strategies, Mongo schemas, mail/configuration and test coverage;
-- identify any tracked secrets or misleading browser/server configuration before dependency upgrades;
-- establish the currently reproducible Node/package-manager/runtime boundary;
-- run existing unit/e2e tests and distinguish real regressions from stale starter scaffolding;
-- decide the smallest maintained Nest/Node/Mongoose upgrade that preserves the learning project;
-- add deterministic CI and dependency/security checks;
-- preserve its status as a framework-learning backend rather than duplicating Meow Matrix.
+- pin the current historical/code authority and inspect authorship/history;
+- inventory Next.js/React versions, package-manager/runtime assumptions, routes, data fetching, localization/i18n and test coverage;
+- run the existing build/tests and distinguish stale starter assumptions from real application behavior;
+- inspect browser/server configuration and public environment boundaries before dependency upgrades;
+- measure `npm audit` / outdated state before changing majors;
+- choose the smallest maintained Next/React/Node update justified by reproducibility and tests;
+- add deterministic CI and behavior tests around the app's actual learning goals;
+- preserve the project as a framework-learning artifact rather than inventing backend/product scope it never had.
 
-The target story is explicit: **a real NestJS learning backend whose auth, persistence, configuration and tests are understandable and reproducible in 2026, without inventing a second production ecommerce platform.**
+The target story is explicit: **a real Next.js learning application whose runtime, routes, localization and tests are understandable and reproducible in 2026, with its historical scope preserved.**
