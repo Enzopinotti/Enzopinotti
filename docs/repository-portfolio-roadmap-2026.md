@@ -1,7 +1,7 @@
 # Repository portfolio roadmap — 2026
 
 Snapshot date: 2026-09-17  
-Last program update: 2026-09-18 — `Ecommerce_NestJS` completed and post-merge verified; `StarWars_App_NextJS` selected as next general framework-maintenance lane  
+Last program update: 2026-09-18 — `StarWars_App_NextJS` completed and post-merge verified; `ejercicioDjango` selected as next general framework-maintenance lane  
 Owner: `Enzopinotti`  
 Scope: repositories accessible under the owner's GitHub installation at this audit point
 
@@ -142,7 +142,7 @@ Known pairs/lineages continue to be treated together where appropriate:
 | `Ecommerce_NestJS` | Public | C/D | NestJS ecommerce learning backend; 2026 modernization complete | **Completed**: Node 24, Nest 12, secure auth/recovery boundaries, 38 unit + 3 integration + 5 E2E tests, permanent CI |
 | `Meow-Matrix---Frontend` | Public | A/D | Maintained frontend authority for Meow Matrix | B7 engineering carrier complete; provider cutover external |
 | `MeowMatrix---Backend-2v` | Public | A/D | Maintained backend/release authority for Meow Matrix | B7 engineering carrier complete; provider cutover external |
-| `StarWars_App_NextJS` | Public | C/B | Next.js 14 learning app; README contextualized | **Next active general lane**: framework/runtime/i18n/test maintenance |
+| `StarWars_App_NextJS` | Public | C/B | Next.js learning app; 2026 modernization complete | **Completed**: Next 16 + React 19, portable i18n/SWAPI contracts, permanent CI, zero npm audit findings, Vercel-qualified delivery |
 | `Portfolio_Backend` | Public | F/C | Small backend scaffold | Determine supersession vs `portafolio-personal` |
 | `luciano-legnoverde` | Public | E | Client/person landing | Ownership/deploy/content/privacy audit only |
 | `centuryLanding` | Public | E | Client landing | Audit with `centuryBackend` |
@@ -155,7 +155,7 @@ Known pairs/lineages continue to be treated together where appropriate:
 | `Antigal_Frontend_Enzo` | Public | E | Client frontend | Audit with paired history/ownership |
 | `TrackIt_Backend` | Public | F/D | Empty backend repository | Determine intended successor/authority |
 | `TrackIt_Frontend` | Public | D/B | React 18 CRA prototype | Current-tree security hygiene done; historical secret review still open |
-| `ejercicioDjango` | Public | C | Small Django exercise | Preserve; packaging/tests/docs if retained |
+| `ejercicioDjango` | Public | C | Small Django exercise | **Next general lane**: establish provenance/runtime/package/test truth before any framework changes |
 | `PortfolioAndreCoronel` | Public | E | Large portfolio/client repository | Ownership/media/deploy audit before changes |
 | `marina_landing` | Private | E | Private landing/client work | Keep private; maintenance by real need |
 | `odontApp` | Private | G/E | Private healthcare/odontology app | Security/privacy/data review; no public exposure |
@@ -273,17 +273,47 @@ Completed evidence:
 - permanent two-job CI plus weekly Dependabot;
 - no payments, transactional cart/checkout, invented roles or production infrastructure added.
 
-### P6 — `StarWars_App_NextJS` — NEXT GENERAL PORTFOLIO LANE
+### P6 — `StarWars_App_NextJS` — COMPLETED
 
-The repository already has a contextual README and is now the next framework-specific learning lane.
+The Next.js learning application is now a completed framework-maintenance case with its historical scope preserved.
 
-The lane should begin with repository-specific discovery rather than a framework upgrade by default. It should verify the current Next.js 14 / React learning app, Node/package-manager boundary, routing/data-fetching behavior, i18n/localization surface, tests, build/deploy assumptions and dependency/security state before changing majors.
+Final evidence:
 
-The goal is a reproducible and truthful Next.js learning artifact in 2026, not a rewrite into an unrelated full-stack product.
+- repository issue: `Enzopinotti/StarWars_App_NextJS#2` — closed;
+- integration PR: `Enzopinotti/StarWars_App_NextJS#3` — squash merged;
+- reviewed PR head: `9b5b857e9016a80f03ebf3591b2fd725d239d48b`;
+- final `main`: `2b3b1ca9c699757b793b35e418d851fda7f47002`;
+- branch Quality run: `35357837618` — success;
+- pull-request Quality run: `35357842513` — success;
+- post-merge `main` Quality run: `35358011800` — success;
+- Vercel preview and post-merge production status: success;
+- Next `16.3.5` + React `19.3.0`;
+- deterministic EN/ES localization and SWAPI failure contracts;
+- route/data and accessibility/responsive contracts;
+- production audit: 0;
+- complete dependency-tree audit: 0;
+- Pages Router and Tailwind 3 deliberately retained;
+- no backend/auth/database/product rewrite invented.
+
+The lane also caught and repaired a real deployment portability regression: local/CI versions remain exactly pinned, while deployment-facing engines now express the supported Node 24.x / npm 11 major contract rather than a platform-hostile minor/patch floor.
+
+### P7 — `ejercicioDjango` — NEXT GENERAL PORTFOLIO LANE
+
+This is a small public Django exercise and is the next low-risk framework-specific learning lane.
+
+Begin with discovery only:
+
+- pin the historical/current code authority and inspect authorship;
+- identify Python and Django versions from repository evidence;
+- inspect dependency/virtual-environment authority and whether a reproducible lock/requirements contract exists;
+- inventory project/apps, routes, models, migrations, templates/static assets and database assumptions;
+- run the existing project/tests before adding or upgrading anything;
+- determine whether tests, packaging and documentation are justified by the actual exercise scope;
+- preserve it as a compact Django learning artifact rather than expanding it into an unrelated production product.
 
 ### Later framework-specific learning lanes
 
-After `StarWars_App_NextJS`, select the next repository from the classification table using the same one-major-lane-at-a-time rule.
+After the completed `StarWars_App_NextJS` lane, `ejercicioDjango` is the selected next framework-specific learning lane under the same one-major-lane-at-a-time rule.
 
 ### Historical backend lineage
 
@@ -362,11 +392,12 @@ COMPLETED HISTORICAL / ACADEMIC LANES
 App_Agenda_Medico
 Web_de_vinos
 
-COMPLETED FRAMEWORK-SPECIFIC LANE
+COMPLETED FRAMEWORK-SPECIFIC LANES
 Ecommerce_NestJS
+StarWars_App_NextJS
 
 NEXT GENERAL PORTFOLIO LANE
-StarWars_App_NextJS
+ejercicioDjango
 
 CURRENT / REFERENCE — MAINTAIN, DON'T REWRITE
 Plantilla-de-Proyecto
@@ -386,17 +417,17 @@ empty and near-empty repositories
 
 ## 12. Next decision gate
 
-The next implementation gate is `StarWars_App_NextJS`.
+The next implementation gate is `ejercicioDjango`.
 
 Before changing behavior:
 
 - pin the current historical/code authority and inspect authorship/history;
-- inventory Next.js/React versions, package-manager/runtime assumptions, routes, data fetching, localization/i18n and test coverage;
-- run the existing build/tests and distinguish stale starter assumptions from real application behavior;
-- inspect browser/server configuration and public environment boundaries before dependency upgrades;
-- measure `npm audit` / outdated state before changing majors;
-- choose the smallest maintained Next/React/Node update justified by reproducibility and tests;
-- add deterministic CI and behavior tests around the app's actual learning goals;
-- preserve the project as a framework-learning artifact rather than inventing backend/product scope it never had.
+- identify the actual Python/Django runtime and dependency authority from repository evidence;
+- run the current application/test commands, if present, before changing packages;
+- inventory Django project/apps, URLs, views, models, migrations, templates/static files and database assumptions;
+- distinguish missing packaging/tests/docs from intentionally small academic scope;
+- measure dependency/security state only after the runtime can be reproduced;
+- choose the smallest maintenance update justified by reproducibility and tests;
+- preserve the project as a compact Django learning exercise rather than inventing production architecture.
 
-The target story is explicit: **a real Next.js learning application whose runtime, routes, localization and tests are understandable and reproducible in 2026, with its historical scope preserved.**
+The target story is explicit: **a small Django learning artifact whose provenance, runtime, structure and tests are understandable and reproducible in 2026, without inflating its original scope.**
