@@ -2,6 +2,11 @@ name: Refresh profile 3D contribution landscape
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/repository-portfolio-roadmap-2026.md"
 
 permissions:
   contents: write
