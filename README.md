@@ -148,6 +148,8 @@ real issue → scoped branch → meaningful commits → validation → review �
 
 The landscape uses the MIT-licensed [`github-profile-3d-contrib`](https://github.com/yoshi389111/github-profile-3d-contrib) engine with a custom palette and profile-specific branding. It can still be refreshed manually, and now also refreshes automatically whenever the central repository-portfolio roadmap changes; there is intentionally **no cron/scheduled churn**.
 
+Operational details, refresh verification and recovery steps are documented in **[Profile maintenance runbook — 2026](./docs/profile-maintenance-2026.md)**.
+
 ---
 
 ## 05 // HOW I WORK
