@@ -255,6 +255,8 @@ def validate_profile_3d_workflow() -> None:
         "main kept advancing while publishing generated profile assets; giving up safely after 3 attempts.",
         "workflow_dispatch:",
         'docs/repository-portfolio-roadmap-2026.md',
+        "Validate generated profile before publish",
+        "python3 .github/scripts/validate-profile.py",
     ):
         if contract not in text:
             fail(f"profile 3D workflow lost required publish safety contract: {contract}")
