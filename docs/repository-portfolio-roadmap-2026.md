@@ -440,8 +440,11 @@ Ecommerce_NestJS
 StarWars_App_NextJS
 ejercicioDjango
 
+PROGRAM STATUS
+2026 modernization program closed after P8
+
 NEXT GENERAL PORTFOLIO LANE
-Selection pending — re-evaluate the 46-repository inventory before activating P9
+Selection pending — any future P9 starts a new scoped issue/program after re-evaluating the 46-repository inventory
 
 CURRENT / REFERENCE — MAINTAIN, DON'T REWRITE
 Plantilla-de-Proyecto
@@ -459,11 +462,13 @@ STUBS — EXPLICIT PRESERVE / ARCHIVE / SUPERSEDE DECISION
 empty and near-empty repositories
 ```
 
-## 12. Next decision gate
+## 12. Program closeout and future decision gate
 
-P8 is complete. Do **not** activate another repository merely to keep the sequence moving.
+The 2026 repository-modernization program is closed after P8.
 
-Before selecting P9:
+Do **not** activate another repository merely to keep the sequence moving, and do not reopen the closed coordination issue solely to create P9.
+
+If a future P9 is justified:
 
 - rescan the 46-repository inventory against current activity, ownership and portfolio value;
 - exclude active/private product work such as TOP, Assetelier-Studio and linkedin-content-ops from legacy-rewrite treatment;
@@ -471,14 +476,15 @@ Before selecting P9:
 - resolve stubs/empty repositories through preserve/archive/supersede decisions rather than invented implementation;
 - keep the separate TrackIt historical/external credential review visible;
 - prefer a lane where real security, reproducibility, provenance or framework-maintenance work can be completed end-to-end;
-- open the repository-specific issue before implementation;
-- synchronize this roadmap again when P9 is selected.
+- open a new scoped repository issue or a new portfolio-program issue before implementation;
+- synchronize this roadmap again when P9 is actually selected.
 
-Current central state:
+Final 2026 central state:
 
 - repository inventory: **46 repositories**;
 - latest completed general lane: **P8 — 2024-UTN-GRUPO-2**;
 - P8 final `main`: `5bca5199db7de80b7ab2f2a75d8d55bab0e27408`;
+- 2026 portfolio program: **closed**;
 - next general lane: **selection pending**.
 
 The target story remains: **real repository need → scoped issue → evidence-based maintenance → validation → closeout → central sync**.
