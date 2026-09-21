@@ -12,9 +12,11 @@ Profile repository:
 
 `Enzopinotti/Enzopinotti`
 
-Current maintained state before this runbook:
+Operational baseline before the final 2026 closeout:
 
 `f1d3b58079d1d383cb3d2f23a6cbd12b9aa3ebcd`
+
+Current `main` is the runtime authority; do not treat this historical baseline as a branch target.
 
 Portfolio inventory:
 
@@ -182,66 +184,47 @@ If it still fails:
 
 ## Portfolio synchronization rule
 
-Whenever a repository lane changes state:
+The 2026 portfolio-modernization program is closed after P8.
 
-`planned → active → completed`
+If a future repository lane is activated:
 
-update:
+1. fetch current `main`;
+2. re-evaluate the 46-repository inventory;
+3. open a **new scoped issue** for that lane or for a new portfolio program;
+4. update `docs/repository-portfolio-roadmap-2026.md`;
+5. update README only when the public story materially changes.
 
-1. the repository-specific issue/PR;
-2. `docs/repository-portfolio-roadmap-2026.md`;
-3. README only when the public story materially changes;
-4. central coordination issue #19.
+Because roadmap changes trigger the 3D refresh, the graph will refresh as a side effect of a meaningful portfolio change.
 
-Because roadmap changes trigger the 3D refresh, the graph then refreshes as a side effect of a meaningful portfolio change.
+Do **not** reopen old coordination issues merely to start P9.
 
-## Open coordination issues that are intentionally still active
+## Coordination issue status
 
-### #1 — Engineering maturity program
+All profile-repository coordination issues from the 2026 program are closed.
 
-Broad umbrella for meaningful engineering/public portfolio work.
+- #1 — engineering maturity program: completed for the 2026 profile/portfolio scope;
+- #3 — maturity baseline: completed;
+- #6 — manual profile finish: closed as an optional/manual checklist, not repository-blocking work;
+- #7 — open-source visibility V1: closed without adoption in this program;
+- #12 — old one-shot hardening rollout: superseded by #19;
+- #13 — 3D refresh follow-up: completed;
+- #14 — profile bio follow-up: consolidated into #6;
+- #19 — repository portfolio modernization program — 2026: completed after P8.
 
-Keep open while the broader program continues.
+There are no intentionally open coordination issues in this repository.
 
-### #6 — Manual profile finish
+## Optional manual profile polish
 
-The single remaining manual-profile checklist.
+Some GitHub account/repository metadata settings are outside repository-content automation:
 
-It contains:
-
-- account bio;
+- profile bio;
 - profile website;
 - curated pins;
 - repository descriptions/homepages/topics.
 
-These settings are not repository-content changes.
+The recommendations remain preserved in closed issue #6 for reference.
 
-### #7 — Open-source visibility
-
-Keep open until there is at least one meaningful upstream contribution based on a real problem encountered in work.
-
-Do not use typo spam or synthetic contribution farming.
-
-### #19 — Repository portfolio modernization program
-
-Central sequencing authority.
-
-P8 is complete and P9 is intentionally unselected.
-
-## Closed/superseded coordination issues
-
-- #3 — maturity baseline: completed;
-- #12 — old one-shot hardening rollout: superseded by #19;
-- #13 — 3D refresh follow-up: completed;
-- #14 — profile bio follow-up: consolidated into #6.
-
-## Manual profile work still outstanding
-
-Repository/API tooling available to this maintenance lane does not expose account-profile editing or repository metadata mutation.
-
-Therefore the remaining manual GitHub UI work is deliberately tracked in #6 rather than represented as completed.
-
-Do not close #6 until those profile-level settings are actually changed.
+These are optional profile-polish tasks and are not blockers for the repository closeout.
 
 ## Rules for future maintenance
 
