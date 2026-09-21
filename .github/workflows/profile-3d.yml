@@ -71,6 +71,9 @@ jobs:
           print(f"README landscape cache version: {cache_key}")
           PY
 
+      - name: Validate generated profile before publish
+        run: python3 .github/scripts/validate-profile.py
+
       - name: Commit changed generated assets
         shell: bash
         run: |
