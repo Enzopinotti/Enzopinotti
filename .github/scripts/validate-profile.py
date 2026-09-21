@@ -94,6 +94,9 @@ def validate_readme() -> str:
         "App_Agenda_Medico",
         "Web_de_vinos",
         "Ecommerce_NestJS",
+        "2024-UTN-GRUPO-2",
+        "63/63 frontend",
+        "93/93 backend",
         "20/20 tests",
         "182071b3e8148196861ee2f38e99a1ebfd0e1294",
     )
@@ -105,6 +108,7 @@ def validate_readme() -> str:
         "The next ecommerce showcase is the paired",
         "The next general historical-modernization lane is now **`App_Agenda_Medico`**",
         "Three completed public modernization cases",
+        "The next portfolio lane is **`2024-UTN-GRUPO-2`**",
     )
     for stale in stale_story:
         if stale in text:
@@ -166,6 +170,11 @@ def validate_roadmap() -> None:
         "d6a335738eb0c9b4dc8751049faa3c21a97bad00",
         "c95ca4bad1b11f0c946a3c04764c63ca18e6d7c6",
         "cadedaa822e87f7a2131625d2acc197efb6e184f",
+        "2024-UTN-GRUPO-2",
+        "5bca5199db7de80b7ab2f2a75d8d55bab0e27408",
+        "63/63 frontend",
+        "93/93 backend",
+        "NEXT GENERAL PORTFOLIO LANE",
     )
     for contract in required_contracts:
         if contract not in text:
@@ -174,6 +183,8 @@ def validate_roadmap() -> None:
     stale_contracts = (
         "NEXT ECOMMERCE SHOWCASE",
         "Before implementation begins in the Meow Matrix lineage",
+        "### P8 — `2024-UTN-GRUPO-2` — NEXT AUTHORSHIP-FIRST DISCOVERY LANE",
+        "2024-UTN-GRUPO-2 — authorship-first discovery",
     )
     for stale in stale_contracts:
         if stale in text:
@@ -242,12 +253,17 @@ def validate_profile_3d_workflow() -> None:
         "git rebase origin/main",
         "git push origin HEAD:main",
         "main kept advancing while publishing generated profile assets; giving up safely after 3 attempts.",
+        "workflow_dispatch:",
+        'docs/repository-portfolio-roadmap-2026.md',
     ):
         if contract not in text:
             fail(f"profile 3D workflow lost required publish safety contract: {contract}")
 
     if BARE_GIT_PUSH.search(text):
         fail("profile 3D workflow must not use a bare git push during generated asset publishing")
+
+    if "schedule:" in text:
+        fail("profile 3D refresh must remain event/manual driven; cron is not allowed")
 
 
 def validate_svgs() -> None:
