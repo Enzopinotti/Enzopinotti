@@ -134,9 +134,9 @@ A deliberately small **Node.js 22 + TypeScript + Fastify 5 + Zod** HTTP starter 
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-enzo-dark.svg?v=a8777a00eac8">
-    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-enzo-light.svg?v=a8777a00eac8">
-    <img src="./profile-3d-contrib/profile-enzo-dark.svg?v=a8777a00eac8" alt="Enzo Pinotti GitHub build signal landscape" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-enzo-dark.svg?v=8dc8e7b6988c">
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-enzo-light.svg?v=8dc8e7b6988c">
+    <img src="./profile-3d-contrib/profile-enzo-dark.svg?v=8dc8e7b6988c" alt="Enzo Pinotti GitHub build signal landscape" width="100%" />
   </picture>
 </p>
 
