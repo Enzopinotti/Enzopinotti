@@ -323,24 +323,39 @@ Final evidence:
 
 This repository remains intentionally small: no REST rewrite, React frontend, PostgreSQL, Docker or custom auth was added.
 
-### P8 — `2024-UTN-GRUPO-2` — NEXT AUTHORSHIP-FIRST DISCOVERY LANE
+### P8 — `2024-UTN-GRUPO-2` — COMPLETED
 
-This repository is a collaborative 2024 academic project, so provenance is the first constraint rather than framework novelty.
+The collaborative 2024 Antigal academic project is now a completed modernization lane with provenance preserved as a hard boundary.
 
-Initial inspection already proves multiple authors in the mainline history, including Enzo Pinotti, Matias Rau Bekerman, Patricio and Natasha Cadabon. The current `main` authority is `b63af0a8092ae4ce69aad4013affc6159cf7fafa`.
+Starting authority:
 
-The first block must remain discovery-only:
+- baseline `main`: `b63af0a8092ae4ce69aad4013affc6159cf7fafa`;
+- multiple authors were verified before behavior changes;
+- no Git history rewrite was used to reattribute team work.
 
-- map authorship and branch/merge history before attributing work;
-- identify the academic assignment/course context from repository evidence;
-- inventory `Frontend/` and `Backend/` stacks, package/runtime authority and deployment assumptions;
-- inspect authentication/data/API boundaries without reproducing secrets or private values;
-- run existing build/test commands before dependency changes;
-- distinguish team-authored behavior from Enzo-authored contributions;
-- preserve team history rather than rewriting the project into an individual portfolio artifact;
-- choose docs/tests/maintenance only after the provenance boundary is explicit.
+Final evidence:
 
-No behavior modernization is authorized merely by selecting the lane.
+- repository modernization issue: `Enzopinotti/2024-UTN-GRUPO-2#9` — closed as completed;
+- final closeout PR: `Enzopinotti/2024-UTN-GRUPO-2#43`;
+- final documented `main`: `5bca5199db7de80b7ab2f2a75d8d55bab0e27408`;
+- published Quality run: `35634649176` — success;
+- published Current-tree security run: `35634649224` — success;
+- frontend authority: React 19.3 / Router 7.18 / Vite 8 / Vitest 5;
+- backend authority: .NET 10 / SDK 10.0.401 / SLNX;
+- **63/63 frontend** tests;
+- **93/93 backend** tests;
+- Release compiler warnings: **0**;
+- npm + production npm audit: **0 findings**;
+- NuGet vulnerability audit: **clean**;
+- current-tree secrets/configuration externalized;
+- repository/UnitOfWork persistence authority made explicit;
+- direct AppDbContext and out-of-repository SaveChanges boundaries reduced to zero;
+- Like concurrency integrity, Cart JWT ownership, Orders/Admin authorization and Image/Admin authorization permanently guarded;
+- redundant public Sale API and unsafe caller-controlled payment-notification surface retired;
+- Admin Product/Image mutations now use persisted Bearer transport;
+- remaining historical product-integration gaps are explicitly tracked in `2024-UTN-GRUPO-2#42` rather than folded into modernization claims.
+
+This lane is now maintenance-mode. Any return should start from issue #42 and preserve the accumulated Quality/security gates.
 
 ### Historical backend lineage
 
@@ -418,6 +433,7 @@ TrackIt_Frontend — current-tree hygiene merged; historical/external credential
 COMPLETED HISTORICAL / ACADEMIC LANES
 App_Agenda_Medico
 Web_de_vinos
+2024-UTN-GRUPO-2 — collaborative full-stack modernization, provenance preserved
 
 COMPLETED FRAMEWORK-SPECIFIC LANES
 Ecommerce_NestJS
@@ -425,7 +441,7 @@ StarWars_App_NextJS
 ejercicioDjango
 
 NEXT GENERAL PORTFOLIO LANE
-2024-UTN-GRUPO-2 — authorship-first discovery
+Selection pending — re-evaluate the 46-repository inventory before activating P9
 
 CURRENT / REFERENCE — MAINTAIN, DON'T REWRITE
 Plantilla-de-Proyecto
@@ -445,24 +461,24 @@ empty and near-empty repositories
 
 ## 12. Next decision gate
 
-The next implementation gate is **discovery-only** for `2024-UTN-GRUPO-2`.
+P8 is complete. Do **not** activate another repository merely to keep the sequence moving.
 
-Before changing behavior:
+Before selecting P9:
 
-- pin current `main` and inspect the complete authorship/merge history;
-- identify the academic assignment and team context from repository evidence;
-- inventory the frontend/backend stacks, package managers, runtime versions, routes/APIs, persistence and deployment assumptions;
-- run existing build/test commands before changing dependencies;
-- inspect public configuration and secret-handling boundaries without reproducing historical values;
-- separate Enzo-authored contributions from work authored by collaborators;
-- decide whether the correct treatment is maintenance, documentation/testing only, or preservation;
-- do not rewrite collaborative history into an individual-origin story.
+- rescan the 46-repository inventory against current activity, ownership and portfolio value;
+- exclude active/private product work such as TOP, Assetelier-Studio and linkedin-content-ops from legacy-rewrite treatment;
+- keep client/delivery repositories behind ownership + production-need review;
+- resolve stubs/empty repositories through preserve/archive/supersede decisions rather than invented implementation;
+- keep the separate TrackIt historical/external credential review visible;
+- prefer a lane where real security, reproducibility, provenance or framework-maintenance work can be completed end-to-end;
+- open the repository-specific issue before implementation;
+- synchronize this roadmap again when P9 is selected.
 
-Current discovery authority:
+Current central state:
 
-- repository: `Enzopinotti/2024-UTN-GRUPO-2`;
-- `main`: `b63af0a8092ae4ce69aad4013affc6159cf7fafa`;
-- visible top-level structure: `Frontend/`, `Backend/`, `.gitignore`, `README.md`;
-- history already shows multiple authors, so provenance is a hard gate.
+- repository inventory: **46 repositories**;
+- latest completed general lane: **P8 — 2024-UTN-GRUPO-2**;
+- P8 final `main`: `5bca5199db7de80b7ab2f2a75d8d55bab0e27408`;
+- next general lane: **selection pending**.
 
-The target story is not “modernize everything.” It is: **understand the collaborative academic artifact accurately, then make only the smallest maintenance changes that can be attributed and justified.**
+The target story remains: **real repository need → scoped issue → evidence-based maintenance → validation → closeout → central sync**.
