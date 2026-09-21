@@ -41,9 +41,9 @@ My current focus is building and evolving **operational software and ERP/SaaS-st
 
 What differentiates my profile is the bridge between **business context and technical execution**: I can move from user/stakeholder discovery, AS-IS / TO-BE process analysis and acceptance criteria into frontend/backend work, APIs, data, infrastructure, QA/UAT, release qualification and production follow-up.
 
-Four public modernization cases now show that method at different levels. **[El_Nucleo_Web](https://github.com/Enzopinotti/El_Nucleo_Web)** reconstructs an early HTML/SCSS site while preserving provenance. **[Web-de-profesores](https://github.com/Enzopinotti/Web-de-profesores)** matures a JavaScript/localStorage simulator without adding a backend or React it does not need. **[Pint.ar_Ecommerce](https://github.com/Enzopinotti/Pint.ar_Ecommerce)** turns a React/Firebase learning storefront into a typed, testable and honestly bounded ecommerce demo. The paired **Meow Matrix** frontend/backend then carries the same discipline into a real full-stack architecture: backend-owned sessions, Mongo persistence, transactional checkout, private uploads, durable side effects, Docker integration, recovery rehearsal and an immutable no-rebuild release chain that reaches registry-digest promotion.
+A growing set of public modernization cases now shows that method at different levels. **[El_Nucleo_Web](https://github.com/Enzopinotti/El_Nucleo_Web)** reconstructs an early HTML/SCSS site while preserving provenance. **[Web-de-profesores](https://github.com/Enzopinotti/Web-de-profesores)** matures a JavaScript/localStorage simulator without adding a backend or React it does not need. **[Pint.ar_Ecommerce](https://github.com/Enzopinotti/Pint.ar_Ecommerce)** turns a React/Firebase learning storefront into a typed, testable and honestly bounded ecommerce demo. The paired **Meow Matrix** frontend/backend carries the same discipline into a real full-stack architecture with backend-owned sessions, Mongo persistence, transactional checkout, private uploads, durable side effects, Docker integration and a no-rebuild release chain.
 
-Meow Matrix's **provider-neutral engineering carrier is complete through B7**; what remains there is deliberately external production work — real registry/provider credentials, production data/storage/SMTP/DNS/TLS, deploy-by-digest and final public qualification — rather than more simulated infrastructure. **`App_Agenda_Medico`**, **`Web_de_vinos`**, **`Ecommerce_NestJS`**, **`StarWars_App_NextJS`** and **`ejercicioDjango`** are now completed maintenance lanes with their historical boundaries preserved and permanent CI in place. StarWars finishes with a verified Vercel deployment and zero npm audit findings; `ejercicioDjango` now preserves its compact academic scope on Python 3.12 / Django 5.2 LTS with 25 tests, clean migration reconstruction and HTTP smoke. The next portfolio lane is **`2024-UTN-GRUPO-2`**, starting strictly with collaborative authorship/provenance discovery before any behavioral change, as tracked in **[Repository portfolio roadmap — 2026](./docs/repository-portfolio-roadmap-2026.md)**.
+Meow Matrix's **provider-neutral engineering carrier is complete through B7**; what remains there is deliberately external production work rather than simulated infrastructure. **`App_Agenda_Medico`**, **`Web_de_vinos`**, **`Ecommerce_NestJS`**, **`StarWars_App_NextJS`**, **`ejercicioDjango`** and now **[`2024-UTN-GRUPO-2`](https://github.com/Enzopinotti/2024-UTN-GRUPO-2)** are completed maintenance lanes with their historical boundaries preserved. The latest one is a collaborative 2024 React + ASP.NET project modernized without rewriting team provenance: the maintained authority finishes on React 19 / Router 7 / Vite 8 and .NET 10 with **63/63 frontend** tests, **93/93 backend** tests, zero C# warnings and clean npm/NuGet audits. The central roadmap is synchronized through that closure; the **next general lane is intentionally not preselected yet** and will be chosen from the 46-repository inventory after a fresh fit/provenance check.
 
 ---
 
@@ -97,6 +97,13 @@ A paired modernization across **[MeowMatrix---Backend-2v](https://github.com/Enz
 
 The delivery path is qualified as a system rather than two isolated builds: Mongo replica-set transactions, dev SMTP, persistence/restart smoke, recovery rehearsal, exact frontend pinning, immutable API/web image bundles and registry promotion **without rebuilding source**. Backend authority after the B7 promotion carrier: `182071b3e8148196861ee2f38e99a1ebfd0e1294`; frontend pin: `9d64c48d2324703cb594acad8e1bb0c9a3d6191c`. This is intentionally **not labeled as a completed public production cutover** until the real provider, credentials and public endpoints are qualified.
 
+### 🥗 [Antigal — 2024 → 2026 collaborative full-stack modernization](https://github.com/Enzopinotti/2024-UTN-GRUPO-2)
+**Collaborative provenance + React/.NET modernization + security and persistence contracts**
+
+A completed UTN team project modernization where the first constraint was authorship: the 2024 collaborative history remains visible instead of being rewritten as an individual-origin portfolio piece. The maintained frontend now runs on **React 19.3, React Router 7.18, Vite 8 and Vitest 5**, while the backend is on **.NET 10 / SDK 10.0.401** with an SLNX solution, explicit repository/UnitOfWork authority and permanent CI gates around security-sensitive boundaries.
+
+The final 2026 carrier closes with **63/63 frontend tests**, **93/93 backend tests**, **0 C# warnings**, zero npm advisories and a clean NuGet vulnerability report. The work also hardened Admin/product/image transport, cart ownership, Orders authorization, JWT/configuration boundaries, persistence authority and concurrent favorites without inventing a new product. Final documented `main`: `5bca5199db7de80b7ab2f2a75d8d55bab0e27408`. Remaining historical product-integration gaps are separated into the repository's post-modernization backlog rather than hidden inside the modernization claim.
+
 ### 🌐 [Portfolio — enzopinotti.dev](https://enzopinotti.dev)
 **Full-stack product + production operations**
 
@@ -139,7 +146,7 @@ The graph is a compact view of public engineering activity, not a goal by itself
 real issue → scoped branch → meaningful commits → validation → review → merge
 ```
 
-The landscape uses the MIT-licensed [`github-profile-3d-contrib`](https://github.com/yoshi389111/github-profile-3d-contrib) engine with a custom palette, profile-specific branding and manual-only refresh.
+The landscape uses the MIT-licensed [`github-profile-3d-contrib`](https://github.com/yoshi389111/github-profile-3d-contrib) engine with a custom palette and profile-specific branding. It can still be refreshed manually, and now also refreshes automatically whenever the central repository-portfolio roadmap changes; there is intentionally **no cron/scheduled churn**.
 
 ---
 
