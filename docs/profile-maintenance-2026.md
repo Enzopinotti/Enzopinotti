@@ -20,7 +20,7 @@ Current `main` is the runtime authority; do not treat this historical baseline a
 
 Portfolio inventory:
 
-**46 repositories**
+**46 repositories in the September 2026 snapshot; 47 accessible repositories observed on 2026-10-12 (including private repositories).**
 
 Latest completed general modernization lane:
 
@@ -72,16 +72,13 @@ Generator workflow:
 
 ### Triggers
 
-The workflow intentionally supports two triggers only:
+The graph refreshes on:
 
-1. manual `workflow_dispatch`;
-2. a push to `main` that changes:
+1. a daily scheduled GitHub Actions run (12:23 UTC; scheduling is best effort, not real-time);
+2. a manual `workflow_dispatch` run;
+3. a `main` push changing `README.md` or `docs/repository-portfolio-roadmap-2026.md`.
 
-   `docs/repository-portfolio-roadmap-2026.md`
-
-There is deliberately **no schedule/cron**.
-
-This avoids meaningless daily generated commits while still refreshing the graph whenever the central portfolio state materially changes.
+The workflow commits **only when generated SVG content changes**. This keeps the graph current without timestamp-only commits. README cache keys remain content-derived.
 
 ### Generation pipeline
 
@@ -99,7 +96,7 @@ The workflow:
 
 If a rebase conflict occurs, the workflow aborts rather than overwriting newer profile work.
 
-### Last proven refresh
+### Last proven refresh before the October 2026 daily-refresh change
 
 Automatic roadmap-driven refresh:
 
@@ -231,7 +228,7 @@ These are optional profile-polish tasks and are not blockers for the repository 
 - preserve historical and collaborative provenance;
 - do not manufacture activity;
 - do not split trivial work into artificial commits;
-- do not schedule graph churn;
+- schedule graph refreshes but never create commits when generated content is unchanged;
 - prefer exact-head validation before publication;
 - keep private/client material out of public documentation;
 - do not rewrite active private products as legacy portfolio exercises;
