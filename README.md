@@ -2,244 +2,62 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/enzo-engineering-hero.svg">
     <source media="(prefers-color-scheme: light)" srcset="./assets/enzo-engineering-hero-light.svg">
-    <img src="./assets/enzo-engineering-hero.svg" alt="Enzo Pinotti — Product Engineering, Systems Analysis and Delivery" width="100%" />
+    <img src="./assets/enzo-engineering-hero.svg" alt="Enzo Pinotti — software product engineering and delivery" width="100%" />
   </picture>
 </p>
 
+<h1 align="center">Enzo Pinotti</h1>
+<p align="center"><strong>Full-Stack / Product Engineer · Systems Analyst / Technical Lead</strong></p>
+<p align="center">Industrial Engineer · Systems Engineering in progress · La Plata, Argentina · English B2</p>
 <p align="center">
-  <a href="https://enzopinotti.dev"><img src="https://img.shields.io/badge/PORTFOLIO-enzopinotti.dev-0EA5E9?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" /></a>
-  <a href="mailto:enzopinottii@gmail.com"><img src="https://img.shields.io/badge/CONTACT-email-8B5CF6?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <img src="https://img.shields.io/badge/BASE-La_Plata,_Argentina-111827?style=for-the-badge&logo=googlemaps&logoColor=22D3EE" alt="La Plata, Argentina" />
-  <a href="https://github.com/Enzopinotti/Enzopinotti/actions/workflows/profile-quality.yml"><img src="https://github.com/Enzopinotti/Enzopinotti/actions/workflows/profile-quality.yml/badge.svg?branch=main" alt="Profile quality" /></a>
+  <a href="https://enzopinotti.dev">Portfolio</a> ·
+  <a href="mailto:enzopinottii@gmail.com">Email</a>
 </p>
 
-<h1 align="center">Hi, I'm Enzo 👋</h1>
-<p align="center">
-  <strong>Systems Analyst / Technical Lead · Full-Stack / Product Engineer</strong>
-</p>
-<p align="center">
-  Industrial Engineer · Systems Engineering in progress · English B2
-</p>
-<p align="center">
-  I work across <strong>business processes, software systems, data, infrastructure and delivery</strong>.
-</p>
+## What I do
 
----
+I connect **business ↔ technology**: requirements, **BPMN / AS-IS / TO-BE**, architecture, hands-on development and **QA/UAT** through release. My work spans full-stack products, data, integrations and operational software. At **Fedes** I have worked across engineering and systems analysis; at **GIDAS** across data, reporting and coordination.
 
-## 01 // CURRENT MISSION
+## Building now
 
-```text
-DISCOVER → DEFINE → BUILD → VERIFY → SHIP → LEARN
+- **Rundda (Podómetro)** · *Private · active development* — Mobile activity and walking product built with **Expo/React Native, Node.js and PostgreSQL**. On-device step tracking, GPS sessions, goals and social features; native and production verification are still in progress.
+- **[Los Apuntes](https://github.com/Enzopinotti/losApuntes)** · *Public · active development* — Mobile-first university network connecting notes, courses, academic communities and discovery. Built around shared contracts, contextual search and privacy-aware access.
+- **AnyConsole Web** · *Private · research preview* — Local-first console compatibility research with a **React interface, Rust host and an original PS2-oriented experimental core**. Its current demo runs synthetic programs, **not commercial games or imported ISOs**.
+- **TOP** · *Private · beta development* — Modular operational software designed to adapt to different business domains, with role-aware experiences, permissions and focused workflows.
 
-PRODUCT SYSTEMS      operational workflows, collaboration, permissions
-TECHNICAL-FUNCTIONAL requirements, process analysis, scope and coordination
-AI INSIDE PRODUCTS   tools, memory, voice, retrieval, structured execution
-DELIVERY DISCIPLINE  risks, blockers, UAT, CI, releases and follow-up
-```
+## Selected public work
 
-My current focus is building and evolving **operational software and ERP/SaaS-style systems** that have to survive real users, changing requirements, permissions, data constraints, integrations and production releases.
+- **[Meow Matrix](https://github.com/Enzopinotti/MeowMatrix---Backend-2v)** ([frontend](https://github.com/Enzopinotti/Meow-Matrix---Frontend)) — Full-stack ecommerce architecture, backend-owned authentication, transactional order flows and Docker-based release work.
+- **[Antigal — UTN team project](https://github.com/Enzopinotti/2024-UTN-GRUPO-2)** — Collaborative React + .NET application modernized with tests, security boundaries and preserved team attribution.
+- **[El Núcleo](https://github.com/Enzopinotti/El_Nucleo_Web)** — Modernized web experience with preserved historical source, accessible delivery and reproducible production builds.
 
-What differentiates my profile is the bridge between **business context and technical execution**: I can move from user/stakeholder discovery, AS-IS / TO-BE process analysis and acceptance criteria into frontend/backend work, APIs, data, infrastructure, QA/UAT, release qualification and production follow-up.
+<details>
+<summary>More projects</summary>
 
-A growing set of public modernization cases now shows that method at different levels. **[El_Nucleo_Web](https://github.com/Enzopinotti/El_Nucleo_Web)** reconstructs an early HTML/SCSS site while preserving provenance. **[Web-de-profesores](https://github.com/Enzopinotti/Web-de-profesores)** matures a JavaScript/localStorage simulator without adding a backend or React it does not need. **[Pint.ar_Ecommerce](https://github.com/Enzopinotti/Pint.ar_Ecommerce)** turns a React/Firebase learning storefront into a typed, testable and honestly bounded ecommerce demo. The paired **Meow Matrix** frontend/backend carries the same discipline into a real full-stack architecture with backend-owned sessions, Mongo persistence, transactional checkout, private uploads, durable side effects, Docker integration and a no-rebuild release chain.
+[Pint.ar](https://github.com/Enzopinotti/Pint.ar_Ecommerce) · [Modderhouse](https://github.com/Enzopinotti/Web-de-profesores) · [Bitora](https://github.com/Enzopinotti/Bitora) · [Mora Petraglia](https://github.com/Enzopinotti/Mora-Petraglia-Landing) · [Portfolio source](https://github.com/Enzopinotti/portafolio-personal)
 
-Meow Matrix's **provider-neutral engineering carrier is complete through B7**; what remains there is deliberately external production work rather than simulated infrastructure. **`App_Agenda_Medico`**, **`Web_de_vinos`**, **`Ecommerce_NestJS`**, **`StarWars_App_NextJS`**, **`ejercicioDjango`** and now **[`2024-UTN-GRUPO-2`](https://github.com/Enzopinotti/2024-UTN-GRUPO-2)** are completed maintenance lanes with their historical boundaries preserved. The latest one is a collaborative 2024 React + ASP.NET project modernized without rewriting team provenance: the maintained authority finishes on React 19 / Router 7 / Vite 8 and .NET 10 with **63/63 frontend** tests, **93/93 backend** tests, zero C# warnings and clean npm/NuGet audits. The central **[Repository portfolio roadmap — 2026](./docs/repository-portfolio-roadmap-2026.md)** is synchronized through that closure; the **next general lane is intentionally not preselected yet** and will be chosen from the 46-repository inventory after a fresh fit/provenance check.
+For the earlier repository modernization program, see the [Repository portfolio roadmap — 2026](./docs/repository-portfolio-roadmap-2026.md) (historical snapshot).
 
----
+</details>
 
-## 02 // CAREER ARC
+## Toolkit
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/career-arc.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/career-arc-light.svg">
-    <img src="./assets/career-arc.svg" alt="Enzo Pinotti career progression" width="100%" />
-  </picture>
-</p>
+**Product & delivery:** process analysis, requirements, stakeholder coordination, APIs, QA/UAT, releases.
 
-My path has been intentionally transversal:
+**Engineering:** React, React Native, TypeScript, Node.js, Python, SQL/PostgreSQL, MongoDB, Docker, GitHub Actions, Linux/VPS and AI integrations.
 
-- **GIDAS · Data & Visualization Coordination (2021 → present):** requirements, KPIs, data sources, dashboards/reports and iterative validation while coordinating development, statistics and engineering perspectives.
-- **Fedes · Web / Full-Stack Development (2024 → 2025):** React, Node.js, REST APIs, SQL/data work, integrations and production infrastructure including VPS, Docker, Nginx, SSL and troubleshooting.
-- **Fedes · Systems Analyst / Technical Lead (2025 → present):** ERP/SaaS evolution, requirements, BPMN, AS-IS / TO-BE, use cases, user stories, business rules, acceptance criteria, backlog/scope, risks, dependencies, blockers, development coordination, QA/UAT, releases and production support.
-
-That progression is also why I am increasingly interested in **technical project coordination, IT project administration and functional/system analysis roles** around ERP and complex software implementations — without losing the ability to go deep technically when needed.
-
----
-
-## 03 // SELECTED BUILDS
-
-### 🎬 [El Núcleo — 2022 → 2026 reconstruction](https://github.com/Enzopinotti/El_Nucleo_Web)
-**Evolutionary modernization + provenance + production-qualified delivery**
-
-A completed public legacy-to-modern case that keeps the original HTML/SCSS source auditable while the current product runs from **Node.js 24, pnpm 11.26.0, React 19, Vite 8, TypeScript 6, modern Sass and Vitest**. The repository finishes with **30/30 permanent tests**, immutable-SHA CI, provenance/truth-boundary contracts, versioned Netlify deployment policy and a real production smoke in Chrome under enforced CSP.
-
-The engineering constraint is part of the result: historical copy and media keep explicit source context instead of being silently rewritten into present-day commercial claims. The modern deployment is live at **[el-nucleo-producciones.netlify.app](https://el-nucleo-producciones.netlify.app/)** while the 2022 baseline remains recoverable.
-
-### 🎓 [Modderhouse — 2023 → 2026 teaching workspace](https://github.com/Enzopinotti/Web-de-profesores)
-**Fit-for-purpose modernization + recoverable local data + browser-qualified delivery**
-
-A completed JavaScript-learning project that now preserves its exact 2023 baseline while the maintained 2026 workspace uses **Node.js 24, pnpm 11.26.0, Vite 8 and TypeScript 6** with no framework inflation. The current product removes fake password/auth semantics, adds versioned storage recovery, backup/restore, stable-ID editing, undo and neutral classroom summaries, and finishes with **41/41 tests** plus a real Chrome production smoke at 360 / 768 / 1440.
-
-The deployment itself became part of the engineering story: when GitHub's legacy Pages publisher competed with the custom workflow, the repository was changed so both publication paths resolve to a verified equivalent 2026 artifact while the original 14-file project remains byte-for-byte auditable under `historical/2023/`.
-
-### 🛒 [Pint.ar — 2023 → 2026 storefront](https://github.com/Enzopinotti/Pint.ar_Ecommerce)
-**Ecommerce product engineering + typed domain contracts + hardened delivery**
-
-A completed React/Firebase learning ecommerce that now preserves its exact 2023 Coderhouse + UTN context while the maintained `modern/` authority uses **Node.js 24, pnpm 11.26.0, React 19.3, Vite 8, TypeScript 6 and Sass**. The storefront adds deterministic search/filter/sort, immutable cart behavior, versioned recovery, a truthful guest checkout demo and **20/20 tests** without inventing payments, authentication or a backend the product does not need.
-
-Delivery is part of the case: a multi-stage Docker image serves through non-root Nginx with read-only/capability-reduced runtime controls, while GitHub Pages uses an explicit repository-subpath build. A real race between the custom Pages workflow and GitHub's legacy branch publisher was neutralized with a **byte-for-byte verified generated mirror**, and the final public workflow runs an Internet-facing Chrome smoke over the home, assets, metadata and direct `/carrito` navigation. Production: **[enzopinotti.github.io/Pint.ar_Ecommerce](https://enzopinotti.github.io/Pint.ar_Ecommerce/)**.
-
-### 🐈 [Meow Matrix — full-stack ecommerce modernization](https://github.com/Enzopinotti/MeowMatrix---Backend-2v)
-**Backend-owned security + transactional commerce + recoverable release engineering**
-
-A paired modernization across **[MeowMatrix---Backend-2v](https://github.com/Enzopinotti/MeowMatrix---Backend-2v)** and **[Meow-Matrix---Frontend](https://github.com/Enzopinotti/Meow-Matrix---Frontend)**. The current authority replaces browser-owned auth and partial checkout semantics with opaque HttpOnly sessions, Mongo-backed identity/catalog/cart/order state, atomic/idempotent checkout, order snapshots, durable outbox delivery, private authenticated file handling and typed frontend contracts.
-
-The delivery path is qualified as a system rather than two isolated builds: Mongo replica-set transactions, dev SMTP, persistence/restart smoke, recovery rehearsal, exact frontend pinning, immutable API/web image bundles and registry promotion **without rebuilding source**. Backend authority after the B7 promotion carrier: `182071b3e8148196861ee2f38e99a1ebfd0e1294`; frontend pin: `9d64c48d2324703cb594acad8e1bb0c9a3d6191c`. This is intentionally **not labeled as a completed public production cutover** until the real provider, credentials and public endpoints are qualified.
-
-### 🥗 [Antigal — 2024 → 2026 collaborative full-stack modernization](https://github.com/Enzopinotti/2024-UTN-GRUPO-2)
-**Collaborative provenance + React/.NET modernization + security and persistence contracts**
-
-A completed UTN team project modernization where the first constraint was authorship: the 2024 collaborative history remains visible instead of being rewritten as an individual-origin portfolio piece. The maintained frontend now runs on **React 19.3, React Router 7.18, Vite 8 and Vitest 5**, while the backend is on **.NET 10 / SDK 10.0.401** with an SLNX solution, explicit repository/UnitOfWork authority and permanent CI gates around security-sensitive boundaries.
-
-The final 2026 carrier closes with **63/63 frontend tests**, **93/93 backend tests**, **0 C# warnings**, zero npm advisories and a clean NuGet vulnerability report. The work also hardened Admin/product/image transport, cart ownership, Orders authorization, JWT/configuration boundaries, persistence authority and concurrent favorites without inventing a new product. Final documented `main`: `5bca5199db7de80b7ab2f2a75d8d55bab0e27408`. Remaining historical product-integration gaps are separated into the repository's post-modernization backlog rather than hidden inside the modernization claim.
-
-### 🌐 [Portfolio — enzopinotti.dev](https://enzopinotti.dev)
-**Full-stack product + production operations**
-
-React + Node.js product surface with structured data, authentication/integration work, Docker environments and production deployment tooling.
-
-→ [Source: Enzopinotti/portafolio-personal](https://github.com/Enzopinotti/portafolio-personal)
-
-### 🎨 [Mora Petraglia — Landing + CMS](https://github.com/Enzopinotti/Mora-Petraglia-Landing)
-**Frontend product experience + content operations + integrations**
-
-React + TypeScript public portfolio paired with a private `/admin` CMS, using Google Apps Script as an HTTP API and Google Sheets / Drive as operational content services.
-
-### 🧠 [Bitora](https://github.com/Enzopinotti/Bitora)
-**Algorithms + testable product behavior**
-
-Educational full-stack lab comparing **Huffman** and **Shannon-Fano** lossless compression through an interactive React UI, Express API, algorithm tests, file-format handling and Docker execution.
-
-### 🧰 [Plantilla de Proyecto — Node Service Starter](https://github.com/Enzopinotti/Plantilla-de-Proyecto)
-**Reusable backend foundation + explicit runtime contracts**
-
-A deliberately small **Node.js 22 + TypeScript + Fastify 5 + Zod** HTTP starter with validated configuration, deterministic `/health`, structured 404/500 behavior, graceful shutdown, Vitest coverage, `npm ci` reproducibility and a read-only SHA-pinned GitHub Actions quality gate. Product-specific auth, databases, mail, queues and realtime dependencies stay out of the baseline until they are actually needed.
-
-> Selected builds stay deliberately small: each repository has to show a distinct engineering signal rather than merely increasing the project count.
-
----
-
-## 04 // BUILD SIGNAL LANDSCAPE
+## Contribution activity
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-enzo-dark.svg?v=a955184d93e4">
     <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-enzo-light.svg?v=a955184d93e4">
-    <img src="./profile-3d-contrib/profile-enzo-dark.svg?v=a955184d93e4" alt="Enzo Pinotti GitHub build signal landscape" width="100%" />
+    <img src="./profile-3d-contrib/profile-enzo-dark.svg?v=a955184d93e4" alt="GitHub contribution history visualized in 3D" width="100%" />
   </picture>
 </p>
 
-The graph is a compact view of public engineering activity, not a goal by itself. The pattern behind it matters more:
-
-```text
-real issue → scoped branch → meaningful commits → validation → review → merge
-```
-
-The landscape uses the MIT-licensed [`github-profile-3d-contrib`](https://github.com/yoshi389111/github-profile-3d-contrib) engine with a custom palette and profile-specific branding. It can still be refreshed manually, and now also refreshes automatically whenever the central repository-portfolio roadmap changes; there is intentionally **no cron/scheduled churn**.
-
-Operational details, refresh verification and recovery steps are documented in **[Profile maintenance runbook — 2026](./docs/profile-maintenance-2026.md)**.
+<p align="center"><sub>Automatically refreshed daily and when this profile changes. GitHub Actions may run late; this is not a live feed. The chart reflects the contribution data available to its generator.</sub></p>
 
 ---
 
-## 05 // HOW I WORK
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/how-i-work.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/how-i-work-light.svg">
-    <img src="./assets/how-i-work.svg" alt="Enzo Pinotti operating model from discovery to delivery" width="100%" />
-  </picture>
-</p>
-
-I usually work through the full delivery loop rather than one isolated layer. Typical responsibilities include **requirements discovery, process documentation, BPMN / AS-IS / TO-BE, business ↔ technology translation, prioritization, development coordination, dependency and risk tracking, QA/UAT, release follow-up, production troubleshooting and reporting**.
-
-In ERP and operational-system contexts I am especially comfortable acting as the person who can understand the process with users, translate it into a technical contract, coordinate implementation and then validate what actually reaches production.
-
-I do **not** present myself as a SAP or Dynamics specialist. My relevant experience is the transferable part: ERP/SaaS processes, migrations and integrations, local-business requirements, user validation, delivery coordination and technical ownership.
-
----
-
-## 06 // ENGINEERING MAP
-
-| Product / functional analysis | Platform & data |
-| --- | --- |
-| Requirements & stakeholder discovery | Node.js / Fastify / Express services |
-| BPMN · AS-IS / TO-BE · use cases | REST APIs and explicit contracts |
-| User stories · business rules · acceptance criteria | PostgreSQL / MySQL / SQL data integrity |
-| Scope · priorities · risks · dependencies | MongoDB · Redis · integrations |
-| QA / UAT · release / production follow-up | Auth · tenancy · RBAC · migrations |
-
-| AI systems | Delivery & operations |
-| --- | --- |
-| Provider abstraction | Docker / Compose environments |
-| Capability / tool execution | Linux / VPS / Nginx |
-| Confirmation boundaries | DNS · SSL/TLS · Certbot |
-| Memory, retrieval and voice | GitHub Actions · CI/CD · runners |
-| Structured extraction / automation | Monitoring · logs · troubleshooting |
-
-I also work with **Power BI, Looker Studio, Excel and Google Apps Script** when the problem is better solved through reporting, analysis or lightweight automation than through a new application.
-
----
-
-## 07 // CORE TOOLCHAIN
-
-Recent public compatibility proof in `El_Nucleo_Web`: **Node.js 24 · pnpm 11.26.0 · React 19.3 · Vite 8.3 · TypeScript 6.0.3 · Vitest 5 · ESLint 10 · Prettier 3.9**. `Plantilla-de-Proyecto` intentionally uses **Node.js 22 + Fastify 5 + Zod** as a smaller reusable-service baseline, while Meow Matrix demonstrates direct MongoDB-driver persistence, Docker/Compose integration, transactional data and release/recovery qualification. The point is verified compatibility and fit-for-purpose choices, not chasing the highest major everywhere.
-
-<p>
-  <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/TypeScript-111827?style=flat-square&logo=typescript&logoColor=3178C6" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Node.js-111827?style=flat-square&logo=nodedotjs&logoColor=5FA04E" alt="Node.js" />
-  <img src="https://img.shields.io/badge/Fastify-111827?style=flat-square&logo=fastify&logoColor=FFFFFF" alt="Fastify" />
-  <img src="https://img.shields.io/badge/PostgreSQL-111827?style=flat-square&logo=postgresql&logoColor=4169E1" alt="PostgreSQL" />
-  <img src="https://img.shields.io/badge/MongoDB-111827?style=flat-square&logo=mongodb&logoColor=47A248" alt="MongoDB" />
-  <img src="https://img.shields.io/badge/Docker-111827?style=flat-square&logo=docker&logoColor=2496ED" alt="Docker" />
-  <img src="https://img.shields.io/badge/Linux-111827?style=flat-square&logo=linux&logoColor=FCC624" alt="Linux" />
-  <img src="https://img.shields.io/badge/GitHub_Actions-111827?style=flat-square&logo=githubactions&logoColor=2088FF" alt="GitHub Actions" />
-  <img src="https://img.shields.io/badge/AI_Tooling-111827?style=flat-square&logo=openai&logoColor=FFFFFF" alt="AI tooling" />
-</p>
-
-<details>
-<summary><strong>Additional experience</strong></summary>
-<br />
-
-JavaScript · Sass / CSS · MongoDB · Redis · ORM patterns · OAuth · Google Workspace / Apps Script · Python scripting · Odoo exposure · Power BI · Looker Studio · Excel · WordPress · Shopify · SEO / analytics · Figma-to-code
-
-</details>
-
----
-
-## 08 // ENGINEERING PRINCIPLES
-
-```text
-01. Understand the business process before choosing the technology.
-02. Turn ambiguity into explicit requirements, contracts and ownership.
-03. Surface dependencies, risks and blockers before they become surprises.
-04. Prefer recoverable, reviewable changes over giant rewrites.
-05. Treat tests, UAT evidence and documentation as part of delivery.
-06. Communicate status, risks and decisions in a way stakeholders can act on.
-07. Automate evidence — not activity for activity's sake.
-08. Preserve historical truth; modernization should explain progression, not erase it.
-09. Security and privacy outrank cosmetic modernization.
-10. Build for the person who has to understand the system six months later.
-```
-
----
-
-<p align="center">
-  <strong>Bridge the process. Build the system. Make the delivery legible.</strong>
-</p>
-
-<p align="center">
-  <a href="https://enzopinotti.dev">Portfolio</a> · <a href="mailto:enzopinottii@gmail.com">Email</a>
-</p>
+<p align="center">Build what matters. Verify what ships. Keep learning.</p>
