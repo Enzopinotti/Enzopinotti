@@ -15,10 +15,11 @@ BRAND_SCRIPT = ROOT / ".github" / "scripts" / "brand-profile-3d.py"
 PROFILE_3D_WORKFLOW = ROOT / ".github" / "workflows" / "profile-3d.yml"
 
 REQUIRED_SECTIONS = [
-    "## What I do",
-    "## Building now",
-    "## Selected public work",
-    "## Toolkit",
+    "## What I bring",
+    "## Work you can inspect",
+    "## Products I'm building",
+    "## Skills & tools",
+    "## Let's connect",
     "## Contribution activity",
 ]
 
@@ -75,27 +76,41 @@ def validate_readme() -> str:
         fail("README must provide adaptive dark/light imagery")
 
     required_story = (
+        "Full-Stack / Product Engineer",
         "Systems Analyst / Technical Lead",
         "Industrial Engineer",
         "English B2",
-        "business ↔ technology",
-        "BPMN / AS-IS / TO-BE",
-        "QA/UAT",
         "Fedes",
         "GIDAS",
-        "Rundda (Podómetro)",
+        "BPMN / AS-IS / TO-BE",
+        "QA/UAT",
         "Los Apuntes",
-        "AnyConsole Web",
-        "TOP",
         "Meow Matrix",
         "2024-UTN-GRUPO-2",
         "El_Nucleo_Web",
+        "TOP",
+        "Rundda (Podómetro)",
+        "AnyConsole Web",
+        "repositories are private",
+        "Does not run imported or commercial games",
         "Repository portfolio roadmap — 2026",
         "not a live feed",
     )
     for contract in required_story:
         if contract not in text:
             fail(f"profile lost required current story: {contract}")
+
+    if text.index("## Work you can inspect") > text.index("## Products I'm building"):
+        fail("publicly inspectable work must precede private product summaries")
+
+    for public_repo in (
+        "github.com/Enzopinotti/losApuntes",
+        "github.com/Enzopinotti/MeowMatrix---Backend-2v",
+        "github.com/Enzopinotti/2024-UTN-GRUPO-2",
+        "github.com/Enzopinotti/El_Nucleo_Web",
+    ):
+        if public_repo not in text:
+            fail(f"public evidence link missing: {public_repo}")
 
     private_repositories = (
         "github.com/Enzopinotti/Podometro",
