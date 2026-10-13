@@ -2,11 +2,14 @@ name: Refresh profile 3D contribution landscape
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "23 12 * * *" # Daily refresh; GitHub may delay scheduled runs.
   push:
     branches:
       - main
     paths:
       - "docs/repository-portfolio-roadmap-2026.md"
+      - "README.md"
 
 permissions:
   contents: write
