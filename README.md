@@ -1,50 +1,50 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/enzo-engineering-hero.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/enzo-engineering-hero-light.svg">
-    <img src="./assets/enzo-engineering-hero.svg" alt="Enzo Pinotti — software product engineering and delivery" width="100%" />
-  </picture>
-</p>
-
 <h1 align="center">Enzo Pinotti</h1>
-<p align="center"><strong>Full-Stack / Product Engineer · Systems Analyst / Technical Lead</strong></p>
-<p align="center">Industrial Engineer · Systems Engineering in progress · La Plata, Argentina · English B2</p>
+<p align="center"><strong>I turn complex business workflows into software people can use and maintain.</strong></p>
+<p align="center">Full-Stack / Product Engineer · Systems Analyst / Technical Lead</p>
+<p align="center"><sub>Industrial Engineer · Systems Engineering in progress · La Plata, Argentina · English B2</sub></p>
 <p align="center">
-  <a href="https://enzopinotti.dev">Portfolio</a> ·
-  <a href="mailto:enzopinottii@gmail.com">Email</a>
+  <a href="https://enzopinotti.dev">Portfolio</a> · <a href="mailto:enzopinottii@gmail.com">Get in touch</a>
 </p>
 
-## What I do
+## What I bring
 
-I connect **business ↔ technology**: requirements, **BPMN / AS-IS / TO-BE**, architecture, hands-on development and **QA/UAT** through release. My work spans full-stack products, data, integrations and operational software. At **Fedes** I have worked across engineering and systems analysis; at **GIDAS** across data, reporting and coordination.
+I work at the intersection of **business, product and engineering**. I can sit with stakeholders to understand a process, translate it into requirements and acceptance criteria, then work across the frontend, APIs, data, infrastructure and **QA/UAT** to deliver it.
 
-## Building now
+At **Fedes**, my path has spanned web/full-stack development, systems analysis and technical coordination for operational software. At **GIDAS**, I've worked with data, reporting and interdisciplinary collaboration. My toolkit includes **BPMN / AS-IS / TO-BE**, prioritization, troubleshooting and release follow-up.
 
-- **Rundda (Podómetro)** · *Private · active development* — Mobile activity and walking product built with **Expo/React Native, Node.js and PostgreSQL**. On-device step tracking, GPS sessions, goals and social features; native and production verification are still in progress.
-- **[Los Apuntes](https://github.com/Enzopinotti/losApuntes)** · *Public · active development* — Mobile-first university network connecting notes, courses, academic communities and discovery. Built around shared contracts, contextual search and privacy-aware access.
-- **AnyConsole Web** · *Private · research preview* — Local-first console compatibility research with a **React interface, Rust host and an original PS2-oriented experimental core**. Its current demo runs synthetic programs, **not commercial games or imported ISOs**.
-- **TOP** · *Private · beta development* — Modular operational software designed to adapt to different business domains, with role-aware experiences, permissions and focused workflows.
+## Work you can inspect
 
-## Selected public work
+- **[Los Apuntes](https://github.com/Enzopinotti/losApuntes)** · *Active development* — Building a mobile-first academic network that connects university students with notes, courses, search and communities. Shared web/mobile contracts, backend-owned rules and privacy-aware access.
+- **[Meow Matrix](https://github.com/Enzopinotti/MeowMatrix---Backend-2v)** · [Frontend](https://github.com/Enzopinotti/Meow-Matrix---Frontend) — Full-stack commerce modernization: server-owned sessions, transactional checkout, persistent state and Docker-based release/recovery engineering. Production cutover is not claimed.
+- **[Antigal — UTN team project](https://github.com/Enzopinotti/2024-UTN-GRUPO-2)** — Collaborative **React + .NET** application. My subsequent modernization work focused on security boundaries, testing and keeping the original team's contributions visible.
+- **[El Núcleo](https://github.com/Enzopinotti/El_Nucleo_Web)** — Took an older web project through a modern React/TypeScript build, reproducible testing and a documented deployment path without erasing its history.
 
-- **[Meow Matrix](https://github.com/Enzopinotti/MeowMatrix---Backend-2v)** ([frontend](https://github.com/Enzopinotti/Meow-Matrix---Frontend)) — Full-stack ecommerce architecture, backend-owned authentication, transactional order flows and Docker-based release work.
-- **[Antigal — UTN team project](https://github.com/Enzopinotti/2024-UTN-GRUPO-2)** — Collaborative React + .NET application modernized with tests, security boundaries and preserved team attribution.
-- **[El Núcleo](https://github.com/Enzopinotti/El_Nucleo_Web)** — Modernized web experience with preserved historical source, accessible delivery and reproducible production builds.
+## Products I'm building
+
+*These repositories are private. Features below describe active engineering work, not a public release.*
+
+- **TOP** — Modular business software across web, mobile and API, with organizational boundaries, role-aware workflows and AI-assisted capabilities. Beta work is ongoing.
+- **Rundda (Podómetro)** — **Expo/React Native + Node.js/PostgreSQL** app for activity goals, on-device step tracking, GPS walks and social challenges. Physical-device and release acceptance remain in progress.
+- **AnyConsole Web** — Local-first **React + Rust** console-compatibility research: persistent library metadata, a local session host and an experimental PS2-oriented synthetic-program core. **Does not run imported or commercial games.**
 
 <details>
-<summary>More projects</summary>
+<summary>More public projects</summary>
 
 [Pint.ar](https://github.com/Enzopinotti/Pint.ar_Ecommerce) · [Modderhouse](https://github.com/Enzopinotti/Web-de-profesores) · [Bitora](https://github.com/Enzopinotti/Bitora) · [Mora Petraglia](https://github.com/Enzopinotti/Mora-Petraglia-Landing) · [Portfolio source](https://github.com/Enzopinotti/portafolio-personal)
 
-For the earlier repository modernization program, see the [Repository portfolio roadmap — 2026](./docs/repository-portfolio-roadmap-2026.md) (historical snapshot).
+[Repository portfolio roadmap — 2026](./docs/repository-portfolio-roadmap-2026.md) — historical modernization record, not the current product backlog.
 
 </details>
 
-## Toolkit
+## Skills & tools
 
-**Product & delivery:** process analysis, requirements, stakeholder coordination, APIs, QA/UAT, releases.
+**Product / delivery:** requirements, stakeholder communication, process mapping, BPMN / AS-IS / TO-BE, scope, QA/UAT, technical coordination.
 
-**Engineering:** React, React Native, TypeScript, Node.js, Python, SQL/PostgreSQL, MongoDB, Docker, GitHub Actions, Linux/VPS and AI integrations.
+**Engineering / operations:** React, React Native, TypeScript, Node.js, REST APIs, SQL/PostgreSQL, MongoDB, Docker, Linux/VPS, GitHub Actions, AI integrations.
+
+## Let's connect
+
+I'm interested in **product engineering, systems analysis and technical delivery** — especially where understanding the business matters as much as writing the code. [Explore my portfolio](https://enzopinotti.dev) or [email me](mailto:enzopinottii@gmail.com).
 
 ## Contribution activity
 
@@ -52,12 +52,8 @@ For the earlier repository modernization program, see the [Repository portfolio 
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-enzo-dark.svg?v=0c638a578898">
     <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-enzo-light.svg?v=0c638a578898">
-    <img src="./profile-3d-contrib/profile-enzo-dark.svg?v=0c638a578898" alt="GitHub contribution history visualized in 3D" width="100%" />
+    <img src="./profile-3d-contrib/profile-enzo-dark.svg?v=0c638a578898" alt="GitHub contributions visualized in 3D" width="100%" />
   </picture>
 </p>
 
-<p align="center"><sub>Automatically refreshed daily and when this profile changes. GitHub Actions may run late; this is not a live feed. The chart reflects the contribution data available to its generator.</sub></p>
-
----
-
-<p align="center">Build what matters. Verify what ships. Keep learning.</p>
+<p align="center"><sub>Refreshed automatically each day, and when this profile changes. GitHub Actions scheduling is best-effort; this is not a live feed.</sub></p>
