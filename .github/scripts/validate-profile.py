@@ -15,14 +15,11 @@ BRAND_SCRIPT = ROOT / ".github" / "scripts" / "brand-profile-3d.py"
 PROFILE_3D_WORKFLOW = ROOT / ".github" / "workflows" / "profile-3d.yml"
 
 REQUIRED_SECTIONS = [
-    "01 // CURRENT MISSION",
-    "02 // CAREER ARC",
-    "03 // SELECTED BUILDS",
-    "04 // BUILD SIGNAL LANDSCAPE",
-    "05 // HOW I WORK",
-    "06 // ENGINEERING MAP",
-    "07 // CORE TOOLCHAIN",
-    "08 // ENGINEERING PRINCIPLES",
+    "## What I do",
+    "## Building now",
+    "## Selected public work",
+    "## Toolkit",
+    "## Contribution activity",
 ]
 
 REQUIRED_SVGS = [
@@ -55,8 +52,8 @@ def validate_readme() -> str:
 
     text = README.read_text(encoding="utf-8")
 
-    if len(text.encode("utf-8")) > 100_000:
-        fail("README.md exceeded the 100 KiB profile budget")
+    if len(text.encode("utf-8")) > 9_000 or len(text.splitlines()) > 95:
+        fail("README.md exceeded the concise-profile budget (9 KiB / 95 lines)")
 
     previous_index = -1
     for section in REQUIRED_SECTIONS:
@@ -80,29 +77,34 @@ def validate_readme() -> str:
     required_story = (
         "Systems Analyst / Technical Lead",
         "Industrial Engineer",
-        "GIDAS",
-        "AS-IS / TO-BE",
-        "BPMN",
-        "business ↔ technology",
-        "QA/UAT",
         "English B2",
-        "Repository portfolio roadmap — 2026",
-        "pnpm 11.26.0",
-        "Web-de-profesores",
-        "Pint.ar_Ecommerce",
+        "business ↔ technology",
+        "BPMN / AS-IS / TO-BE",
+        "QA/UAT",
+        "Fedes",
+        "GIDAS",
+        "Rundda (Podómetro)",
+        "Los Apuntes",
+        "AnyConsole Web",
+        "TOP",
         "Meow Matrix",
-        "App_Agenda_Medico",
-        "Web_de_vinos",
-        "Ecommerce_NestJS",
         "2024-UTN-GRUPO-2",
-        "63/63 frontend",
-        "93/93 backend",
-        "20/20 tests",
-        "182071b3e8148196861ee2f38e99a1ebfd0e1294",
+        "El_Nucleo_Web",
+        "Repository portfolio roadmap — 2026",
+        "not a live feed",
     )
     for contract in required_story:
         if contract not in text:
-            fail(f"career/profile narrative lost required contract: {contract}")
+            fail(f"profile lost required current story: {contract}")
+
+    private_repositories = (
+        "github.com/Enzopinotti/Podometro",
+        "github.com/Enzopinotti/AnyConsole-Web",
+        "github.com/Enzopinotti/TOP",
+    )
+    for url in private_repositories:
+        if url in text:
+            fail(f"private repository exposed as a public link: {url}")
 
     stale_story = (
         "The next ecommerce showcase is the paired",
@@ -264,8 +266,11 @@ def validate_profile_3d_workflow() -> None:
     if BARE_GIT_PUSH.search(text):
         fail("profile 3D workflow must not use a bare git push during generated asset publishing")
 
-    if "schedule:" in text:
-        fail("profile 3D refresh must remain event/manual driven; cron is not allowed")
+    if "schedule:" not in text or 'cron: "23 12 * * *"' not in text:
+        fail("profile 3D refresh must declare a daily schedule")
+
+    if '"README.md"' not in text:
+        fail("profile README updates must trigger a contribution refresh")
 
 
 def validate_svgs() -> None:
