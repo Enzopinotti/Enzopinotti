@@ -50,9 +50,9 @@ For the earlier repository modernization program, see the [Repository portfolio 
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-enzo-dark.svg?v=a955184d93e4">
-    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-enzo-light.svg?v=a955184d93e4">
-    <img src="./profile-3d-contrib/profile-enzo-dark.svg?v=a955184d93e4" alt="GitHub contribution history visualized in 3D" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-enzo-dark.svg?v=0c638a578898">
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-enzo-light.svg?v=0c638a578898">
+    <img src="./profile-3d-contrib/profile-enzo-dark.svg?v=0c638a578898" alt="GitHub contribution history visualized in 3D" width="100%" />
   </picture>
 </p>
 
