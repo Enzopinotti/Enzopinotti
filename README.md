@@ -50,9 +50,9 @@ I'm interested in **product engineering, systems analysis and technical delivery
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-enzo-dark.svg?v=8ce6121d31b3">
-    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-enzo-light.svg?v=8ce6121d31b3">
-    <img src="./profile-3d-contrib/profile-enzo-dark.svg?v=8ce6121d31b3" alt="GitHub contributions visualized in 3D" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-enzo-dark.svg?v=7364632b9af2">
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-enzo-light.svg?v=7364632b9af2">
+    <img src="./profile-3d-contrib/profile-enzo-dark.svg?v=7364632b9af2" alt="GitHub contributions visualized in 3D" width="100%" />
   </picture>
 </p>
 
